@@ -1,0 +1,31 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Offcanvas
+==============================================
+Styling for offcanvas component.
+
+*/
+
+.btn.js-offcanvas-close {
+    .icon > svg {
+        top: 5px;
+    }
+}
+
+.offcanvas {
+    &.is-left {
+        .btn.js-offcanvas-close {
+            .icon > svg {
+                top: 0;
+            }
+        }
+    }
+}

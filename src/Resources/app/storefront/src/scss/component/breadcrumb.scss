@@ -1,0 +1,113 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Breadcrumb
+==============================================
+Advanced styling for breadcrumb component
+
+*/
+
+@mixin breadcrumbMargin( $dmf-breadcrumb-background-color ) {
+    @if $dmf-breadcrumb-background-color == $sw-background-color {
+        margin-bottom: 0;
+    } @else {
+        margin-bottom: $spacer-lg;
+    }
+}
+
+.breadcrumb-wrapper {
+    background-color: $dmf-breadcrumb-background-color;
+}
+
+.breadcrumb {
+    background-color: $dmf-breadcrumb-background-color;
+    @include breadcrumbMargin($dmf-breadcrumb-background-color);
+    padding: $spacer-sm $order-grid-gutter-width;
+
+    .breadcrumb-home {
+        svg {
+            width: 100%;
+            color: $dmf-breadcrumb-text-color;
+
+            &:hover {
+                color: $sw-color-brand-primary;
+            }
+        }
+    }
+
+    .breadcrumb-container {
+        display: flex;
+
+        &.penultimate {
+            display: none;
+        }
+    }
+
+    .breadcrumb-placeholder-simple {
+        margin-right: $spacer-sm;
+    }
+
+    .breadcrumb-placeholder {
+        margin: 0 $spacer-sm;
+
+        &.penultimate {
+            display: none;
+        }
+    }
+
+    a {
+        color: $dmf-breadcrumb-text-color;
+        font-size: $font-size-base;
+        font-family: $sw-font-family-base;
+        text-transform: $dmf-breadcrumb-text-transformation;
+
+        &.is-active {
+            color: $dmf-breadcrumb-text-color;
+            font-weight: $font-weight-normal;
+        }
+
+        &:hover {
+            color: $sw-color-brand-primary;
+            text-decoration: none;
+        }
+    }
+
+    svg {
+        height: $font-size-base;
+        width: 10px;
+        top: rem(2);
+        color: $dmf-breadcrumb-text-color;
+    }
+
+}
+
+
+@include media-breakpoint-up(sm) {
+    .breadcrumb {
+        padding: $spacer $order-grid-gutter-width;
+
+        .breadcrumb-container {
+            &.penultimate {
+                display: flex;
+            }
+        }
+
+        .breadcrumb-placeholder-simple {
+            display: none;
+        }
+
+        .breadcrumb-placeholder {
+            &.penultimate {
+                display: block;
+            }
+        }
+
+    }
+}

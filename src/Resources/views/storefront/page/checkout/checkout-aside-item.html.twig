@@ -1,0 +1,88 @@
+{% sw_extends '@Storefront/storefront/page/checkout/checkout-aside-item.html.twig' %}
+
+{% block page_checkout_aside_item_container %}
+    <div class="row checkout-aside-item cart-item cart-item-{{ lineItem.type }}{% if isDiscount %} is-discount{% endif %}{% if isNested %} is-nested{% endif %}{% if isChild %} is-child{% endif %}">
+        {% block page_checkout_aside_item_image %}
+            <div class="col-3 checkout-aside-item-image">
+                {% block page_checkout_aside_item_image_inner %}
+                    {% if isDiscount %}
+                        <div class="cart-item-discount-icon cart-item-img">
+                            {% sw_icon 'marketing' style {
+                                'color': 'success'
+                            } %}
+                        </div>
+                    {% elseif isNested %}
+                        <div class="cart-item-nested-icon">
+                            {% sw_icon 'bag-product' style {
+                                'color': 'light'
+                            } %}
+                        </div>
+                    {%  else %}
+                        {% if lineItem.cover.url %}
+                            {% sw_thumbnails 'cart-item-img-thumbnails' with {
+                                media: lineItem.cover,
+                                sizes: {
+                                    'default': '100px'
+                                },
+                                attributes: {
+                                    'class': 'img-fluid cart-item-img',
+                                    'alt': (lineItem.cover.translated.alt ?: ''),
+                                    'title': (lineItem.cover.translated.title ?: '')
+                                }
+                            } %}
+                        {% else %}
+                            {% sw_icon 'placeholder' style {
+                                'size': 'fluid'
+                            } %}
+                        {% endif %}
+                    {% endif %}
+                {% endblock %}
+            </div>
+        {% endblock %}
+
+        {% block page_checkout_aside_item_data %}
+            <div class="col-9 checkout-aside-item-data">
+                {% block page_checkout_aside_item_title %}
+                    <div class="checkout-aside-item-title">
+                        {{ lineItem.label|u.truncate(60) }}
+                    </div>
+                {% endblock %}
+
+                {% block page_checkout_aside_item_variant_characteristics %}
+                    <div class="checkout-aside-item-characteristics">
+                        {% for option in lineItem.payload.options %}
+                            {{ option.group }}:
+                            <span class="checkout-aside-item-characteristics-option">{{ option.option }}</span>
+
+                            {% if lineItem.payload.options|last != option %}
+                                {{ " | " }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endblock %}
+
+                {% block page_checkout_aside_item_info_features %}
+                    {% if lineItem.type == 'product' and lineItem.payload.features is not null %}
+                        {% sw_include '@Storefront/storefront/component/product/feature/list.html.twig' with {
+                            'features': lineItem.payload.features
+                        } %}
+                    {% endif %}
+                {% endblock %}
+
+                {% block page_checkout_aside_item_quantity %}
+                    <div class="checkout-aside-item-link-quantity">
+                        {% if lineItem.quantity %}
+                            {{ "checkout.cartHeaderQuantity"|trans }}: {{ lineItem.quantity }}
+                        {% endif %}
+                    </div>
+                {% endblock %}
+
+                {% block page_checkout_aside_item_price %}
+                    <div class="checkout-aside-item-link-price">
+                        {{ lineItem.price.totalPrice|currency }}{{ "general.star"|trans|sw_sanitize }}
+                    </div>
+                {% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

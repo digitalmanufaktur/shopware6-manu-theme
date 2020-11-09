@@ -1,0 +1,26 @@
+{% block layout_newsletter_inner_container %}
+    <div class="row justify-content-center footer-newsletter-row">
+        {% set newsletterBtnClass = shopware.theme['dmf-newsletter-btn'] %}
+        {% set newsletterVariant = shopware.theme['dmf-newsletter-columns'] %}
+
+        <div class="col-12 {% if newsletterVariant == 1 %}col-md-7 footer-newsletter-above {% endif %}footer-newsletter-col">
+            <div class="row">
+                <div class="col-{% if newsletterVariant == 1 %}12{% else %}md-6 align-self-center{% endif %}">
+                    <div class="footer-newsletter-heading">
+                        <h2>{{ "newsletter.footerHeadline"|trans|striptags }}</h2>
+                        <p>{{ "newsletter.footerText"|trans|striptags }}</p>
+                    </div>
+                </div>
+
+                <div class="col-{% if newsletterVariant == 1 %}12{% else %}md-6 align-self-center{% endif %}">
+                    {% sw_include '@Storefront/storefront/layout/newsletter/newsletter-widget.html.twig'
+                        with {
+                            action: 'frontend.form.newsletter.register.handle',
+                            submitText: 'newsletter.formSubmit'
+                        }
+                    %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

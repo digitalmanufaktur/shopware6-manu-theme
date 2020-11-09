@@ -1,0 +1,134 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Product Box
+==============================================
+Custom styling for product box component.
+
+*/
+
+.product-box {
+    background-color: $dmf-product-box-background-color;
+    border-color: $dmf-product-box-border-color;
+
+    .product-info {
+        @if bool($dmf-product-box-center-text) == true {
+            text-align: center;
+        }
+    }
+
+    .product-description {
+        @if bool($dmf-product-box-description-enable) == false {
+            display: none;
+        }
+    }
+
+    .product-image-wrapper {
+        background-color: $dmf-product-box-image-background-color;
+    }
+
+    .card-body {
+        padding-top: 0;
+
+        @if bool($dmf-listing-product-box-disable-sidepadding) == true {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .manu-product-deliverytime {
+        @if bool($dmf-listing-product-box-disable-deliverytime) == true {
+            display: none;
+        }
+    }
+
+    .manu-product-number {
+        @if bool($dmf-listing-product-box-disable-productnumber) == true {
+            display: none;
+        }
+    }
+
+
+}
+
+.product-name {
+    font-weight: $font-weight-normal;
+    color: $sw-text-color;
+    margin-bottom: 0;
+    height: auto;
+    font-size: $font-size-lg;
+}
+
+.product-description {
+    color: $gray-400;
+
+}
+
+.product-price {
+    font-size: $font-size-base;
+    overflow: visible;
+}
+
+.product-price {
+    .list-price {
+        color: $gray-700;
+    }
+}
+
+.product-name {
+}
+
+.product-badges {
+    top: 1.5rem;
+    left: .5rem;
+
+    .badge {
+        padding: 0 0.3rem;
+        height: auto;
+        line-height: rem(16px);
+        font-size: $font-size-sm;
+        border: 1px solid;
+        border-radius: 0;
+    }
+
+    .badge-discount {
+        color: $danger;
+        border-color: $danger;
+        background-color: rgba($color: $danger, $alpha: 0.2);
+    }
+
+    .badge-topseller {
+        color: $warning;
+        border-color: $warning;
+        background-color: rgba($color: $warning, $alpha: 0.2);
+    }
+
+    .badge-new {
+        color: $success;
+        border-color: $success;
+        background-color: rgba($color: $success, $alpha: 0.2);
+
+    }
+}
+
+
+.box-single-column {
+    .product-image-link {
+        img {
+            max-height: unset;
+        }
+    }
+
+    .product-price-info {
+        .product-price {
+            font-size: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{% sw_extends '@Storefront/storefront/component/checkout/offcanvas-cart-summary.html.twig' %}
+
+{% block component_offcanvas_summary_content %}
+    <div class="offcanvas-summary">
+        {% if page.cart.deliveries is defined %}
+
+            {% set activeShipping = page.cart.deliveries.elements[0] %}
+
+            {% block component_offcanvas_summary_content_info %}
+                <div class="row offcanvas-shipping-info">
+                    <span class="col-7 shipping-label shipping-cost">
+                        {{ "checkout.summaryShipping"|trans|sw_sanitize }}
+                    </span>
+
+                    <span class="col-5 shipping-value shipping-cost">
+                        {{ activeShipping.shippingCosts.totalPrice|currency }}
+                    </span>
+                </div>
+            {% endblock %}
+        {% endif %}
+        <dl class="row offcanvas-summary-list">
+            {% block component_offcanvas_summary_total %}
+                {% block component_offcanvas_summary_total_label %}
+                    <dt class="col-7 summary-label summary-total">
+                        {{ "checkout.subtotalAmount"|trans|sw_sanitize }}
+                    </dt>
+                {% endblock %}
+
+                {% block component_offcanvas_summary_total_value %}
+                    <dd class="col-5 summary-value summary-total">
+                        {{ page.cart.price.positionPrice|currency }}
+                    </dd>
+                {% endblock %}
+            {% endblock %}
+        </dl>
+        {% block component_offcanvas_summary_tax_info %}
+            <p class="offcanvas-cart-tax">
+                <span>
+                    {% if page.cart.price.taxStatus == "gross" %}
+                        {{ "general.grossTaxInformation"|trans|sw_sanitize }}
+                    {% else %}
+                        {{ "general.netTaxInformation"|trans|sw_sanitize }}
+                    {% endif %}
+                </span>
+            </p>
+        {% endblock %}
+    </div>
+{% endblock %}

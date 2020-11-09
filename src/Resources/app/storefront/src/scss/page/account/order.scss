@@ -1,0 +1,52 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Order
+==============================================
+Contains custom styles for the user order area.
+
+*/
+
+
+.order-item-header {
+    background-color: $gray-100;
+    padding-bottom: $spacer;
+}
+
+.order-table-header-order-status {
+    padding: 0;
+    h5 {
+        color: $sw-text-color;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .order-item {
+        padding: 0 !important;
+    }
+
+    .order-item-name {
+        .name-value {
+            font-size: $dmf-font-size-h5;
+        }
+    }
+
+    .order-item-quantity,
+    .order-item-price,
+    .order-item-total {
+        color: $sw-text-color;
+        opacity: .5;
+
+        strong {
+            font-weight: $font-weight-normal;
+        }
+    }
+
+}

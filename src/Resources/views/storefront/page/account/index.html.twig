@@ -1,0 +1,13 @@
+{% sw_extends '@Storefront/storefront/page/account/index.html.twig' %}
+
+{% block page_account_overview %}
+    {% if shopware.theme['dmf-account-overview-enable'] %}
+        <div class="account-overview-container">
+            {{ parent() }}
+        </div>
+    {% else %}
+        <div class="account-overview-container d-none d-md-block">
+            {{ parent() }}
+        </div>
+    {% endif %}
+{% endblock %}

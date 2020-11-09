@@ -1,0 +1,189 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Offcanvas Cart
+==============================================
+Styling for offcanvas cart component.
+
+*/
+
+.cart-offcanvas {
+    .close-icon {
+        position: relative;
+        bottom: 4px;
+        cursor: pointer;
+        padding-left: 0px;
+    }
+
+
+    .offcanvas-content-container {
+        width: 100%;
+        padding: $spacer;
+    }
+
+    .offcanvas-cart-title {
+        color: $sw-headline-color;
+        font-size: $dmf-font-size-h2;
+    }
+
+    .offcanvas-cart-header-count {
+        font-weight: $font-weight-normal;
+        font-family: $sw-font-family-base;
+    }
+
+    .offcanvas-cart-items {
+        margin-bottom: $spacer-xl;
+    }
+
+    .cart-item-img-link {
+        .cart-item-img-source {
+            height: auto;
+            max-height: 100px;
+            object-fit: contain;
+        }
+    }
+
+    .cart-item-img {
+        border: none;
+        height: 100%;
+        padding: 0;
+    }
+
+    .cart-item-product {
+        border-bottom: 1px solid $sw-border-color;
+    }
+
+    .cart-item-details-container {
+        padding-left: $spacer-xs;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .cart-item-details {
+        position: relative;
+        margin-bottom: 0;
+
+        .cart-item-label {
+            font-size: $dmf-font-size-h5;
+            font-weight: $font-weight-normal;
+        }
+
+        .cart-item-price {
+            margin-left: auto;
+            text-align: right;
+            font-size: $dmf-font-size-h5;
+        }
+
+        .cart-item-characteristics {
+            color: $sw-link-color;
+            margin: 5px 0 5px 0;
+
+            .cart-item-characteristics-option {
+                font-weight: $font-weight-normal;
+            }
+        }
+    }
+
+    .js-offcanvas-cart-promotion {
+        margin-bottom: $spacer-xl;
+
+        input {
+            border-radius: $dmf-border-radius 0 0 $dmf-border-radius;
+            border-color: $dmf-input-border-color;
+            height: 49px;
+        }
+
+        .btn {
+            width: 93px;
+        }
+    }
+
+    .offcanvas-summary {
+        background-color: $gray-100;
+        border-radius: $dmf-border-radius;
+        padding: $spacer;
+        margin-bottom: $spacer;
+
+        .offcanvas-shipping-info {
+            font-size: $dmf-font-size-h5;
+            margin-bottom: $spacer-sm;
+        }
+
+        .summary-total {
+            font-weight: $font-weight-bold;
+            font-size: $dmf-font-size-h5;
+        }
+
+        .offcanvas-cart-tax {
+            margin-bottom: 0;
+        }
+    }
+
+    .offcanvas-cart-actions {
+        .begin-checkout-btn {
+            max-width: 100%;
+        }
+        .btn-seconday {
+            margin-top: $spacer-lg;
+        }
+    }
+
+    .offcanvas-cart-promotion-form {
+        .input-group {
+            .form-control {
+                border-top-left-radius: $dmf-border-radius;
+                border-bottom-left-radius: $dmf-border-radius;
+            }
+        }
+    }
+
+    .begin-checkout-btn {
+        max-width: unset;
+    }
+}
+
+.offcanvas-cart {
+    .cart-quantity-price {
+        display: block;
+    }
+}
+@include media-breakpoint-up(sm) {
+    .offcanvas-cart {
+        .cart-quantity-price {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: auto;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .cart-offcanvas {
+        .offcanvas-content-container {
+            width: 440px;
+            padding: $spacer-xl $spacer-lg;
+        }
+
+        .cart-item-details-container {
+            padding-left: $spacer;
+            padding-top: $spacer-sm;
+            padding-bottom: $spacer-sm;
+        }
+
+        .cart-item-details {
+            .cart-item-characteristics {
+                margin: 0 0 $spacer-sm 0;
+            }
+        }
+    }
+}

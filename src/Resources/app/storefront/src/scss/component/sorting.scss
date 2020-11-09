@@ -1,0 +1,23 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Sorting
+==============================================
+Custom styling for sorting component.
+
+*/
+
+.sorting {
+    width: unset;
+
+    @if(bool($dmf-listing-show-sorting) == false) {
+        display: none;
+    }
+}

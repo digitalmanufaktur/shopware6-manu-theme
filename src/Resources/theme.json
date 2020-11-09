@@ -1,0 +1,2628 @@
+{
+    "name": "Manu Theme by digital.manufaktur",
+    "author": "digital.manufaktur GmbH",
+    "description": {
+        "en-GB": "Flexible and high-performance Shopware 6 theme",
+        "de-DE": "Flexibles und performantes Shopware 6 Theme"
+    },
+    "previewMedia": "app/storefront/src/assets/ThemePreview.jpg",
+    "views": ["@Storefront", "@DmfManuTheme", "@Plugins"],
+    "style": [
+        "app/storefront/src/scss/variables.scss",
+        "@Storefront",
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/dmf-manu-theme.js"
+    ],
+    "asset": ["app/storefront/src/assets"],
+    "config": {
+        "tabs": {
+            "layout": {
+                "label": {
+                    "en-GB": "Layout",
+                    "de-DE": "Layout"
+                }
+            },
+            "colorsTypo": {
+                "label": {
+                    "en-GB": "Color & Typography",
+                    "de-DE": "Farben & Schriftarten"
+                }
+            },
+            "header": {
+                "label": {
+                    "en-GB": "Header",
+                    "de-DE": "Header"
+                }
+            },
+            "footer": {
+                "label": {
+                    "en-GB": "Footer",
+                    "de-DE": "Footer"
+                }
+            },
+            "newsletter": {
+                "label": {
+                    "en-GB": "Newsletter",
+                    "de-DE": "Newsletter"
+                }
+            },
+            "account": {
+                "label": {
+                    "en-GB": "Benutzerkonto",
+                    "de-DE": "Account"
+                }
+            },
+            "checkout": {
+                "label": {
+                    "en-GB": "Checkout",
+                    "de-DE": "Checkout"
+                }
+            },
+            "productDetail": {
+                "label": {
+                    "en-GB": "Detail page",
+                    "de-DE": "Detailseite"
+                }
+            },
+            "media": {
+                "label": {
+                    "en-GB": "Media",
+                    "de-DE": "Media"
+                }
+            },
+            "buttons": {
+                "label": {
+                    "en-GB": "Buttons & Forms",
+                    "de-DE": "Buttons & Formulare"
+                }
+            },
+            "listing": {
+                "label": {
+                    "en-GB": "Listing",
+                    "de-DE": "Listing"
+                }
+            }
+        },
+        "blocks": {
+            "themeLayout": {
+                "label": {
+                    "en-GB": "Theme Layout",
+                    "de-DE": "Theme-Layout"
+                }
+            },
+            "themeColors": {
+                "label": {
+                    "en-GB": "Theme colours",
+                    "de-DE": "Theme-Farben"
+                }
+            },
+            "typography": {
+                "label": {
+                    "en-GB": "Typography",
+                    "de-DE": "Typografie"
+                }
+            },
+            "eCommerce": {
+                "label": {
+                    "en-GB": "E-Commerce",
+                    "de-DE": "E-Commerce"
+                }
+            },
+            "breadcrumb": {
+                "label": {
+                    "en-GB": "Breadcrumb",
+                    "de-DE": "Brotkrümelnavigation"
+                }
+            },
+            "statusColors": {
+                "label": {
+                    "en-GB": "Status messages",
+                    "de-DE": "Status-Ausgaben"
+                }
+            },
+            "media": {
+                "label": {
+                    "en-GB": "Media",
+                    "de-DE": "Medien"
+                }
+            },
+            "unordered": {
+                "label": {
+                    "en-GB": "Misc",
+                    "de-DE": "Sonstige"
+                }
+            },
+            "button": {
+                "label": {
+                    "en-GB": "Buttons",
+                    "de-DE": "Buttons"
+                }
+            },
+            "forms": {
+                "label": {
+                    "en-GB": "Forms",
+                    "de-DE": "Forms"
+                }
+            },
+            "buyBox": {
+                "label": {
+                    "en-GB": "Buybox",
+                    "de-DE": "Buy Box"
+                }
+            },
+            "cart": {
+                "label": {
+                    "en-GB": "Cart",
+                    "de-DE": "Warenkorb"
+                }
+            }
+        },
+        "sections": {
+            "generalSettings": {
+                "label": {
+                    "en-GB": "General settings",
+                    "de-DE": "Generelle Einstellungen"
+                }
+            },
+            "headerLogo": {
+                "label": {
+                    "en-GB": "Logo",
+                    "de-DE": "Logo"
+                }
+            },
+            "headerCart": {
+                "label": {
+                    "en-GB": "Cart",
+                    "de-DE": "Warenkorb"
+                }
+            },
+            "headerSearch": {
+                "label": {
+                    "en-GB": "Search",
+                    "de-DE": "Suche"
+                }
+            },
+            "headerNav": {
+                "label": {
+                    "en-GB": "Navigation",
+                    "de-DE": "Navigation"
+                }
+            },
+            "headerMegamenu": {
+                "label": {
+                    "en-GB": "Megamenu",
+                    "de-DE": "Megamenü"
+                }
+            },
+            "footerSocial": {
+                "label": {
+                    "en-GB": "Social Media Icons",
+                    "de-DE": "Social Media Icons"
+                }
+            },
+            "thumbnails": {
+                "label": {
+                    "en-GB": "Thumbnails",
+                    "de-DE": "Thumbnails"
+                }
+            },
+            "loginPage": {
+                "label": {
+                    "en-GB": "Login page",
+                    "de-DE": "Login Seite"
+                }
+            },
+            "accountarea": {
+                "label": {
+                    "en-GB": "Accountarea",
+                    "de-DE": "Benutzerkontobereich"
+                }
+            },
+
+            "navigation": {
+                "label": {
+                    "en-GB": "Navigation",
+                    "de-DE": "Navigation"
+                }
+            },
+            "productBox": {
+                "label": {
+                    "en-GB": "Productbox",
+                    "de-DE": "Produktbox"
+                }
+            },
+            "homeIcon": {
+                "label": {
+                    "en-GB": "Home icon or label",
+                    "de-DE": "Home Icon oder Text"
+                }
+            }
+        },
+        "fields": {
+            "dmf-border-radius-enable": {
+                "label": {
+                    "en-GB": "Enable border radius",
+                    "de-DE": "Aktiviere abgerundete Ecken"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "layout",
+                "block": "themeLayout",
+                "order": 100
+            },
+            "dmf-border-radius": {
+                "label": {
+                    "en-GB": "Border radius (in px)",
+                    "de-DE": "Abgerundete Ecken (in px)"
+                },
+                "type": "text",
+                "value": "5px",
+                "editable": true,
+                "tab": "layout",
+                "block": "themeLayout",
+                "order": 200
+            },
+            "dmf-shadows-enable": {
+                "label": {
+                    "en-GB": "Enable shadows",
+                    "de-DE": "Aktiviere Schatten"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "layout",
+                "block": "themeLayout",
+                "order": 300
+            },
+            "dmf-transitions-enable": {
+                "label": {
+                    "en-GB": "Enable transitions",
+                    "de-DE": "Transitions aktivieren"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "layout",
+                "block": "themeLayout",
+                "order": 400
+            },
+            "dmf-spacer": {
+                "label": {
+                    "en-GB": "Global Spacer (in px)",
+                    "de-DE": "Globaler Abstand (in px)"
+                },
+                "type": "text",
+                "value": "16px",
+                "editable": true,
+                "tab": "layout",
+                "block": "themeLayout",
+                "order": 500
+            },
+            "dmf-customer-support": {
+                "label": {
+                    "en-GB": "Customer support hint in search",
+                    "de-DE": "Kundensupport Hinweis in der Suche"
+                },
+                "helpText": {
+                    "en-GB": "Displays a help text (+link) in the search flyout. Texstsnippet text: header.searchHelpText, textsnippet URL: header.searchHelpTextUrl",
+                    "de-DE": "Zeigt im Suchflyout einen Hilfetext (+link) an. Texstsnippet Text: header.searchHelpText, Textsnippet URL: header.searchHelpTextUrl"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "layout",
+                "block": "eCommerce",
+                "order": 100
+            },
+            "dmf-customer-support-color": {
+                "label": {
+                    "en-GB": "Customer support link color",
+                    "de-DE": "Kundensupport Linkfarbe"
+                },
+                "type": "color",
+                "value": "#808080",
+                "editable": true,
+                "tab": "layout",
+                "block": "eCommerce",
+                "order": 200
+            },
+            "sw-color-brand-primary": {
+                "label": {
+                    "en-GB": "Primary colour",
+                    "de-DE": "Primärfarbe"
+                },
+                "type": "color",
+                "value": "#0DB669",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "themeColors",
+                "order": 100
+            },
+            "sw-color-brand-primary-alt": {
+                "label": {
+                    "en-GB": "Primary colour alternative",
+                    "de-DE": "Primärfarbe Alternative"
+                },
+                "type": "color",
+                "value": "#CDDD5D",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "themeColors",
+                "order": 200
+            },
+            "sw-color-brand-secondary": {
+                "label": {
+                    "en-GB": "Secondary colour",
+                    "de-DE": "Sekundärfarbe"
+                },
+                "type": "color",
+                "value": "#F0F5F3",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "themeColors",
+                "order": 300
+            },
+            "sw-border-color": {
+                "label": {
+                    "en-GB": "Border",
+                    "de-DE": "Rahmen"
+                },
+                "type": "color",
+                "value": "#DEE8E3",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "themeColors",
+                "order": 400
+            },
+            "sw-background-color": {
+                "label": {
+                    "en-GB": "Background",
+                    "de-DE": "Hintergrund"
+                },
+                "type": "color",
+                "value": "#FFFFFF",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "themeColors",
+                "order": 500
+            },
+            "sw-base-gray": {
+                "label": {
+                    "en-GB": "Base gray",
+                    "de-DE": "Basis Grauton"
+                },
+                "type": "color",
+                "value": "#F5F5F5",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "themeColors",
+                "order": 600
+            },
+            "sw-color-success": {
+                "label": {
+                    "en-GB": "Success",
+                    "de-DE": "Erfolg"
+                },
+                "type": "color",
+                "value": "#3CC261",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "statusColors",
+                "order": 100
+            },
+            "sw-color-info": {
+                "label": {
+                    "en-GB": "Information",
+                    "de-DE": "Information"
+                },
+                "type": "color",
+                "value": "#26A0CF",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "statusColors",
+                "order": 200
+            },
+            "sw-color-warning": {
+                "label": {
+                    "en-GB": "Notice",
+                    "de-DE": "Hinweis"
+                },
+                "type": "color",
+                "value": "#FFCC5D",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "statusColors",
+                "order": 300
+            },
+            "sw-color-danger": {
+                "label": {
+                    "en-GB": "Error",
+                    "de-DE": "Fehler"
+                },
+                "type": "color",
+                "value": "#D63D2C",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "statusColors",
+                "order": 400
+            },
+            "sw-font-family-base": {
+                "label": {
+                    "en-GB": "Fonttype text",
+                    "de-DE": "Schriftart Text"
+                },
+                "type": "fontFamily",
+                "value": "'SF Pro', Inter, sans-serif",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 100
+            },
+            "sw-text-color": {
+                "label": {
+                    "en-GB": "Text color",
+                    "de-DE": "Textfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 200
+            },
+            "sw-font-family-headline": {
+                "label": {
+                    "en-GB": "Fonttype headline",
+                    "de-DE": "Schriftart Überschrift"
+                },
+                "type": "fontFamily",
+                "value": "'Sora', 'Inter', sans-serif",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 300
+            },
+            "sw-headline-color": {
+                "label": {
+                    "en-GB": "Headline colour",
+                    "de-DE": "Überschriftfarbe"
+                },
+                "type": "color",
+                "value": "#0DB669",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 400
+            },
+            "sw-link-color": {
+                "label": {
+                    "en-GB": "Link colour",
+                    "de-DE": "Linkfarbe"
+                },
+                "type": "color",
+                "value": "#808080",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 400
+            },
+            "dmf-headline-font-weight": {
+                "label": {
+                    "en-GB": "Headline font weight",
+                    "de-DE": "Schriftdicke der Überschriften"
+                },
+                "type": "text",
+                "value": "400",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "600",
+                            "label": {
+                                "en-GB": "Bold",
+                                "de-DE": "Fett"
+                            }
+                        },
+                        {
+                            "value": "400",
+                            "label": {
+                                "en-GB": "Regular",
+                                "de-DE": "Normal"
+                            }
+                        },
+                        {
+                            "value": "300",
+                            "label": {
+                                "en-GB": "Light",
+                                "de-DE": "Dünn"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 500
+            },
+            "dmf-font-size-base": {
+                "label": {
+                    "en-GB": "Base font size",
+                    "de-DE": "Basis Textgröße"
+                },
+                "type": "text",
+                "value": "14px",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 600
+            },
+            "dmf-line-height-base": {
+                "label": {
+                    "en-GB": "Base line height",
+                    "de-DE": "Basis Zeilenabstand"
+                },
+                "type": "text",
+                "value": "1.6",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 700
+            },
+            "dmf-font-size-h1": {
+                "label": {
+                    "en-GB": "H1 font size",
+                    "de-DE": "H1 Textgröße"
+                },
+                "type": "text",
+                "value": "36px",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 800
+            },
+            "dmf-font-size-h2": {
+                "label": {
+                    "en-GB": "H2 font size",
+                    "de-DE": "H2 Textgröße"
+                },
+                "type": "text",
+                "value": "24px",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 900
+            },
+            "dmf-font-size-h3": {
+                "label": {
+                    "en-GB": "H3 font size",
+                    "de-DE": "H3 Textgröße"
+                },
+                "type": "text",
+                "value": "21px",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 1000
+            },
+            "dmf-font-size-h4": {
+                "label": {
+                    "en-GB": "H4 font size",
+                    "de-DE": "H4 Textgröße"
+                },
+                "type": "text",
+                "value": "18px",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 1100
+            },
+            "dmf-font-size-h5": {
+                "label": {
+                    "en-GB": "H5 font size",
+                    "de-DE": "H5 Textgröße"
+                },
+                "type": "text",
+                "value": "16px",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 1200
+            },
+            "dmf-font-size-h6": {
+                "label": {
+                    "en-GB": "H6 font size",
+                    "de-DE": "H6 Textgröße"
+                },
+                "type": "text",
+                "value": "14px",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "typography",
+                "order": 1300
+            },
+            "sw-color-price": {
+                "label": {
+                    "en-GB": "Price",
+                    "de-DE": "Preis"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "eCommerce",
+                "order": 100
+            },
+            "sw-color-buy-button": {
+                "label": {
+                    "en-GB": "Buy button",
+                    "de-DE": "Kaufen-Button"
+                },
+                "type": "color",
+                "value": "#0DB669",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "eCommerce",
+                "order": 200
+            },
+            "sw-color-buy-button-text": {
+                "label": {
+                    "en-GB": "Buy button text",
+                    "de-DE": "Kaufen-Button Text"
+                },
+                "type": "color",
+                "value": "#F0F5F3",
+                "editable": true,
+                "tab": "colorsTypo",
+                "block": "eCommerce",
+                "order": 300
+            },
+            "dmf-breadcrumb-size": {
+                "label": {
+                    "en-GB": "Show only parents category",
+                    "de-DE": "Nur Eltern Kategorie anzeigen"
+                },
+                "helpText": {
+                    "en-GB": "The setting only affects the display in the mobile view.",
+                    "de-DE": "Die Einstellung beeinflusst nur die Darstellung in der mobilen Ansicht."
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "layout",
+                "block": "breadcrumb",
+                "section": "generalSettings",
+                "order": 100
+            },
+            "dmf-breadcrumb-home": {
+                "label": {
+                    "en-GB": "Show Home",
+                    "de-DE": "Home anzeigen"
+                },
+                "helpText": {
+                    "en-GB": "Display a home before the breadcrumb.",
+                    "de-DE": "Vor der Krümelpfadnavigation ein Home (Startseite) anzeigen."
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "layout",
+                "block": "breadcrumb",
+                "section": "homeIcon",
+                "order": 200
+            },
+            "dmf-breadcrumb-home-icon-label": {
+                "label": {
+                    "en-GB": "Show icon or textlink",
+                    "de-DE": "Icon oder Text-Link"
+                },
+                "type": "text",
+                "value": "icon",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "icon",
+                            "label": {
+                                "en-GB": "Icon",
+                                "de-DE": "Icon"
+                            }
+                        },
+                        {
+                            "value": "text",
+                            "label": {
+                                "en-GB": "Text",
+                                "de-DE": "Text"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "layout",
+                "block": "breadcrumb",
+                "section": "homeIcon",
+                "order": 300
+            },
+            "dmf-breadcrumb-background-color": {
+                "label": {
+                    "en-GB": "Background-color",
+                    "de-DE": "Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "#FFFFFF",
+                "editable": true,
+                "tab": "layout",
+                "block": "breadcrumb",
+                "order": 400
+            },
+            "dmf-breadcrumb-text-color": {
+                "label": {
+                    "en-GB": "Text Color",
+                    "de-DE": "Schriftfarbe"
+                },
+                "type": "color",
+                "value": "#929292",
+                "editable": true,
+                "tab": "layout",
+                "block": "breadcrumb",
+                "order": 500
+            },
+            "dmf-breadcrumb-text-transformation": {
+                "label": {
+                    "en-GB": "Large and lower case",
+                    "de-DE": "Groß- und Kleinschreibung"
+                },
+                "type": "text",
+                "value": "initial",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "initial",
+                            "label": {
+                                "en-GB": "Normal",
+                                "de-DE": "Normal"
+                            }
+                        },
+                        {
+                            "value": "uppercase",
+                            "label": {
+                                "en-GB": "Uppercase",
+                                "de-DE": "Großschreibung"
+                            }
+                        },
+                        {
+                            "value": "lowercase",
+                            "label": {
+                                "en-GB": "Lowercase",
+                                "de-DE": "Kleinschreibung"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "layout",
+                "block": "breadcrumb",
+                "order": 600
+            },
+            "sw-logo-desktop": {
+                "label": {
+                    "en-GB": "Desktop",
+                    "de-DE": "Desktop"
+                },
+                "helpText": {
+                    "en-GB": "Displayed for viewports of above 991px",
+                    "de-DE": "Wird über einem Viewport von 991px angezeigt"
+                },
+                "type": "media",
+                "value": "app/storefront/src/assets/logo/logo-manu.svg",
+                "editable": true,
+                "tab": "media",
+                "block": "media",
+                "order": 100
+            },
+            "sw-logo-tablet": {
+                "label": {
+                    "en-GB": "Tablet",
+                    "de-DE": "Tablet"
+                },
+                "helpText": {
+                    "en-GB": "Displayed between a viewport of 767px to 991px",
+                    "de-DE": "Wird zwischen einem viewport von 767px bis 991px angezeigt"
+                },
+                "type": "media",
+                "value": "app/storefront/src/assets/logo/logo-manu.svg",
+                "editable": true,
+                "tab": "media",
+                "block": "media",
+                "order": 200
+            },
+            "sw-logo-mobile": {
+                "label": {
+                    "en-GB": "Mobile",
+                    "de-DE": "Mobil"
+                },
+                "helpText": {
+                    "en-GB": "Displayed up to a viewport of 767px",
+                    "de-DE": "Wird bis zu einem Viewport von 767px angezeigt"
+                },
+                "type": "media",
+                "value": "app/storefront/src/assets/logo/logo-manu.svg",
+                "editable": true,
+                "tab": "media",
+                "block": "media",
+                "order": 300
+            },
+            "sw-logo-share": {
+                "label": {
+                    "en-GB": "App & share icon",
+                    "de-DE": "App- & Share-Icon"
+                },
+                "type": "media",
+                "value": "",
+                "editable": true,
+                "tab": "media",
+                "block": "media",
+                "order": 400
+            },
+            "sw-logo-favicon": {
+                "label": {
+                    "en-GB": "Favicon",
+                    "de-DE": "Favicon"
+                },
+                "type": "media",
+                "value": "app/storefront/src/assets/logo/favicon.png",
+                "editable": true,
+                "tab": "media",
+                "block": "media",
+                "order": 500
+            },
+            "dmf-header-layout": {
+                "label": {
+                    "en-GB": "Layout",
+                    "de-DE": "Variante"
+                },
+                "type": "text",
+                "value": "1",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": {
+                                "en-GB": "Large search / Navigation underneath",
+                                "de-DE": "Große Suche / Navigation Unterhalb"
+                            }
+                        },
+                        {
+                            "value": "2",
+                            "label": {
+                                "en-GB": "Search as icon / Navigation centered",
+                                "de-DE": "Suche als Icon / Navigation Mittig"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "generalSettings",
+                "order": 100
+            },
+            "dmf-nav-mobile": {
+                "label": {
+                    "en-GB": "Menu icon on mobile",
+                    "de-DE": "Menü Icon auf Mobile"
+                },
+                "type": "text",
+                "value": "right",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "right",
+                            "label": {
+                                "en-GB": "Right",
+                                "de-DE": "Rechts"
+                            }
+                        },
+                        {
+                            "value": "left",
+                            "label": {
+                                "en-GB": "Left",
+                                "de-DE": "Links"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "generalSettings",
+                "order": 200
+            },
+            "dmf-header-fullwidth": {
+                "label": {
+                    "en-GB": "Enable fullwidth header",
+                    "de-DE": "Aktiviere Header über die ganze Breite"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "generalSettings",
+                "order": 300
+            },
+            "dmf-header-padding-top": {
+                "label": {
+                    "en-GB": "Inner padding top (in px)",
+                    "de-DE": "Innenabstand Oben (in px)"
+                },
+                "type": "text",
+                "value": "16px",
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "generalSettings",
+                "order": 400
+            },
+            "dmf-header-padding-bottom": {
+                "label": {
+                    "en-GB": "Inner padding bottom (in px)",
+                    "de-DE": "Innenabstand Unten (in px)"
+                },
+                "type": "text",
+                "value": "16px",
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "generalSettings",
+                "order": 500
+            },
+            "dmf-header-logo-max-width-desktop": {
+                "label": {
+                    "en-GB": "Maximum width from logo on desktop (in px)",
+                    "de-DE": "Maximale Breite des Logos auf Desktop (in px)"
+                },
+                "type": "text",
+                "value": "140px",
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "headerLogo",
+                "order": 100
+            },
+            "dmf-header-logo-max-width-mobile": {
+                "label": {
+                    "en-GB": "Maximum width from logo on mobile (in px)",
+                    "de-DE": "Maximale Breite des Logos auf Mobile (in px)"
+                },
+                "type": "text",
+                "value": "90px",
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "headerLogo",
+                "order": 200
+            },
+            "dmf-header-cart-quantity": {
+                "label": {
+                    "en-GB": "Cart product quantity",
+                    "de-DE": "Warenkorb Artikelanzahl"
+                },
+                "helpText": {
+                    "en-GB": "If Badge is selected, a small badge appears instead of the number",
+                    "de-DE": "Wird Badge ausgewählt, erscheint ein kleines Badge anstelle der Anzahl"
+                },
+                "type": "text",
+                "value": "2",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": {
+                                "en-GB": "Standard",
+                                "de-DE": "Standard"
+                            }
+                        },
+                        {
+                            "value": "2",
+                            "label": {
+                                "en-GB": "Badge",
+                                "de-DE": "Badge"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "headerCart",
+                "order": 100
+            },
+            "dmf-header-cart-quantity-background": {
+                "label": {
+                    "en-GB": "Cart badge background",
+                    "de-DE": "Warenkorb Badge Hintergrund"
+                },
+                "type": "color",
+                "value": "#D63D2C",
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "headerCart",
+                "order": 200
+            },
+            "dmf-header-background-color": {
+                "label": {
+                    "en-GB": "Header Background",
+                    "de-DE": "Header Hintergrund"
+                },
+                "type": "color",
+                "value": "#F0F5F3",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "generalSettings",
+                "order": 100
+            },
+            "dmf-header-text-color": {
+                "label": {
+                    "en-GB": "Header text color",
+                    "de-DE": "Header Textfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "generalSettings",
+                "order": 200
+            },
+            "dmf-header-megamenu-background-color": {
+                "label": {
+                    "en-GB": "Megamenu Background",
+                    "de-DE": "Megamenü Hintergrund"
+                },
+                "type": "color",
+                "value": "#FFFFFF",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerMegamenu",
+                "order": 100
+            },
+            "dmf-header-megamenu-color": {
+                "label": {
+                    "en-GB": "Megamenu text color",
+                    "de-DE": "Megamenu Textfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerMegamenu",
+                "order": 200
+            },
+            "dmf-header-megamenu-color-hover": {
+                "label": {
+                    "en-GB": "Megamenu text color (hover)",
+                    "de-DE": "Megamenu Textfarbe (hover)"
+                },
+                "type": "color",
+                "value": "#0DB669",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerMegamenu",
+                "order": 300
+            },
+            "dmf-header-megamenu-text-transform": {
+                "label": {
+                    "en-GB": "Large and lower case",
+                    "de-DE": "Groß- und Kleinschreibung"
+                },
+                "type": "text",
+                "value": "initial",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "initial",
+                            "label": {
+                                "en-GB": "Normal",
+                                "de-DE": "Normal"
+                            }
+                        },
+                        {
+                            "value": "uppercase",
+                            "label": {
+                                "en-GB": "Uppercase",
+                                "de-DE": "Großschreibung"
+                            }
+                        },
+                        {
+                            "value": "lowercase",
+                            "label": {
+                                "en-GB": "Lowercase",
+                                "de-DE": "Kleinschreibung"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "headerMegamenu",
+                "order": 100
+            },
+            "dmf-header-search-background": {
+                "label": {
+                    "en-GB": "Search input background",
+                    "de-DE": "Suche Input Hintergrund"
+                },
+                "type": "color",
+                "value": "#FFF",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerSearch",
+                "order": 100
+            },
+            "dmf-header-search-background-focus": {
+                "label": {
+                    "en-GB": "Search input background (focus)",
+                    "de-DE": "Suche Input Hintergrund (focus)"
+                },
+                "type": "color",
+                "value": "#FFF",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerSearch",
+                "order": 200
+            },
+            "dmf-header-search-border": {
+                "label": {
+                    "en-GB": "Search input border color",
+                    "de-DE": "Suche Input Rahmenfarbe"
+                },
+                "type": "color",
+                "value": "#DEE8E3",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerSearch",
+                "order": 300
+            },
+            "dmf-header-search-border-focus": {
+                "label": {
+                    "en-GB": "Search input border color (focus)",
+                    "de-DE": "Suche Input Rahmenfarbe (focus)"
+                },
+                "type": "color",
+                "value": "#0DB669",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerSearch",
+                "order": 400
+            },
+            "dmf-header-search-color": {
+                "label": {
+                    "en-GB": "Search text color",
+                    "de-DE": "Suche Textfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerSearch",
+                "order": 500
+            },
+            "dmf-header-search-placeholder-color": {
+                "label": {
+                    "en-GB": "Search placeholder color",
+                    "de-DE": "Suche Placeholder Textfarbe"
+                },
+                "type": "color",
+                "value": "rgba(#242424, 0.5)",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerSearch",
+                "order": 600
+            },
+            "dmf-navigation-justify-content": {
+                "label": {
+                    "en-GB": "Justify content",
+                    "de-DE": "Textausrichtung"
+                },
+                "type": "text",
+                "value": "initial",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "initial",
+                            "label": {
+                                "en-GB": "Left",
+                                "de-DE": "Linksbündig"
+                            }
+                        },
+                        {
+                            "value": "center",
+                            "label": {
+                                "en-GB": "Centered",
+                                "de-DE": "Zentriert"
+                            }
+                        },
+                        {
+                            "value": "flex-end",
+                            "label": {
+                                "en-GB": "Right",
+                                "de-DE": "Rechtsbündig"
+                            }
+                        },
+                        {
+                            "value": "space-between",
+                            "label": {
+                                "en-GB": "Space between",
+                                "de-DE": "Blocksatz"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "headerNav",
+                "order": 100
+            },
+            "dmf-navigation-font-weight": {
+                "label": {
+                    "en-GB": "Font weight",
+                    "de-DE": "Schriftstärke"
+                },
+                "type": "text",
+                "value": "400",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "300",
+                            "label": {
+                                "en-GB": "Light",
+                                "de-DE": "Dünn"
+                            }
+                        },
+                        {
+                            "value": "400",
+                            "label": {
+                                "en-GB": "Normal",
+                                "de-DE": "Normal"
+                            }
+                        },
+                        {
+                            "value": "600",
+                            "label": {
+                                "en-GB": "Normal",
+                                "de-DE": "Fett"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "headerNav",
+                "order": 200
+            },
+            "dmf-navigation-text-transform": {
+                "label": {
+                    "en-GB": "Large and lower case",
+                    "de-DE": "Groß- und Kleinschreibung"
+                },
+                "type": "text",
+                "value": "initial",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "initial",
+                            "label": {
+                                "en-GB": "Normal",
+                                "de-DE": "Normal"
+                            }
+                        },
+                        {
+                            "value": "uppercase",
+                            "label": {
+                                "en-GB": "Uppercase",
+                                "de-DE": "Großschreibung"
+                            }
+                        },
+                        {
+                            "value": "lowercase",
+                            "label": {
+                                "en-GB": "Lowercase",
+                                "de-DE": "Kleinschreibung"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "header",
+                "block": "themeLayout",
+                "section": "headerNav",
+                "order": 300
+            },
+            "dmf-navigation-background-color": {
+                "label": {
+                    "en-GB": "Navigation Background",
+                    "de-DE": "Navigation Hintergrund"
+                },
+                "type": "color",
+                "value": "#F0F5F3",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerNav",
+                "order": 100
+            },
+            "dmf-navigation-text-color": {
+                "label": {
+                    "en-GB": "Navigation text color",
+                    "de-DE": "Navigation Textfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerNav",
+                "order": 200
+            },
+            "dmf-navigation-text-color-hover": {
+                "label": {
+                    "en-GB": "Navigation text color (hover)",
+                    "de-DE": "Navigation Textfarbe (hover)"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "header",
+                "block": "themeColors",
+                "section": "headerNav",
+                "order": 300
+            },
+            "dmf-footer-columns": {
+                "label": {
+                    "en-GB": "Columns (Ony Dektop)",
+                    "de-DE": "Spalten (Nur Desktop)"
+                },
+                "type": "text",
+                "value": "3",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "2",
+                            "label": {
+                                "en-GB": "6 Columns",
+                                "de-DE": "6 Spalten"
+                            }
+                        },
+                        {
+                            "value": "3",
+                            "label": {
+                                "en-GB": "4 Columns",
+                                "de-DE": "4 Spalten"
+                            }
+                        },
+                        {
+                            "value": "4",
+                            "label": {
+                                "en-GB": "3 Columns",
+                                "de-DE": "3 Spalten"
+                            }
+                        },
+                        {
+                            "value": "6",
+                            "label": {
+                                "en-GB": "2 Columns",
+                                "de-DE": "2 Spalten"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "footer",
+                "block": "themeLayout",
+                "order": 100
+            },
+            "dmf-footer-border-enable": {
+                "label": {
+                    "en-GB": "Enable border top",
+                    "de-DE": "Aktiviere den Rahmen oberhalb des Footers"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "footer",
+                "block": "themeLayout",
+                "order": 200
+            },
+            "dmf-footer-border-color": {
+                "label": {
+                    "en-GB": "Border color",
+                    "de-DE": "Rahmenfarbe"
+                },
+                "type": "color",
+                "value": "#F0F5F3",
+                "editable": true,
+                "tab": "footer",
+                "block": "themeColors",
+                "order": 300
+            },
+            "dmf-footer-background-color": {
+                "label": {
+                    "en-GB": "Footer Background",
+                    "de-DE": "Footer Hintergrund"
+                },
+                "type": "color",
+                "value": "#F0F5F3",
+                "editable": true,
+                "tab": "footer",
+                "block": "themeColors",
+                "order": 400
+            },
+            "dmf-footer-text-color": {
+                "label": {
+                    "en-GB": "Footer text color",
+                    "de-DE": "Footer Textfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "footer",
+                "block": "themeColors",
+                "order": 500
+            },
+            "dmf-shipping-logos-enable": {
+                "label": {
+                    "en-GB": "Enable Shipping Logos",
+                    "de-DE": "Aktiviere Versand Logos"
+                },
+                "helpText": {
+                    "en-GB": "Logos can be set under shipping in the basic settings.",
+                    "de-DE": "Logos werden über die Versandarten in den Grundeinstellungen gepflegt."
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "footer",
+                "block": "themeLayout",
+                "order": 100
+            },
+            "dmf-payment-logos-enable": {
+                "label": {
+                    "en-GB": "Enable Payment Logos",
+                    "de-DE": "Aktiviere Zahlungsarten Logos"
+                },
+                "helpText": {
+                    "en-GB": "Logos can be set under payment methods in the basic settings.",
+                    "de-DE": "Logos werden über die Zahlungsarten in den Grundeinstellungen gepflegt."
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "footer",
+                "block": "themeLayout",
+                "order": 100
+            },
+            "dmf-social-media-enable": {
+                "label": {
+                    "en-GB": "Show Social Media in Footer",
+                    "de-DE": "Social Media im Footer anzeigen"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "footer",
+                "block": "eCommerce",
+                "section": "generalSettings",
+                "order": 100
+            },
+            "dmf-social-media-facebook": {
+                "label": {
+                    "en-GB": "Show Facebook",
+                    "de-DE": "Facebook anzeigen"
+                },
+                "helpText": {
+                    "en-GB": "Textsnippet: footer.socialMediaFacebook",
+                    "de-DE": "Textbaustein: footer.socialMediaFacebook"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "footer",
+                "block": "eCommerce",
+                "section": "footerSocial",
+                "order": 100
+            },
+            "dmf-social-media-twitter": {
+                "label": {
+                    "en-GB": "Show Twitter",
+                    "de-DE": "Twitter anzeigen"
+                },
+                "helpText": {
+                    "en-GB": "Textsnippet: footer.socialMediaTwitter",
+                    "de-DE": "Textbaustein: footer.socialMediaTwitter"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "footer",
+                "block": "eCommerce",
+                "section": "footerSocial",
+                "order": 200
+            },
+            "dmf-social-media-pinterest": {
+                "label": {
+                    "en-GB": "Show Pinterest",
+                    "de-DE": "Pinterest anzeigen"
+                },
+                "helpText": {
+                    "en-GB": "Textsnippet: footer.socialMediaPinterest",
+                    "de-DE": "Textbaustein: footer.socialMediaPinterest"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "footer",
+                "block": "eCommerce",
+                "section": "footerSocial",
+                "order": 300
+            },
+            "dmf-social-media-instagram": {
+                "label": {
+                    "en-GB": "Show Instagram",
+                    "de-DE": "Instagram anzeigen"
+                },
+                "helpText": {
+                    "en-GB": "Textsnippet: footer.socialMediaInstagram",
+                    "de-DE": "Textbaustein: footer.socialMediaInstagram"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "footer",
+                "block": "eCommerce",
+                "section": "footerSocial",
+                "order": 400
+            },
+            "dmf-social-media-youtube": {
+                "label": {
+                    "en-GB": "Show YouTube",
+                    "de-DE": "YouTube anzeigen"
+                },
+                "helpText": {
+                    "en-GB": "Textsnippet: footer.socialMediaYoutube",
+                    "de-DE": "Textbaustein: footer.socialMediaYoutube"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "footer",
+                "block": "eCommerce",
+                "section": "footerSocial",
+                "order": 500
+            },
+            "dmf-newsletter-enable": {
+                "label": {
+                    "en-GB": "Show Newsletter on top of footer",
+                    "de-DE": "Newsletter oberhalb des Footers anzeigen"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "newsletter",
+                "block": "themeLayout",
+                "order": 100
+            },
+            "dmf-newsletter-columns": {
+                "label": {
+                    "en-GB": "Columns (Ony Dektop)",
+                    "de-DE": "Spalten (Nur Desktop)"
+                },
+                "type": "text",
+                "value": "1",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": {
+                                "en-GB": "Text top, input bottom",
+                                "de-DE": "Text oben, Eingabefeld unten"
+                            }
+                        },
+                        {
+                            "value": "2",
+                            "label": {
+                                "en-GB": "Text left, input right",
+                                "de-DE": "Text link, Eingabefeld rechts"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "newsletter",
+                "block": "themeLayout",
+                "order": 200
+            },
+            "dmf-newsletter-additional-fields": {
+                "label": {
+                    "en-GB": "Show additional fields (Last name, first name)",
+                    "de-DE": "Zusätzliche Felder anzeigen (Vorname, Nachname)"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "newsletter",
+                "block": "themeLayout",
+                "order": 300
+            },
+            "dmf-newsletter-background-color": {
+                "label": {
+                    "en-GB": "Background color",
+                    "de-DE": "Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "#CDDD5D",
+                "editable": true,
+                "tab": "newsletter",
+                "block": "themeColors",
+                "order": 100
+            },
+            "dmf-newsletter-text-color": {
+                "label": {
+                    "en-GB": "Text color",
+                    "de-DE": "Textfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "newsletter",
+                "block": "themeColors",
+                "order": 200
+            },
+            "dmf-newsletter-btn": {
+                "label": {
+                    "en-GB": "Button style",
+                    "de-DE": "Button Style"
+                },
+                "type": "text",
+                "value": "primary",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "primary",
+                            "label": {
+                                "en-GB": "Primary",
+                                "de-DE": "Primär"
+                            }
+                        },
+                        {
+                            "value": "secondary",
+                            "label": {
+                                "en-GB": "Secondary",
+                                "de-DE": "Sekundär"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "newsletter",
+                "block": "themeColors",
+                "order": 300
+            },
+            "dmf-btn-border-radius": {
+                "label": {
+                    "en-GB": "Border radius (in px)",
+                    "de-DE": "Abgerundete Ecken (in px)"
+                },
+                "type": "text",
+                "value": "5px",
+                "editable": true,
+                "tab": "buttons",
+                "block": "button",
+                "order": 100
+            },
+            "dmf-btn-font-family": {
+                "label": {
+                    "en-GB": "Fonttype text",
+                    "de-DE": "Schriftart Text"
+                },
+                "type": "fontFamily",
+                "value": "'SF Pro', Inter, sans-serif",
+                "editable": true,
+                "tab": "buttons",
+                "block": "button",
+                "order": 200
+            },
+            "dmf-btn-font-weight": {
+                "label": {
+                    "en-GB": "Font weight",
+                    "de-DE": "Schriftstärke"
+                },
+                "type": "text",
+                "value": "400",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "300",
+                            "label": {
+                                "en-GB": "Light",
+                                "de-DE": "Dünn"
+                            }
+                        },
+                        {
+                            "value": "400",
+                            "label": {
+                                "en-GB": "Normal",
+                                "de-DE": "Normal"
+                            }
+                        },
+                        {
+                            "value": "600",
+                            "label": {
+                                "en-GB": "Normal",
+                                "de-DE": "Fett"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "buttons",
+                "block": "button",
+                "order": 200
+            },
+            "dmf-btn-text-transform": {
+                "label": {
+                    "en-GB": "Large and lower case",
+                    "de-DE": "Groß- und Kleinschreibung"
+                },
+                "type": "text",
+                "value": "initial",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "initial",
+                            "label": {
+                                "en-GB": "Normal",
+                                "de-DE": "Normal"
+                            }
+                        },
+                        {
+                            "value": "uppercase",
+                            "label": {
+                                "en-GB": "Uppercase",
+                                "de-DE": "Großschreibung"
+                            }
+                        },
+                        {
+                            "value": "lowercase",
+                            "label": {
+                                "en-GB": "Lowercase",
+                                "de-DE": "Kleinschreibung"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "buttons",
+                "block": "button",
+                "order": 200
+            },
+            "dmf-btn-border-width": {
+                "label": {
+                    "en-GB": "Border width (in px)",
+                    "de-DE": "Rahmenstärke (in px)"
+                },
+                "type": "text",
+                "value": "1px",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 200
+            },
+            "dmf-input-bg": {
+                "label": {
+                    "en-GB": "Input background color",
+                    "de-DE": "Input Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "#FFFFFF",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 100
+            },
+            "dmf-input-color": {
+                "label": {
+                    "en-GB": "Input text color",
+                    "de-DE": "Input Textfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 200
+            },
+            "dmf-input-border-color": {
+                "label": {
+                    "en-GB": "Input border color",
+                    "de-DE": "Input Rahmenfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 300
+            },
+            "dmf-input-focus-bg": {
+                "label": {
+                    "en-GB": "Input background color (focus)",
+                    "de-DE": "Input Hintergrundfarbe (focus)"
+                },
+                "type": "color",
+                "value": "#FFFFFF",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 400
+            },
+            "dmf-input-focus-color": {
+                "label": {
+                    "en-GB": "Input text color (focus)",
+                    "de-DE": "Input Textfarbe (focus)"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 500
+            },
+            "dmf-input-focus-border-color": {
+                "label": {
+                    "en-GB": "Input border color (focus)",
+                    "de-DE": "Input Rahmenfarbe (focus)"
+                },
+                "type": "color",
+                "value": "#0DB669",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 600
+            },
+            "dmf-input-placeholder-color": {
+                "label": {
+                    "en-GB": "Input placeholder color",
+                    "de-DE": "Input Platzhalterfarbe"
+                },
+                "type": "color",
+                "value": "#C3C3C3",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 700
+            },
+            "dmf-input-plaintext-color": {
+                "label": {
+                    "en-GB": "Input plaintext color",
+                    "de-DE": "Input Plaintextfarbe"
+                },
+                "type": "color",
+                "value": "#242424",
+                "editable": true,
+                "tab": "buttons",
+                "block": "forms",
+                "order": 800
+            },
+            "dmf-account-variant": {
+                "label": {
+                    "en-GB": "Layout Variant",
+                    "de-DE": "Layout Variante"
+                },
+                "type": "text",
+                "value": "minimal",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "default",
+                            "label": {
+                                "en-GB": "Default (Login & Registration)",
+                                "de-DE": "Default (Login & Registrierung)"
+                            }
+                        },
+                        {
+                            "value": "minimal",
+                            "label": {
+                                "en-GB": "Minimal (Login & Collapsed Registration)",
+                                "de-DE": "Minimal (Login & Eingeklappte Registrierung)"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "account",
+                "block": "themeLayout",
+                "section": "loginPage",
+                "order": 100
+            },
+            "dmf-account-order-btn-color": {
+                "label": {
+                    "en-GB": "Order collapse button background",
+                    "de-DE": "Bestell-Ausklappbutton Hintergrund"
+                },
+                "type": "color",
+                "value": "#FFFFFF",
+                "editable": true,
+                "tab": "account",
+                "block": "themeColors",
+                "section": "accountarea",
+                "order": 100
+            },
+            "dmf-account-overview-enable": {
+                "label": {
+                    "en-GB": "Enable Account Overview (Mobile)",
+                    "de-DE": "Aktiviere Account Übersicht (Mobile)"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "account",
+                "block": "themeLayout",
+                "order": 200
+            },
+            "dmf-account-showpassword-enable": {
+                "label": {
+                    "en-GB": "Enable Show-Password Icon",
+                    "de-DE": "Aktiviere Paswort-Anzeigen Icon"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "account",
+                "block": "themeLayout",
+                "order": 300
+            },
+            "dmf-account-showpassword-variant": {
+                "label": {
+                    "en-GB": "Show-Password Layout",
+                    "de-DE": "Passwort-Anzeigen Layout"
+                },
+                "type": "text",
+                "value": "icon",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "icon",
+                            "label": {
+                                "en-GB": "Eye Icon",
+                                "de-DE": "Auge-Icon"
+                            }
+                        },
+                        {
+                            "value": "button",
+                            "label": {
+                                "en-GB": "Textlink",
+                                "de-DE": "Textlink"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "account",
+                "block": "themeLayout",
+                "section": "loginPage",
+                "order": 400
+            },
+            "dmf-detail-headline-position": {
+                "label": {
+                    "en-GB": "Headline position",
+                    "de-DE": "Position der Überschrift"
+                },
+                "type": "text",
+                "value": "buybox",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "buybox",
+                            "label": {
+                                "en-GB": "In Buybox",
+                                "de-DE": "In der Buybox"
+                            }
+                        },
+                        {
+                            "value": "top",
+                            "label": {
+                                "en-GB": "Above the product picture",
+                                "de-DE": "Oberhalb des Produktbildes"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "productDetail",
+                "block": "themeLayout",
+                "order": 100
+            },
+            "dmf-detail-tabs": {
+                "label": {
+                    "en-GB": "Tabs",
+                    "de-DE": "Tabs"
+                },
+                "type": "text",
+                "value": "tabs",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "tabs",
+                            "label": {
+                                "en-GB": "Tabs (Standard)",
+                                "de-DE": "Tabs (Standard)"
+                            }
+                        },
+                        {
+                            "value": "accordion",
+                            "label": {
+                                "en-GB": "Accordion",
+                                "de-DE": "Akkordion"
+                            }
+                        },
+                        {
+                            "value": "anchor",
+                            "label": {
+                                "en-GB": "Anchor",
+                                "de-DE": "Anker"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "productDetail",
+                "block": "themeLayout",
+                "order": 200
+            },
+            "dmf-detail-show-short-description": {
+                "label": {
+                    "en-GB": "Show short description in Buybox",
+                    "de-DE": "Kurzbeschreibung in der Buybox anzeigen"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "productDetail",
+                "block": "themeLayout",
+                "order": 300
+            },
+            "dmf-detail-show-manufacturer": {
+                "label": {
+                    "en-GB": "Show manufacturer",
+                    "de-DE": "Hersteller anzeigen"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "productDetail",
+                "block": "themeLayout",
+                "order": 400
+            },
+            "dmf-detail-buybox-quantity": {
+                "label": {
+                    "en-GB": "Quantity select",
+                    "de-DE": "Mengenauswahl"
+                },
+                "type": "text",
+                "value": "1",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": {
+                                "en-GB": "Standard (Select)",
+                                "de-DE": "Standard (Select)"
+                            }
+                        },
+                        {
+                            "value": "2",
+                            "label": {
+                                "en-GB": "Custom (+-)",
+                                "de-DE": "Custom (+-)"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "productDetail",
+                "block": "buybox",
+                "order": 100
+            },
+            "dmf-detail-buybox-background": {
+                "label": {
+                    "en-GB": "Background color",
+                    "de-DE": "Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "transparent",
+                "editable": true,
+                "tab": "productDetail",
+                "block": "buybox",
+                "order": 200
+            },
+            "dmf-detail-buybox-border": {
+                "label": {
+                    "en-GB": "Border color",
+                    "de-DE": "Rahmenfarbe"
+                },
+                "type": "color",
+                "value": "transparent",
+                "editable": true,
+                "tab": "productDetail",
+                "block": "buybox",
+                "order": 300
+            },
+            "dmf-detail-buybox-reviews": {
+                "label": {
+                    "en-GB": "Show Reviews in buybox",
+                    "de-DE": "Bewertungen in Buybox anzeigen"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "productDetail",
+                "block": "buybox",
+                "order": 400
+            },
+            "dmf-detail-media-background": {
+                "label": {
+                    "en-GB": "Background color",
+                    "de-DE": "Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "#F0F5F3",
+                "editable": true,
+                "tab": "productDetail",
+                "block": "media",
+                "order": 100
+            },
+            "dmf-detail-media-border": {
+                "label": {
+                    "en-GB": "Border color",
+                    "de-DE": "Rahmenfarbe"
+                },
+                "type": "color",
+                "value": "#F0F5F3",
+                "editable": true,
+                "tab": "productDetail",
+                "block": "media",
+                "order": 200
+            },
+            "dmf-detail-media-thumbnails-enable": {
+                "label": {
+                    "en-GB": "Enable thumbnails",
+                    "de-DE": "Thumbnails aktivieren"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "productDetail",
+                "block": "media",
+                "section": "thumbnails",
+                "order": 100
+            },
+            "dmf-detail-media-thumbnails-position": {
+                "label": {
+                    "en-GB": "Thumbnail position",
+                    "de-DE": "Position der Thumbnails"
+                },
+                "type": "text",
+                "value": "bottom",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": {
+                                "en-GB": "Left",
+                                "de-DE": "Links"
+                            }
+                        },
+                        {
+                            "value": "bottom",
+                            "label": {
+                                "en-GB": "Bottom",
+                                "de-DE": "Unten"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "productDetail",
+                "block": "media",
+                "section": "thumbnails",
+                "order": 200
+            },
+            "dmf-detail-media-navigation-enable": {
+                "label": {
+                    "en-GB": "Enable navigation",
+                    "de-DE": "Navigation aktivieren"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "productDetail",
+                "block": "media",
+                "section": "generalSettings",
+                "order": 100
+            },
+            "dmf-detail-media-paging-enable": {
+                "label": {
+                    "en-GB": "Enable thumbnails",
+                    "de-DE": "Thumbnails aktivieren"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "productDetail",
+                "block": "media",
+                "section": "generalSettings",
+                "order": 200
+            },
+            "dmf-cart-itemborder-enable": {
+                "label": {
+                    "en-GB": "Enable cart item borders",
+                    "de-DE": "Warenkorb-Elemente Rahmen aktivieren"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "checkout",
+                "block": "cart",
+                "section": "generalSettings",
+                "order": 100
+            },
+            "dmf-cart-showproductnumber-enable": {
+                "label": {
+                    "en-GB": "Show productnumber in cart",
+                    "de-DE": "Produktnummer im Warenkorb anzeigen"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "checkout",
+                "block": "cart",
+                "section": "generalSettings",
+                "order": 200
+            },
+            "dmf-cart-showproperties-enable": {
+                "label": {
+                    "en-GB": "Show properties in cart",
+                    "de-DE": "Eigenschaften im Warenkorb anzeigen"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "checkout",
+                "block": "cart",
+                "section": "generalSettings",
+                "order": 300
+            },
+            "dmf-cart-addproductcontainer-enable": {
+                "label": {
+                    "en-GB": "Show add-product-container in cart",
+                    "de-DE": "Produktnummer-hinzufügen-Container im Warenkorb anzeigen"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "checkout",
+                "block": "cart",
+                "section": "generalSettings",
+                "order": 400
+            },
+            "dmf-cart-shippingcostcontainer-enable": {
+                "label": {
+                    "en-GB": "Show shippingcost-container in cart",
+                    "de-DE": "Versandkostenrechner-Container im Warenkorb anzeigen"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "checkout",
+                "block": "cart",
+                "section": "generalSettings",
+                "order": 500
+            },
+            "dmf-cart-checkoutbtn-layout": {
+                "label": {
+                    "en-GB": "Layout checkout button",
+                    "de-DE": "Darstellung Checkout Button"
+                },
+                "type": "text",
+                "value": "topbottom",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "top",
+                            "label": {
+                                "en-GB": "Top",
+                                "de-DE": "Oben"
+                            }
+                        },
+                        {
+                            "value": "bottom",
+                            "label": {
+                                "en-GB": "Bottom",
+                                "de-DE": "Unten"
+                            }
+                        },
+                        {
+                            "value": "topbottom",
+                            "label": {
+                                "en-GB": "Top & bottom",
+                                "de-DE": "Oben & unten"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "checkout",
+                "block": "cart",
+                "section": "generalSettings",
+                "order": 700
+            },
+            "dmf-cart-checkout-aside-container-position": {
+                "label": {
+                    "en-GB": "Right Column Alignment",
+                    "de-DE": "Darstellung Checkout Infos rechts"
+                },
+                "type": "text",
+                "value": "sticky",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "start",
+                            "label": {
+                                "en-GB": "Top",
+                                "de-DE": "Oben"
+                            }
+                        },
+                        {
+                            "value": "end",
+                            "label": {
+                                "en-GB": "Bottom",
+                                "de-DE": "Unten"
+                            }
+                        },
+                        {
+                            "value": "sticky",
+                            "label": {
+                                "en-GB": "Sticky",
+                                "de-DE": "Sticky"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "checkout",
+                "block": "cart",
+                "section": "generalSettings",
+                "order": 700
+            },
+            "dmf-product-box-image-background-color": {
+                "label": {
+                    "en-GB": "Productbox Image Background color",
+                    "de-DE": "Produktbox Bild Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "#f0f5f3",
+                "editable": true,
+                "tab": "listing",
+                "block": "themeColors",
+                "order": 100
+            },
+            "dmf-listing-pagination-position": {
+                "label": {
+                    "en-GB": "Pagination Position",
+                    "de-DE": "Pagination Position"
+                },
+                "type": "text",
+                "value": "bottom",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "top",
+                            "label": {
+                                "en-GB": "Top",
+                                "de-DE": "Oben"
+                            }
+                        },
+                        {
+                            "value": "bottom",
+                            "label": {
+                                "en-GB": "Bottom",
+                                "de-DE": "Unten"
+                            }
+                        },
+                        {
+                            "value": "both",
+                            "label": {
+                                "en-GB": "Top & Bottom",
+                                "de-DE": "Oben & Unten"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 300,
+                "section": "navigation"
+            },
+            "dmf-listing-pagination-last-first-enable": {
+                "label": {
+                    "en-GB": "Enable Pagination First / Last Buttons",
+                    "de-DE": "Pagination Erste / Letzte Button anzeigen"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 100,
+                "section": "navigation"
+            },
+            "dmf-product-box-description-enable": {
+                "label": {
+                    "en-GB": "Enable Productbox Description",
+                    "de-DE": "Produktbox Beschreibung anzeigen"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 100,
+                "section": "productBox"
+            },
+            "dmf-product-box-center-text": {
+                "label": {
+                    "en-GB": "Center Productbox text",
+                    "de-DE": "Produktbox Text zentrieren"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 100,
+                "section": "productBox"
+            },
+            "dmf-product-box-border-enable": {
+                "label": {
+                    "en-GB": "Enable Productbox Border",
+                    "de-DE": "Produktbox Rahmen aktivieren"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 100,
+                "section": "productBox"
+            },
+            "dmf-product-box-background-color": {
+                "label": {
+                    "en-GB": "Productbox Background color",
+                    "de-DE": "Produktbox Hintergrundfarbe"
+                },
+                "type": "color",
+                "value": "transparent",
+                "editable": true,
+                "tab": "listing",
+                "block": "themeColors",
+                "order": 100
+            },
+            "dmf-product-box-border-color": {
+                "label": {
+                    "en-GB": "Productbox Border color",
+                    "de-DE": "Produktbox Rahmenfarbe"
+                },
+                "type": "color",
+                "value": "transparent",
+                "editable": true,
+                "tab": "listing",
+                "block": "themeColors",
+                "order": 100
+            },
+            "dmf-listing-show-sorting": {
+                "label": {
+                    "en-GB": "Show Sort by Dropdown",
+                    "de-DE": "Sortier dropdown anzeigen"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 100,
+                "section": "productBox"
+            },
+            "dmf-listing-product-box-disable-sidepadding": {
+                "label": {
+                    "en-GB": "Hide left/right Productbox padding",
+                    "de-DE": "Produktbox Innenabstand links/rechts ausblenden"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 100,
+                "section": "productBox"
+            },
+            "dmf-listing-product-box-disable-deliverytime": {
+                "label": {
+                    "en-GB": "Hide Productbox delivery time",
+                    "de-DE": "Produktbox lieferzeit ausblenden"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 100,
+                "section": "productBox"
+            },
+            "dmf-listing-product-box-disable-productnumber": {
+                "label": {
+                    "en-GB": "Hide productbox product number",
+                    "de-DE": "Produktbox Produktnummer ausblenden"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 100,
+                "section": "productBox"
+            }
+        }
+    }
+}
+

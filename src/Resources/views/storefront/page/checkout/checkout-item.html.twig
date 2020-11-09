@@ -1,0 +1,131 @@
+{% sw_extends '@Storefront/storefront/page/checkout/checkout-item.html.twig' %}
+
+{% block page_checkout_item_container %}
+    <div class="cart-item cart-item-{{ lineItem.type }}{% if isDiscount %} is-discount{% endif %}{% if isNested %} is-nested{% endif %}{% if isChild %} is-child{% endif %}">
+        <div class="row cart-item-row">
+            <div class="col-12 col-md cart-item-info">
+                {% block page_checkout_item_info %}
+                    {% block page_checkout_item_info_inner %}
+                        <div class="row cart-item-row">
+                            {% block page_checkout_item_info_image %}
+                                <div class="col-3 cart-item-info-img">
+                                    {% block page_checkout_item_info_image_container %}
+                                        {{ parent() }}
+                                    {% endblock %}
+                                </div>
+                            {% endblock %}
+
+                            {% block page_checkout_item_info_details %}
+                                <div class="col-9 cart-item-details">
+                                    {% block page_checkout_item_info_details_inner %}
+                                        <div class="cart-item-details-container">
+                                            {% block page_checkout_item_info_label %}
+                                                {{ parent() }}
+                                            {% endblock %}
+
+                                            {% block page_checkout_item_info_variant_characteristics %}
+                                                {{ parent() }}
+                                            {% endblock %}
+
+                                            {% block page_checkout_item_info_features %}
+                                                <div class="cart-item-info-features">
+                                                    {{ parent() }}
+                                                </div>
+                                            {% endblock %}
+
+                                            {# @deprecated tag:v6.4.0.0 #}
+                                            {% block page_checkout_item_info_variants %}
+                                                {{ parent() }}
+                                            {% endblock %}
+
+                                            {% block page_checkout_item_info_ordernumber %}
+                                                {% if shopware.theme['dmf-cart-showproductnumber-enable'] %}
+                                                    {{ parent() }}
+                                                {% endif %}
+                                            {% endblock %}
+
+                                            {% block page_checkout_item_info_properties_theme %}
+                                                {% if shopware.theme['dmf-cart-showproperties-enable'] and lineItem.payload.properties %}
+                                                    {% sw_include '@Storefront/storefront/component/dmfmanu-attributes/properties.html.twig' ignore missing with {
+                                                        properties: lineItem.payload.properties
+                                                    }  %}
+                                                {% endif %}
+                                            {% endblock %}
+
+                                            {% block page_checkout_item_delivery_date %}
+                                                {{ parent() }}
+                                            {% endblock %}
+
+                                            <div class="cart-item-price">
+                                                {% block page_checkout_item_quantity %}
+                                                    <div class="cart-item-quantity">
+                                                        <div class="cart-item-quantity-row">
+                                                            {% block page_checkout_item_quantity_label %}
+                                                            {% endblock %}
+
+                                                            {% block page_checkout_item_quantity_select %}
+                                                                {% block page_checkout_item_quantity_form %}
+                                                                    {{ parent() }}
+                                                                {% endblock %}
+                                                            {% endblock %}
+                                                        </div>
+                                                    </div>
+                                                {% endblock %}
+
+                                                {% block page_checkout_item_remove %}
+                                                    <div class="cart-item-remove">
+                                                        {% block page_checkout_item_remove_form %}
+                                                            {{ parent() }}
+                                                        {% endblock %}
+                                                    </div>
+                                                {% endblock %}
+
+                                                {% block page_checkout_item_unit_price %}
+                                                    <div class="d-none d-md-flex cart-item-unit-price">
+                                                        {% block page_checkout_item_unit_price_wrapper %}
+                                                            {% if not isDiscount and not isNested %}
+                                                                {% block page_checkout_item_unit_price_label %}
+                                                                {% endblock %}
+
+                                                                {% block page_checkout_item_unit_price_inner %}
+                                                                    {{ parent() }}
+                                                                {% endblock %}
+                                                            {% endif %}
+                                                        {% endblock %}
+                                                    </div>
+                                                {% endblock %}
+
+                                                {% block page_checkout_item_total_price %}
+                                                    <div class="cart-item-total-price">
+                                                        {% block page_checkout_item_total_price_wrapper %}
+                                                            {% block page_checkout_item_total_price_label %}
+                                                            {% endblock %}
+
+                                                            {% block page_checkout_item_total_price_inner %}
+                                                                {{ parent() }}
+                                                            {% endblock %}
+                                                        {% endblock %}
+                                                    </div>
+                                                {% endblock %}
+                                            </div>
+
+                                        </div>
+                                    {% endblock %}
+                                </div>
+                            {% endblock %}
+                        </div>
+                    {% endblock %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block page_checkout_item_remove_submit %}
+    <button type="submit"
+            title="{{ "checkout.removeLineItem"|trans|striptags }}"
+            data-product-id="{{ lineItem.id }}"
+            class="btn btn-link btn-sm cart-item-remove-button">
+        {{ "checkout.removeLabel"|trans|sw_sanitize }}
+    </button>
+{% endblock %}

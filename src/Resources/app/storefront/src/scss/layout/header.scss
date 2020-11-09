@@ -1,0 +1,259 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Header
+==============================================
+Contains custom styles for the header at the top of the page.
+The header contains the shop logo, the search form and various actions like the offcanvas cart button.
+
+*/
+
+$header-padding-top: rem($dmf-header-padding-top);
+$header-padding-bottom: rem($dmf-header-padding-bottom);
+
+.header-main {
+    background: $dmf-header-background-color;
+    position: relative;
+
+    &.is-fullwidth {
+        .container {
+            max-width: 95%;
+        }
+    }
+}
+
+.header-row {
+    padding-top: $header-padding-top / 2;
+    padding-bottom: $header-padding-bottom / 2;
+}
+
+.header-logo-main {
+    max-width: $dmf-header-logo-max-width-mobile;
+}
+
+.header-logo-main-img {
+    width: fit-content;
+}
+
+.header-logo-col {
+    z-index: 100;
+    margin: 0;
+}
+
+.header-cart {
+    .header-cart-badge {
+        background: $dmf-header-cart-quantity-background;
+        display: block;
+        min-width: 6px;
+        width: 6px;
+        height: 6px;
+        padding: 0;
+        margin: 0;
+        top: 13px;
+        right: 7px;
+    }
+    .header-cart-total {
+        color: $dmf-header-text-color;
+        font-weight: $font-weight-normal;
+        font-size: $font-size-sm;
+        margin-left: 0;
+    }
+}
+
+.header-actions-col {
+    z-index: 100;
+
+    > .row {
+        justify-content: flex-end;
+    }
+}
+
+.header-actions-btn {
+    padding-left: $spacer-sm;
+    padding-right: $spacer-sm;
+
+    &, .icon {
+        color: $dmf-header-text-color;
+    }
+
+    &:hover {
+        &, .icon {
+            color: $dmf-header-text-color;
+        }
+    }
+}
+
+.header-search-btn {
+     &, .icon {
+         color: $sw-text-color;
+     }
+ }
+
+.search-toggle-btn {
+    .icon-search {
+        display: none;
+    }
+
+    &.collapsed {
+        .icon-x {
+            display: none;
+        }
+        .icon-search {
+            display: inline-flex;
+        }
+    }
+}
+
+.header-search-advanced {
+    padding: 0 $spacer $spacer-sm;
+}
+
+@include media-breakpoint-down(sm) {
+    .header-actions-col {
+        padding-left: $spacer-sm;
+        padding-right: $spacer-sm;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .header-search-advanced {
+        .header-search {
+            max-width: 100%;
+        }
+    }
+
+    .header-logo-col {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    .header-row {
+        padding-top: $header-padding-top;
+        padding-bottom: $header-padding-bottom;
+    }
+
+    .header-cart-badge {
+        display: block;
+    }
+
+    .header-search {
+        max-width: 560px;
+    }
+
+    .header-search-input {
+        background: $dmf-header-search-background;
+        border-color: $dmf-header-search-border;
+        color: $dmf-header-search-color;
+        text-align: left;
+        height: 48px;
+
+        &:focus {
+            background: $dmf-header-search-background-focus;
+            border-color: $dmf-header-search-border-focus;
+
+            ~ .input-group-append {
+                .header-search-btn {
+                    background: $dmf-header-search-background-focus;
+                    border-color: $dmf-header-search-border-focus;
+                    color: $dmf-header-search-color;
+                }
+            }
+        }
+
+        &::placeholder {
+            color: $dmf-header-search-placeholder-color !important;
+        }
+    }
+
+    .header-search-form {
+        .input-group-append {
+            > .header-search-btn {
+                background: $dmf-header-search-background;
+                border-color: $dmf-header-search-border;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .header-search-advanced {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background: $white;
+        height: 100%;
+        opacity: 0;
+        display: flex;
+        padding: 0;
+
+        &.collapsing {
+            transition: none;
+        }
+
+        &.show {
+            opacity: 1;
+        }
+
+        .header-search-col {
+            .collapse {
+                &:not(.show) {
+                    display: none;
+                }
+            }
+        }
+
+        .header-search {
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .header-search-input {
+            background: $input-bg;
+            border-color: $input-border-color;
+            color: $input-color;
+            text-align: left;
+            height: 48px;
+
+            &:focus {
+                background: $input-focus-bg;
+                border-color: $input-focus-border-color;
+
+                ~ .input-group-append {
+                    .header-search-btn {
+                        background: $input-focus-bg;
+                        border-color: $input-focus-border-color;
+                        color: $input-focus-color;
+                    }
+                }
+            }
+
+            &::placeholder {
+                color: $input-placeholder-color !important;
+            }
+        }
+
+        .header-search-form {
+            .input-group-append {
+                > .header-search-btn {
+                    background: $input-bg;
+                    border-color: $input-border-color;
+                }
+            }
+        }
+
+    }
+
+    .header-logo-main {
+        max-width: $dmf-header-logo-max-width-desktop;
+    }
+}

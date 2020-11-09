@@ -1,0 +1,64 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Icons
+==============================================
+Basic styling for icon component plus helper classes for sizing and colors.
+
+*/
+
+.icon {
+    color: currentColor;
+
+    &.icon-filter-panel-item-toggle {
+        > svg {
+            top: rem(2) !important;
+        }
+    }
+}
+
+.btn {
+    .icon {
+        color: currentColor;
+
+        > svg {
+            top: rem(4);
+        }
+
+    }
+}
+
+.icon-review {
+    color: $sw-color-warning;
+}
+
+.icon-light {
+    color: $gray-200;
+}
+
+.icon-dark {
+    color: $gray-800;
+}
+
+.product-review-point {
+    .icon-light {
+        color: $white;
+    }
+    .icon-review {
+        color: $primary;
+    }
+}
+.is-active {
+    .product-review-point {
+        .icon-light {
+            color: $primary;
+        }
+    }
+}

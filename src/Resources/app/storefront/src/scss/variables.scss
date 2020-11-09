@@ -1,0 +1,28 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Variables & Functions
+==============================================
+Contains the imports to variables and functions.
+
+*/
+
+/*
+ * Functions
+ * ---------- */
+@import 'abstract/functions/strip-unit';
+@import 'abstract/functions/px-to-rem';
+@import 'abstract/functions/boolean';
+
+/*
+ * Variables
+ * ---------- */
+@import "abstract/variables/bootstrap";
+@import "abstract/variables/custom";

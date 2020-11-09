@@ -1,0 +1,38 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Login
+==============================================
+Contains custom styles for the login area.
+
+*/
+
+.is-act-loginpage {
+    .container-main {
+        padding-top: 0;
+    }
+}
+
+.login-form {
+    .form-group {
+        @extend .col-md-12;
+        @extend .col-12;
+        padding-right: $form-grid-gutter-width / 2;
+        padding-left: $form-grid-gutter-width / 2;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .is-act-loginpage {
+        .container-main {
+            padding-top: $spacer-lg;
+        }
+    }
+}

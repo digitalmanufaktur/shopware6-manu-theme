@@ -1,0 +1,65 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_header %}
+    <header class="header-main{% if shopware.theme['dmf-header-layout'] == 2 %} header-main-advanced{% endif %}{% if shopware.theme['dmf-header-fullwidth'] %} is-fullwidth{% endif %}"{% if shopware.theme['dmf-header-layout'] == 2 %} data-flyout-menu="true"{% endif %}>
+        {% block base_header_inner %}
+            {{ parent() }}
+
+            {% if shopware.theme['dmf-header-layout'] == 2 %}
+                {% sw_include '@Storefront/storefront/layout/header/search.html.twig' %}
+            {% endif %}
+        {% endblock %}
+
+        {% block base_header_flyout %}
+            {% if shopware.theme['dmf-header-layout'] == 2 %}
+                {% set navigationChildrenCount = 0 %}
+                {% for treeItem in page.header.navigation.tree %}
+                    {% if treeItem.category.childCount > 0 %}
+                        {% set navigationChildrenCount = navigationChildrenCount + 1 %}
+                    {% endif %}
+                {% endfor %}
+
+                {% if navigationChildrenCount > 0 %}
+                    <div class="navigation-flyouts">
+                        {% for treeItem in page.header.navigation.tree %}
+                            {% if treeItem.children|length > 0 %}
+                                <div class="navigation-flyout"
+                                     data-flyout-menu-id="{{ treeItem.category.id }}">
+                                    <div class="container">
+                                        {% sw_include '@Storefront/storefront/layout/navigation/flyout.html.twig' with {navigationTree: treeItem, level: level+1} only %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endblock %}
+    </header>
+{% endblock %}
+
+{% block base_navigation %}
+    {% if shopware.theme['dmf-header-layout'] == 1 %}
+        <div class="nav-main{% if shopware.theme['dmf-header-fullwidth'] %} is-fullwidth{% endif %}">
+            {% block base_navigation_inner %}
+                {% sw_include '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
+            {% endblock %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block base_footer %}
+    {% block base_newsletter %}
+        {% if shopware.theme['dmf-newsletter-enable'] %}
+            <div class="main-newsletter">
+                {% block base_newsletter_inner %}
+                    <div class="container">
+                        {% sw_include '@Storefront/storefront/layout/newsletter/newsletter.html.twig' %}
+                    </div>
+                {% endblock %}
+            </div>
+        {% endif %}
+    {% endblock %}
+
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,123 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Account
+==============================================
+Contains custom styles for the user account area.
+
+*/
+
+.is-act-index {
+    .account-back-container {
+        display: none;
+    }
+}
+
+.is-ctl-accountprofile,
+.is-ctl-accountorder,
+.is-ctl-address,
+.is-ctl-accountpayment {
+    .container-main {
+        padding-top: 0;
+    }
+}
+
+.account {
+    position: relative;
+
+    .logout-container {
+        position: absolute;
+        right: 20px;
+        z-index: 99;
+
+        .logout-btn {
+            float: right;
+            margin-top: $spacer;
+        }
+    }
+
+    .js-validation-message {
+        font-size: $font-size-base;
+        opacity: .5;
+    }
+}
+
+.account-right {
+    h1 {
+        font-size: $dmf-font-size-h2;
+    }
+}
+
+.account-content-inner {
+    margin-top: $spacer-xl;
+}
+
+.account-menu-dropdown {
+    left: 80px !important;
+    text-align: center;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-style: solid;
+        border-color: $sw-border-color;
+        border-width: 1px 0 0 1px;
+        width: 15px;
+        height: 15px;
+        top: -9px;
+        right: 89px;
+        background: $sw-background-color;
+        transform: rotate(45deg);
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .account-menu-dropdown {
+        left: 38px !important;
+
+        &:after {
+            right: 47px;
+        }
+
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .is-act-paymentoverview,
+    .is-act-accountaddressoverview,
+    .is-act-profileoverview,
+    .is-act-orderoverview {
+        .left-sidebar {
+            display: none;
+        }
+    }
+
+    .account {
+        .logout-container {
+            width: auto;
+
+            .logout-btn {
+                margin-top: 0 !important;
+                z-index: 99;
+            }
+
+        }
+    }
+
+    .account-back-container {
+        .btn {
+            position: absolute;
+            left: 20px;
+            padding: 5px 25px;
+            z-index: 99;
+        }
+    }
+}

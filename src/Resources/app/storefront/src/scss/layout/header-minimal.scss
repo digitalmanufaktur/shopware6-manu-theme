@@ -1,0 +1,40 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Header minimal
+==================================================
+Contains custom styles for the minimal header which is used on checkout pages.
+
+*/
+
+.header-minimal {
+    background: $dmf-header-background-color;
+    border-bottom: 0;
+    color: $dmf-header-text-color;
+}
+
+.header-minimal-back-to-shop {
+    &-button {
+        color: $sw-color-brand-primary;
+    }
+}
+
+.header-minimal-logo {
+    margin-bottom: 0;
+}
+
+.header-minimal-contact {
+    text-align: center;
+    color: $dmf-header-text-color;
+
+    a {
+        color: $dmf-header-text-color;
+    }
+}

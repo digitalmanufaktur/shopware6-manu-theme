@@ -1,0 +1,65 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Account menu
+==================================================
+Contains custom styles for the account menu which opens via click/touch on the avatar icon in the header section.
+The menu opens on smaller viewports inside an offcanvas and on larger viewports inside a bootstrap dropdown.
+
+*/
+
+.account-menu-login {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.account-menu-register {
+    color: rgba($sw-text-color, 0.5);
+    font-size: $font-size-sm;
+
+    a {
+        display: block;
+        color: $sw-text-color;
+        font-size: $font-size-base;
+    }
+}
+
+.header-account-menu {
+    padding: $spacer-sm 0;
+
+    .account-aside-item {
+        padding: 3px 0;
+        background: transparent;
+
+        &.account-home-link {
+            @extend .btn;
+            @extend .btn-primary;
+            @extend .btn-sm;
+            margin-bottom: $spacer-sm;
+        }
+
+        .aside-menu-item {
+            .subtitle {
+                display: none;
+            }
+        }
+    }
+}
+
+
+.account-menu-offcanvas {
+    .account-aside-item {
+        &.account-home-link {
+            @extend .btn;
+            @extend .btn-primary;
+            margin-bottom: $spacer;
+        }
+    }
+}

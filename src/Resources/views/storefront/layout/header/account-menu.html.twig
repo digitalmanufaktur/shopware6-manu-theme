@@ -1,0 +1,12 @@
+{% sw_extends '@Storefront/storefront/layout/header/account-menu.html.twig' %}
+
+{% block layout_header_actions_account_widget_dropdown_header %}
+{% endblock %}
+
+{% block layout_header_actions_account_widget_dropdown_links %}
+    {% if context.customer %}
+        <div class="account-menu-links">
+            {% sw_include '@Storefront/storefront/page/account/sidebar.html.twig' with {'headerWidget': true} %}
+        </div>
+    {% endif %}
+{% endblock %}

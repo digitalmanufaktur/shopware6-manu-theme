@@ -1,0 +1,32 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Button
+==============================================
+Custom skin styling for bootstrap button component.
+
+*/
+
+.btn {
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
+    text-transform: $btn-text-transform;
+}
+
+.btn-decrement,
+.btn-increment {
+    border-radius: 15px !important;
+    font-size: 21px;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    line-height: 25px;
+    text-align: center;
+}

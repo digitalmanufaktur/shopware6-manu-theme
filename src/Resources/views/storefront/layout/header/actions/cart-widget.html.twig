@@ -1,0 +1,18 @@
+{% sw_extends '@Storefront/storefront/layout/header/actions/cart-widget.html.twig' %}
+
+{% block layout_header_actions_cart_widget %}
+    <span class="header-cart-icon">
+        {% sw_icon 'bag' style {'size': 'sm'} %}
+    </span>
+
+    {% if page.cart.lineItems|length > 0 %}
+        {% if shopware.theme['dmf-header-cart-quantity'] == 2 %}
+            <span class="badge badge-primary header-cart-badge"></span>
+        {% else %}
+            <span class="header-cart-total">
+                {{ page.cart.lineItems|length }}
+            </span>
+        {% endif %}
+    {% endif %}
+
+{% endblock %}

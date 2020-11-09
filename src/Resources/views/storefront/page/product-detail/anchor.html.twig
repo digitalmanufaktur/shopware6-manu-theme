@@ -1,0 +1,57 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+
+{% block page_product_detail_tabs_inner %}
+    <div class="card card-anchors">
+        {% block page_product_detail_anchors_navigation %}
+            <div class="card-header product-detail-anchor-navigation">
+                {% block page_product_detail_anchors_navigation_container %}
+                    <ul class="nav nav-anchors product-detail-anchor-navigation-list"
+                        id="product-detail-anchor">
+                        {% block page_product_detail_anchors_navigation_description %}
+                            <li class="nav-item">
+                                <span class="nav-link product-detail-anchor-navigation-link active">
+                                    <span>{{ "detail.tabsDescription"|trans|sw_sanitize }}</span>
+                                </span>
+                            </li>
+                        {% endblock %}
+                        {% block page_product_detail_anchors_navigation_review %}
+                            {% if shopware.config.core.listing.showReview %}
+                                <li class="nav-item">
+                                    <a class="nav-link product-detail-anchor-navigation-link"
+                                       href="#review-tab-pane">
+                                        {{ "detail.tabsReview"|trans|sw_sanitize }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endblock %}
+                    </ul>
+                {% endblock %}
+            </div>
+        {% endblock %}
+
+        {% block page_product_detail_anchors_content %}
+            <div class="product-detail-anchors-content card-body">
+                {% block page_product_detail_anchors_content_container %}
+                    <div class="anchor-content">
+                        {% block page_product_detail_anchors_content_description %}
+                            <div class="anchor-pane"
+                                 id="description">
+                                {% sw_include '@Storefront/storefront/page/product-detail/description.html.twig' %}
+                            </div>
+                        {% endblock %}
+
+                        {% block page_product_detail_anchors_content_review %}
+                            {% if shopware.config.core.listing.showReview %}
+                                <span class="product-detail-anchor-title"
+                                      id="review-tab-pane">{{ "detail.tabsReview"|trans|sw_sanitize }}</span>
+                                <div class="anchor-pane">
+                                    {% sw_include '@Storefront/storefront/page/product-detail/review/review.html.twig' with {'reviews': page.reviews} %}
+                                </div>
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

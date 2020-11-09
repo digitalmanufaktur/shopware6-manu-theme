@@ -1,0 +1,72 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Search suggest
+==================================================
+Contains styles for the search suggest popover in the shop header.
+
+*/
+
+.search-suggest-container {
+    top: 52px;
+    border: 1px solid $sw-border-color;
+    box-shadow: none;
+    border-radius: $border-radius;
+
+    &::after {
+        display: none;
+    }
+}
+
+.search-suggest-product-image-container {
+    margin-left: 0;
+}
+
+.search-suggest-product-link {
+    color: $sw-text-color;
+}
+
+.search-suggest-total {
+    padding: $spacer-sm 0;
+}
+
+.search-suggest-total-link {
+    color: $sw-text-color;
+    text-decoration: underline;
+
+    &:hover {
+        color: $sw-text-color;
+        text-decoration: none;
+    }
+}
+
+.search-suggest-total-count,
+.search-suggest-product-price {
+    color: $gray-300;
+}
+
+.search-suggest-not-found {
+    margin-top: $spacer-sm;
+
+    .search-suggest-not-found-link {
+        color: $dmf-customer-support-color;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .search-suggest-container {
+        width: 560px;
+        max-width: 100%;
+    }
+
+    .search-suggest-not-found {
+        margin-top: $spacer;
+    }
+}

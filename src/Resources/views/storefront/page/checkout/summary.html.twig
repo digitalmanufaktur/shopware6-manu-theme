@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/page/checkout/summary.html.twig' %}
+
+{% block page_checkout_summary_tax %}
+    {% block page_checkout_summary_tax_label %}
+        <dt class="col-7 checkout-aside-summary-label tax-value">
+            {{ "checkout.summaryTax"|trans({
+                '%rate%': taxItem.taxRate
+            })|sw_sanitize }}
+        </dt>
+    {% endblock %}
+
+    {% block page_checkout_summary_tax_value %}
+        <dd class="col-5 checkout-aside-summary-value tax-value">
+            {{ taxItem.tax|currency }}
+        </dd>
+    {% endblock %}
+{% endblock %}

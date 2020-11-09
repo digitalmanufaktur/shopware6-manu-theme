@@ -1,0 +1,60 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Pagination
+==============================================
+Custom styling for bootstrap pagination component.
+
+*/
+
+.pagination {
+    .page-item {
+        .page-link {
+            background: transparent;
+            border: none;
+            color: $sw-text-color;
+            padding: 5px;
+            line-height: rem(16);
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            border-radius: 100%;
+
+            &.disabled {
+                opacity: .5;
+                border-radius: 100%;
+            }
+
+        }
+
+        &.active {
+            .page-link {
+                background: transparent;
+                border: none;
+                color: $sw-color-brand-primary;
+            }
+        }
+    }
+
+    .page-next,
+    .page-prev,
+    .page-first,
+    .page-last {
+        padding-left: 5px;
+        padding-right: 5px;
+
+        .page-link {
+            color: $white;
+            background: $sw-color-brand-primary;
+            border: none;
+            border-radius: 100%;
+        }
+    }
+}

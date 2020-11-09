@@ -1,0 +1,76 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Main navigation
+==============================================
+Custom styling for main navigation on larger screens.
+
+*/
+
+.nav-main {
+    background: $dmf-navigation-background-color;
+
+    &.is-fullwidth {
+        .container {
+            max-width: 95%;
+        }
+    }
+}
+
+.main-navigation-menu {
+    font-size: $font-size-base;
+    justify-content: $dmf-navigation-justify-content;
+}
+
+.main-navigation-link {
+    font-weight: $dmf-navigation-font-weight;
+    text-transform: $dmf-navigation-text-transform;
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.header-main-advanced {
+    .main-navigation-menu {
+        justify-content: center;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .main-navigation-link {
+        color: $dmf-navigation-text-color;
+        padding-top: $spacer;
+        padding-bottom: $spacer;
+
+        .main-navigation-link-text {
+            border-bottom-width: 1px;
+            padding-bottom: 0;
+        }
+
+        &.active {
+            color: $dmf-navigation-text-color;
+
+            .main-navigation-link-text {
+                border-color: $dmf-navigation-text-color;
+            }
+        }
+
+        &:hover, &.is-open {
+            color: $dmf-navigation-text-color-hover;
+
+            .main-navigation-link-text {
+                border-color: $dmf-navigation-text-color-hover;
+            }
+
+        }
+    }
+}
+

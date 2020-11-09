@@ -1,0 +1,30 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Checkout
+==============================================
+Contains custom styles for the checkout page.
+
+*/
+
+.checkout {
+    padding-top: $spacer-sm;
+}
+
+@include media-breakpoint-up(md) {
+    .checkout {
+        padding-top: $spacer;
+    }
+
+    .continue-shopping-btn,
+    .begin-checkout-btn {
+        max-width: 320px;
+    }
+}

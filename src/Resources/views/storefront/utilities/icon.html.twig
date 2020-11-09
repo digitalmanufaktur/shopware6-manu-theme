@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/utilities/icon.html.twig' %}
+
+{% block utilities_icon %}
+    {% if pack is not defined %}
+        {% set pack = 'default' %}
+    {% endif %}
+    {% set customIcon = source('@DmfManuTheme/../app/storefront/src/assets/icon/'~ pack ~'/'~ name ~'.svg', ignore_missing = true) %}
+    {% if (customIcon) %}
+        {% set styles = [ size, color, rotation, flip, class ] %}
+        <span
+            class="icon icon-{{ name }}{% for entry in styles %}{% if entry != "" %} icon-{{ entry }}{% endif %}{% endfor %}">
+            {{ customIcon|raw }}
+        </span>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

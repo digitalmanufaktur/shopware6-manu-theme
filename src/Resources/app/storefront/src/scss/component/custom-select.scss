@@ -1,0 +1,41 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Custom Select
+==============================================
+Custom skin styling for bootstrap custom select menu.
+
+*/
+
+.custom-select {
+    &.sorting {
+        cursor: pointer;
+        background-image: url("data:image/svg+xml;utf8,%3Csvg enable-background='new 0 0 19.5 14' width='20' height='20' viewBox='0 0 19.5 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23242424'%3E%3Cpath d='m18.75 0h-9.176c-.414 0-.75.336-.75.75s.336.75.75.75h9.176c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z'/%3E%3Cpath d='m16.75 4h-7.176c-.414 0-.75.336-.75.75s.336.75.75.75h7.176c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z'/%3E%3Cpath d='m14.75 8h-5.176c-.414 0-.75.336-.75.75s.336.75.75.75h5.176c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z'/%3E%3Cpath d='m12.75 12h-3.176c-.414 0-.75.336-.75.75s.336.75.75.75h3.176c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z'/%3E%3Cpath d='m6.22 9.72-1.72 1.72v-10.69c0-.414-.336-.75-.75-.75s-.75.336-.75.75v10.689l-1.72-1.719c-.293-.293-.768-.293-1.061 0s-.293.768 0 1.061l3 3c.147.146.339.219.531.219s.384-.073.53-.22l3-3c.293-.293.293-.768 0-1.061s-.767-.292-1.06.001z'/%3E%3C/g%3E%3C/svg%3E");
+        background-color: $sw-base-gray;
+        border-color: $sw-base-gray;
+        background-position: 10px 10px;
+        padding-top: $input-btn-padding-y;
+        padding-bottom: $input-btn-padding-y;
+        padding-right: $input-btn-padding-x;
+        padding-left: 45px;
+        width: 100%;
+        background-size: 22px;
+
+        &:invalid {
+            color: $input-placeholder-color;
+        }
+
+        @include hover-focus {
+            border-color: $sw-base-gray;
+            color: $input-focus-border-color;
+            box-shadow: none;
+        }
+    }
+}

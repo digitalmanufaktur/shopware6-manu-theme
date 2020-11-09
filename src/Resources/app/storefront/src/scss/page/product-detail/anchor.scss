@@ -1,0 +1,54 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Anchor
+==============================================
+Contains custom styles for the anchor navigation.
+
+*/
+
+.product-detail-anchor-navigation {
+    padding: 0;
+    background: transparent;
+
+    .nav-item {
+        margin-right: $spacer-lg;
+    }
+}
+
+.product-detail-anchor-title {
+    font-size: $h3-font-size;
+}
+
+.product-detail-anchor-navigation-link {
+    font-size: $h3-font-size;
+    border: 0;
+    border-bottom: 2px solid $sw-border-color;
+    border-radius: 0;
+    color: $sw-text-color;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 5px;
+
+    &.active {
+        color: $sw-text-color;
+        border-color: $sw-color-brand-primary;
+    }
+
+    &:focus, &:hover {
+        color: $sw-color-brand-primary;
+        border-color: $sw-color-brand-primary;
+        cursor: pointer;
+    }
+}
+
+.anchor-pane {
+    padding: $spacer-lg 4px;
+}

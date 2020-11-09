@@ -1,0 +1,97 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Aside
+==============================================
+Contains custom styles for the aside component.
+
+*/
+
+.checkout-aside-action {
+    margin-top: 0;
+}
+
+.checkout-aside-item-characteristics,
+.checkout-aside-item-link-quantity {
+    color: $sw-link-color;
+    margin: 0 0 $spacer-sm 0;
+    line-height: $line-height-base;
+
+    .checkout-aside-item-characteristics-option {
+        font-weight: $font-weight-normal;
+    }
+}
+
+.checkout-aside-container {
+    padding-top: $spacer;
+    display: flex;
+    flex-direction: column;
+
+    .checkout-aside-summary {
+        order: 1;
+    }
+
+    .checkout-aside-action,
+    .checkout-aside-products {
+        order: 0;
+    }
+
+    .promotion-text {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    &.is-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+.checkout-aside-products {
+    padding: 0;
+    margin-bottom: $spacer-xl;
+}
+
+.checkout-aside-product-header {
+    font-size: $dmf-font-size-h2;
+    color: $sw-headline-color;
+    margin-bottom: $spacer;
+}
+
+.checkout-aside-item-image {
+    padding-left: 0;
+
+    .cart-item-img {
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.checkout-aside-summary-label,
+.checkout-aside-summary-value {
+    font-size: $dmf-font-size-h5;
+}
+
+.checkout-aside-summary-label {
+    &.tax-value {
+        color: $sw-text-color;
+        opacity: 0.5;
+    }
+}
+
+.checkout-aside-add-code {
+    .form-control {
+        border-top-left-radius: $dmf-border-radius !important;
+        border-bottom-left-radius: $dmf-border-radius !important ;
+    }
+}

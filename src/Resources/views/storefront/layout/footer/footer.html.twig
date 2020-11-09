@@ -1,0 +1,202 @@
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
+
+{% block layout_footer_navigation_hotline %}
+    {% set footerCol = shopware.theme['dmf-footer-columns'] %}
+
+    {% if shopware.theme['dmf-social-media-enable'] %}
+        <div class="col-md-{{ footerCol }} order-md-4 footer-column footer-social-column">
+            {% block layout_footer_navigation_hotline_headline %}
+                <div class="d-inline-block d-md-block pr-3 pr-md-0 footer-column-headline footer-headline">
+                    {{ 'footer.socialMediaHeadline'|trans|sw_sanitize }}
+                </div>
+            {% endblock %}
+
+            {% block layout_footer_navigation_hotline_content %}
+                <div class="d-inline-block d-md-flex footer-column-content footer-social-content">
+                    <div class="footer-column-content-inner">
+                        {% if shopware.theme['dmf-social-media-facebook'] %}
+                            <a href="{{ 'footer.socialMediaFacebook'|trans|sw_sanitize }}"
+                               class="footer-social-item"
+                               target="_blank"
+                               rel="noopener"
+                               title="facebook">
+                                {% sw_icon 'facebook' %}
+                                <span class="d-none d-md-inline-block">{{ 'footer.socialMediaFacebookLabel'|trans|sw_sanitize }}</span>
+                            </a>
+                        {% endif %}
+
+                        {% if shopware.theme['dmf-social-media-twitter'] %}
+                            <a href="{{ 'footer.socialMediaTwitter'|trans|sw_sanitize }}"
+                               class="footer-social-item"
+                               target="_blank"
+                               rel="noopener"
+                               title="facebook">
+                                {% sw_icon 'twitter' %}
+                                <span class="d-none d-md-inline-block">{{ 'footer.socialMediaTwitterLabel'|trans|sw_sanitize }}</span>
+                            </a>
+                        {% endif %}
+
+                        {% if shopware.theme['dmf-social-media-pinterest'] %}
+                            <a href="{{ 'footer.socialMediaPinterest'|trans|sw_sanitize }}"
+                               class="footer-social-item"
+                               target="_blank"
+                               rel="noopener"
+                               title="facebook">
+                                {% sw_icon 'pinterest' %}
+                                <span class="d-none d-md-inline-block">{{ 'footer.socialMediaPinterestLabel'|trans|sw_sanitize }}</span>
+                            </a>
+                        {% endif %}
+
+                        {% if shopware.theme['dmf-social-media-instagram'] %}
+                            <a href="{{ 'footer.socialMediaInstagram'|trans|sw_sanitize }}"
+                               class="footer-social-item"
+                               target="_blank"
+                               rel="noopener"
+                               title="facebook">
+                                {% sw_icon 'instagram' %}
+                                <span class="d-none d-md-inline-block">{{ 'footer.socialMediaInstagramLabel'|trans|sw_sanitize }}</span>
+                            </a>
+                        {% endif %}
+
+                        {% if shopware.theme['dmf-social-media-youtube'] %}
+                            <a href="{{ 'footer.socialMediaYoutube'|trans|sw_sanitize }}"
+                               class="footer-social-item"
+                               target="_blank"
+                               rel="noopener"
+                               title="facebook">
+                                {% sw_icon 'youtube' %}
+                                <span class="d-none d-md-inline-block">{{ 'footer.socialMediaYoutubeLabel'|trans|sw_sanitize }}</span>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block layout_footer_navigation_column %}
+    {% set footerCol = shopware.theme['dmf-footer-columns'] %}
+
+    <div class="col-md-{{ footerCol }} footer-column js-footer-column">
+        {% block layout_footer_navigation_information_headline %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block layout_footer_navigation_information_content %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+{% block layout_footer_payment_shipping_logos %}
+    {% if shopware.theme['dmf-shipping-logos-enable'] or shopware.theme['dmf-payment-logos-enable'] %}
+        <div id="footerColumnsLogos"
+             class="row footer-columns"
+             data-collapse-footer="true">
+            {% if shopware.theme['dmf-shipping-logos-enable'] %}
+                {% block layout_footer_shipping_logos %}
+                    <div class="col-md-3 footer-column js-footer-column footer-shipping-column">
+                        <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+                             id="collapseFooterShippingTitle"
+                             data-target="#collapseFooterShipping"
+                             aria-expanded="true"
+                             aria-controls="collapseFooterShipping">
+                            {{ 'footer.shippingHeadline'|trans|sw_sanitize }}
+                            <div class="footer-column-toggle">
+                                <span class="footer-plus-icon">
+                                    {% sw_icon 'plus' %}
+                                </span>
+                                <span class="footer-minus-icon">
+                                    {% sw_icon 'minus' %}
+                                </span>
+                            </div>
+                        </div>
+                        <div id="collapseFooterShipping"
+                             class="footer-column-content collapse js-footer-column-content footer-shipping"
+                             aria-labelledby="collapseFooterShippingTitle">
+                            <div class="footer-column-content-inner">
+                                {% for shippingMethod in page.salesChannelShippingMethods %}
+                                    {% block layout_footer_shipping_logo %}
+                                        {% if shippingMethod.media %}
+                                            <div class="footer-logo is-shipping">
+                                                {% sw_thumbnails 'footer-shipping-image-thumbnails' with {
+                                                    media: shippingMethod.media,
+                                                    sizes: {
+                                                        'default': '100px'
+                                                    },
+                                                    attributes: {
+                                                        'class': 'img-fluid footer-logo-image',
+                                                        'alt': (shippingMethod.media.translated.alt ?: shippingMethod.translated.name),
+                                                        'title': (shippingMethod.media.translated.title ?: shippingMethod.translated.name)
+                                                    }
+                                                } %}
+                                            </div>
+                                        {% endif %}
+                                    {% endblock %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endif %}
+
+            {% if shopware.theme['dmf-payment-logos-enable'] %}
+                {% block layout_footer_payment_logos %}
+                    <div class="col-md-9 footer-column js-footer-column footer-payment-column">
+                        <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger"
+                             id="collapseFooterPaymentTitle"
+                             data-target="#collapseFooterPayment"
+                             aria-expanded="true"
+                             aria-controls="collapseFooterPayment">
+                            {{ 'footer.paymentHeadline'|trans|sw_sanitize }}
+                            <div class="footer-column-toggle">
+                                <span class="footer-plus-icon">
+                                    {% sw_icon 'plus' %}
+                                </span>
+                                <span class="footer-minus-icon">
+                                    {% sw_icon 'minus' %}
+                                </span>
+                            </div>
+                        </div>
+                        <div id="collapseFooterPayment"
+                             class="footer-column-content collapse js-footer-column-content footer-payment"
+                             aria-labelledby="collapseFooterPaymentTitle">
+                            <div class="footer-column-content-inner">
+                                {% for paymentMethod in page.salesChannelPaymentMethods %}
+                                    {% block layout_footer_payment_logo %}
+                                        {% if paymentMethod.media %}
+                                            <div class="footer-logo is-payment">
+                                                {% sw_thumbnails 'footer-payment-image-thumbnails' with {
+                                                    media: paymentMethod.media,
+                                                    sizes: {
+                                                        'default': '100px'
+                                                    },
+                                                    attributes: {
+                                                        'class': 'img-fluid footer-logo-image',
+                                                        'alt': (paymentMethod.media.translated.alt ?: paymentMethod.translated.name),
+                                                        'title': (paymentMethod.media.translated.title ?: paymentMethod.translated.name)
+                                                    }
+                                                } %}
+                                            </div>
+                                        {% endif %}
+                                    {% endblock %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block layout_footer_service_menu %}
+{% endblock %}
+
+{% block layout_footer_copyright %}
+    <div class="footer-copyright">
+        {% sw_icon 'shopware' style {'size':'xs'} %}
+        {{ "footer.copyrightInfoDmf"|trans|sw_sanitize }}
+    </div>
+{% endblock %}

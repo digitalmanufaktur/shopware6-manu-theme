@@ -1,0 +1,7 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-submit.html.twig' %}
+
+{% block cms_form_submit %}
+    <button type="submit" class="btn btn-{% if btnClass %}{{ btnClass }}{% else %}primary{% endif %}">
+        {{ ( submitText ? submitText : 'general.formSubmit' )|trans }}
+    </button>
+{% endblock %}

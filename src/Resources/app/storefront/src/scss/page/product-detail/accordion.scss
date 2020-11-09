@@ -1,0 +1,97 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Accordion
+==============================================
+Contains custom styles for the accordion navigation.
+
+*/
+
+.card-accordion {
+    border: 0;
+    padding-bottom: $spacer-lg;
+}
+
+.card-accordion-header {
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.card-accordion-body {
+    padding: $spacer-lg 4px;
+
+    .offcanvas-close {
+        display: none;
+    }
+}
+
+.card-accordion-btn {
+    font-size: $h3-font-size;
+    font-weight: $font-weight-normal;
+    color: $sw-text-color;
+    text-transform: initial;
+    padding: 0;
+
+    &:hover {
+        color: $sw-color-brand-primary;
+        text-decoration: none;
+    }
+
+    &:focus, &.focus {
+        color: $sw-text-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $sw-color-brand-primary;
+            text-decoration: none;
+        }
+
+    }
+
+    .card-accordion-btn-text {
+        border-bottom: 2px solid $sw-color-brand-primary;
+    }
+
+    .icon {
+        color: $sw-color-brand-primary;
+    }
+
+    .icon-plus-circle {
+        display: none;
+    }
+
+    &.collapsed {
+
+        .icon {
+            color: $sw-text-color;
+        }
+
+        .icon-minus-circle {
+            display: none;
+        }
+
+        .icon-plus-circle {
+            display: inline-flex;
+        }
+
+        .card-accordion-btn-text {
+            border-bottom: 2px solid $sw-border-color;
+        }
+
+        &:hover {
+            .card-accordion-btn-text {
+                border-bottom: 2px solid $sw-color-brand-primary;
+            }
+        }
+    }
+
+}

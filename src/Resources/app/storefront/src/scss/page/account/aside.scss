@@ -1,0 +1,121 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Aside
+==============================================
+Contains custom styles for the aside component.
+
+*/
+
+
+.account-aside {
+    .account-aside-header {
+        color: $sw-headline-color;
+        font-size: $dmf-font-size-h1;
+        font-weight: $headings-font-weight;
+        padding-left: 0;
+    }
+    .account-aside-item {
+        .aside-menu-item {
+            background-color: $gray-100;
+            padding: $spacer $spacer-xl $spacer $spacer;
+            margin-bottom: $spacer;
+            position: relative;
+            border-radius: $dmf-border-radius;
+
+            .title {
+                font-size: $dmf-font-size-h5;
+                font-family: $sw-font-family-headline;
+                color: $sw-text-color;
+                padding: 0;
+                background-color: transparent;
+            }
+
+            .subtitle {
+                color: $sw-text-color;
+                opacity: .5;
+                font-size: $dmf-font-size-h6;
+                margin-top: $spacer-sm;
+                display: block;
+            }
+
+            .arrow {
+                border: solid $sw-text-color;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 3px;
+                opacity: .5;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+
+
+                &.right {
+                    -ms-transform: rotate(-45deg) translateY(-50%);
+                    transform: rotate(-45deg) translateY(-50%);
+                    -webkit-transform: rotate(-45deg) translateY(-50%);
+                }
+
+                &.left {
+                    transform: rotate(135deg);
+                    -webkit-transform: rotate(135deg);
+                }
+
+                &.up {
+                    transform: rotate(-135deg);
+                    -webkit-transform: rotate(-135deg);
+                }
+
+                &.down {
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+
+        }
+
+        &:hover {
+            .aside-menu-item {
+                background-color: darken($gray-100, 5%);
+            }
+        }
+
+        &:focus {
+            background-color: transparent;
+        }
+
+        &.is-active {
+            .subtitle {
+                font-weight: $font-weight-normal;
+            }
+        }
+    }
+
+    .account-home-subtitle {
+        margin-bottom: $spacer;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .account-aside {
+        .account-aside-header {
+            font-size: $dmf-font-size-h2 !important;
+            margin-top: 0;
+        }
+    }
+
+    .account-aside-item {
+        .aside-menu-item {
+            .subtitle {
+                display: none;
+            }
+        }
+    }
+}

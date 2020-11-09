@@ -1,0 +1,52 @@
+{% sw_extends '@Storefront/storefront/component/checkout/offcanvas-item.html.twig' %}
+
+{% block component_offcanvas_product_label %}
+    <div class="cart-item-details">
+        {% if type == 'product' %}
+            <a href="{{ seoUrl('frontend.detail.page', {'productId': referencedId}) }}"
+               class="cart-item-label"
+               title="{{ label }}">
+                {{ label|u.truncate(60) }}
+            </a>
+        {% else %}
+            <div class="cart-item-label">
+                {{ label|u.truncate(60) }}
+            </div>
+        {% endif  %}
+    </div>
+{% endblock %}
+
+{% block component_offcanvas_product_quantity %}
+    {{ parent() }}
+
+    <div class="cart-item-remove">
+        {% block component_offcanvas_product_remove_form %}
+            {% if lineItem.removable %}
+                <form action="{{ path('frontend.checkout.line-item.delete', {'id': id}) }}"
+                      class="cart-item-remove js-offcanvas-cart-remove-product"
+                      method="post">
+
+                    {{ sw_csrf('frontend.checkout.line-item.delete') }}
+
+                    <input type="hidden"
+                           name="redirectTo"
+                           value="frontend.cart.offcanvas"/>
+
+                    <button type="submit"
+                            title="{{ "checkout.removeLineItem"|trans|striptags }}"
+                            data-product-id="{{ lineItem.id }}"
+                            class="btn btn-link btn-sm cart-item-remove-button">
+                        {{ "checkout.removeLabel"|trans|striptags }}
+                    </button>
+                </form>
+            {% endif %}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+{% block component_offcanvas_product_quantity_price %}
+    {{ parent() }}
+{% endblock %}
+
+{% block component_offcanvas_product_remove %}
+{% endblock %}

@@ -1,0 +1,38 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Top bar
+==================================================
+Contains styles for the top bar located at the top of the page.
+The top bar contains the language switcher, the currency switcher and the service menu.
+
+*/
+
+.top-bar-nav {
+    min-height: auto;
+}
+
+.dropdown.show .top-bar-nav-btn {
+    &, .icon {
+        color: $dmf-header-text-color;
+    }
+}
+
+.top-bar-nav-btn {
+    &.btn {
+        color: $dmf-header-text-color;
+
+        &:hover {
+            &, .icon {
+                color: $dmf-header-text-color;
+            }
+        }
+    }
+}

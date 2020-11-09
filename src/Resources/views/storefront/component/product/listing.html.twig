@@ -1,0 +1,81 @@
+{% sw_extends '@Storefront/storefront/component/product/listing.html.twig' %}
+
+{% block element_product_listing_wrapper_content %}
+    <div class="cms-element-product-listing">
+        {% if searchResult.total > 0 %}
+            {% block element_product_listing_pagination_nav_actions %}
+                {% set justify = "between" %}
+                {% if shopware.theme["dmf-listing-show-sorting"] == false %}
+                    {% set justify = "center" %}
+                {% endif %}
+                <div class="cms-element-product-listing-actions row justify-content-{{justify}}">
+                    <div class="col-md-auto">
+                        {% if shopware.theme["dmf-listing-pagination-position"] == "top" or shopware.theme["dmf-listing-pagination-position"] == "both" %}
+                            {% block element_product_listing_pagination_nav_top %}
+                                {% sw_include '@Storefront/storefront/component/pagination.html.twig' with {
+                                    entities: searchResult,
+                                    criteria: searchResult.criteria
+                                } %}
+                            {% endblock %}
+                        {% endif %}
+                    </div>
+
+                    {% block element_product_listing_sorting %}
+                        <div class="col-md-auto">
+                            {{parent()}}
+                        </div>
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        {% endif %}
+
+        {% block element_product_listing_row %}
+            <div class="row cms-listing-row js-listing-wrapper">
+                {% if searchResult.total > 0 %}
+                    {% block element_product_listing_col %}
+                        {% for product in searchResult %}
+                            {% if cmsPage.extensions.category.customFields.listing_layout_mode == "list" %}
+                                <div class="cms-listing-col col-12">
+                                    {% sw_include '@Storefront/storefront/component/product/card/box-single-column.html.twig' with {
+                                        'displayMode': displayMode
+                                    } %}
+                                </div>
+                            {% else %}
+                                <div class="cms-listing-col {{ listingColumns }}">
+                                    {% block element_product_listing_box %}
+                                        {% sw_include '@Storefront/storefront/component/product/card/box.html.twig' with {
+                                            'layout': boxLayout,
+                                            'displayMode': displayMode
+                                        } %}
+                                    {% endblock %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endblock %}
+                {% else %}
+                    {% block element_product_listing_col_empty %}
+                        <div class="cms-listing-col col-12">
+                            {% block element_product_listing_col_empty_alert %}
+                                {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
+                                    type: 'info',
+                                    content: 'listing.emptyResultMessage'|trans|sw_sanitize
+                                } %}
+                            {% endblock %}
+                        </div>
+                    {% endblock %}
+                {% endif %}
+            </div>
+        {% endblock %}
+
+        {% if shopware.theme["dmf-listing-pagination-position"] == "bottom" or shopware.theme["dmf-listing-pagination-position"] == "both" %}
+            {% block element_product_listing_pagination_nav_bottom %}
+                <div class="d-flex justify-content-center">
+                    {% sw_include '@Storefront/storefront/component/pagination.html.twig' with {
+                        entities: searchResult,
+                        criteria: searchResult.criteria
+                    } %}
+                </div>
+            {% endblock %}
+        {% endif %}
+    </div>
+{% endblock %}

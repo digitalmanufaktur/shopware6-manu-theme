@@ -1,0 +1,27 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+CMS blocks
+==============================================
+General styling for cms blocks and
+specific styling for elements dependent on their parent block
+
+*/
+
+.cms-block-dmf-listing-navigation-wrapper,
+.cms-section-default {
+    overflow: visible;
+}
+
+@include media-breakpoint-down(md) {
+    .cms-block-category-navigation {
+        display: none;
+    }
+}

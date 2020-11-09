@@ -1,0 +1,65 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-form/form-types/newsletter-form.html.twig' %}
+
+{% block cms_form_newsletter_select_action %}
+    <input type="hidden" name="option" value="subscribe"/>
+    <input type="submit" class="submit--hidden d-none">
+
+    {% if shopware.theme['dmf-newsletter-additional-fields'] %}
+        {% block cms_form_newsletter_input_first_name %}
+            {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                with {
+                fieldName: 'firstName',
+                additionalClass: 'col-md-6',
+                label: 'newsletter.labelFirstName',
+                placeholder: 'newsletter.placeholderFirstName'
+            }
+            %}
+        {% endblock %}
+
+        {% block cms_form_newsletter_input_last_name %}
+            {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                with {
+                fieldName: 'lastName',
+                additionalClass: 'col-md-6',
+                label: 'newsletter.labelLastName',
+                placeholder: 'newsletter.placeholderLastName'
+            }
+            %}
+        {% endblock %}
+    {% endif %}
+{% endblock %}
+
+{% block cms_form_newsletter_input_email %}
+    {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+        with {
+            fieldName: 'email',
+            type: 'email',
+            required: true,
+            additionalClass: 'col-12',
+            label: 'newsletter.labelMail',
+            placeholder: 'newsletter.placeholderMail',
+            fieldName: 'email-footer'
+        }
+    %}
+{% endblock %}
+
+
+{% block cms_form_newsletter_additional_fields %}
+{% endblock %}
+
+{% block cms_form_newsletter_privacy %}
+    <div class="newsletter-privacy{% if shopware.theme['dmf-newsletter-additional-fields'] %} has-additional-fields{% endif %}" data-newsletter-privacy="true">
+        {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-privacy.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block cms_form_newsletter_required_fields_info %}
+{% endblock %}
+
+{% block cms_form_newsletter_submit %}
+    {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-submit.html.twig'
+        with {
+            btnClass: shopware.theme['dmf-newsletter-btn'] ~ ' btn-newsletter'
+        }
+    %}
+{% endblock %}

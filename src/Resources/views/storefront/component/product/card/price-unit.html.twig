@@ -1,0 +1,46 @@
+{% sw_extends '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
+
+{% block component_product_box_price_unit %}
+    {% if purchaseUnit and purchaseUnit != 0 %}
+        <p class="product-price-unit">
+            {# Price is based on the purchase unit #}
+            {% block component_product_box_price_purchase_unit %}
+                {% if purchaseUnit and purchaseUnit != 0 %}
+                    <span class="product-unit-label">
+						{{ "listing.boxUnitLabel"|trans|sw_sanitize }}
+					</span>
+                    <span class="price-unit-content">
+						{{ purchaseUnit }}
+                        {{ product.unit.translation('name') }}
+					</span>
+                {% endif %}
+            {% endblock %}
+
+            {# Unit price is based on a reference unit #}
+            {% block component_product_box_price_reference_unit %}
+                {{ parent() }}
+            {% endblock %}
+        </p>
+    {% endif %}
+{% endblock %}
+
+{% block component_product_box_price %}
+    {% set listPrice = product.priceRange or product.calculatedPrices.count > 0 ? null : product.calculatedPrice.listPrice %}
+
+    <p class="product-price{% if listPrice.percentage > 0 %} with-list-price{% endif %}">
+        {% if product.priceRange %}
+            {{ fromPrice.unitPrice|currency }}
+            -
+            {{ listingPrice.to.unitPrice|currency }}{{ "general.star"|trans|sw_sanitize }}
+        {% elseif product.calculatedPrices|length == 1 %}
+            {{ product.calculatedPrices.first.unitPrice|currency }}{{ "general.star"|trans|sw_sanitize }}
+        {% else %}
+            {% if listPrice.percentage > 0 %}
+                <span class="list-price mr-3">
+					{{ listPrice.price|currency }}{{ "general.star"|trans|sw_sanitize }}
+				</span>
+            {% endif %}
+            {{ product.calculatedPrice.unitPrice|currency }}{{ "general.star"|trans|sw_sanitize }}
+        {% endif %}
+    </p>
+{% endblock %}

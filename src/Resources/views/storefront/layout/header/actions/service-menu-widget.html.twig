@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/layout/header/actions/service-menu-widget.html.twig' %}
+
+{% block layout_header_actions_service_menu_list %}
+    <div class="service-menu dropdown">
+        <button class="btn dropdown-toggle top-bar-nav-btn"
+                type="button"
+                id="serviceMenuDropdown-{{ position }}"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+            <span class="top-bar-nav-text">{{ "header.indexLinkService"|trans|sw_sanitize }}</span>
+        </button>
+        {% block layout_header_actions_service_menu_items %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}

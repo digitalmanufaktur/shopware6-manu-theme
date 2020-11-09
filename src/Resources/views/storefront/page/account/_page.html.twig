@@ -1,0 +1,49 @@
+{% sw_extends '@Storefront/storefront/page/account/_page.html.twig' %}
+
+{% block base_content %}
+    {% block page_account %}
+        <div class="account account-content">
+            <div class="account-back-container">
+                <a href="{{ path('frontend.account.home.page') }}"
+                   title="{{ "account.backLink"|trans|striptags }}"
+                   class="btn btn-secondary d-lg-none d-xl-none">
+                    {{ "account.backLink"|trans|striptags }}
+                </a>
+            </div>
+            <div class="logout-container">
+                {% if context.customer %}
+                    {% if not context.customer.guest %}
+                        {% block page_account_sidebar_logout %}
+                            <a href="{{ path('frontend.account.logout.page') }}"
+                               class="logout-btn account-aside-btn">
+                                {{ "account.logout"|trans|sw_sanitize }}
+                            </a>
+                        {% endblock %}
+                    {% else %}
+                        {% block page_account_sidebar_guest_abort %}
+                            <a href="{{ path('frontend.account.logout.page') }}"
+                               class="logout-btn account-aside-btn">
+                                {{ "account.guestAbort"|trans|sw_sanitize }}
+                            </a>
+                        {% endblock %}
+                    {% endif %}
+                {% endif %}
+            </div>
+            {% block page_account_sidebar %}
+                <div class="col-lg-3 left-sidebar">
+                    {% if context.customer and not context.customer.guest %}
+                        {% sw_include '@Storefront/storefront/page/account/sidebar.html.twig' %}
+                    {% endif %}
+                </div>
+            {% endblock %}
+
+            {% block page_account_main %}
+                <div class="col-lg-9 col-xl-8 ml-auto account-right">
+                    <div class="account-content-inner">
+                        {% block page_account_main_content %}{% endblock %}
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}

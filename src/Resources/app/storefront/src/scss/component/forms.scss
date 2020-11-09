@@ -1,0 +1,25 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Form
+==============================================
+Custom skin styling for bootstrap forms.
+
+*/
+
+.form-label {
+    opacity: .5;
+}
+
+.input-group {
+    input {
+        border-radius: $btn-border-radius;
+    }
+}

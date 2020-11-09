@@ -1,0 +1,25 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Profile
+==============================================
+Contains custom styles for the user profile area.
+
+*/
+
+.profile-content {
+    .card-actions {
+        margin-bottom: $spacer;
+    }
+
+    .profile-form-submit {
+        width: 100%;
+    }
+}

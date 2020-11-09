@@ -1,0 +1,20 @@
+{% sw_extends '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
+
+{% block component_product_box_variant_characteristics %}
+    {% if not product.isGrouped and product.variation %}
+        <div class="product-variant-characteristics">
+            <div class="product-variant-characteristics-text">
+                {% for variation in product.variation %}
+                    {{ variation.group }}:
+                    <span class="product-variant-characteristics-option">
+						{{ variation.option }}
+					</span>
+
+                    {% if product.variation|last != variation %}
+                        {{ " | " }}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

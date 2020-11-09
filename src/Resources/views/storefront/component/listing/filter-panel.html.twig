@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/component/listing/filter-panel.html.twig' %}
+
+{% block component_filter_panel_items_container %}
+    <div class="filter-panel-items-container">
+        {% block component_filter_panel_item_manufacturer %}
+            {{parent()}}
+        {% endblock %}
+
+        {% block component_filter_panel_item_properties %}
+            {{parent()}}
+        {% endblock %}
+
+        {% block component_filter_panel_item_price %}
+            {{parent()}}
+        {% endblock %}
+
+        {% block component_filter_panel_item_rating %}
+            {{parent()}}
+        {% endblock %}
+
+        {% block component_filter_panel_item_shipping_free %}
+            {{parent()}}
+        {% endblock %}
+        <div class="filter-overlay"></div>
+    </div>
+{% endblock %}

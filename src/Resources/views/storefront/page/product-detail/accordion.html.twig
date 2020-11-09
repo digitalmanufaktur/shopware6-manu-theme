@@ -1,0 +1,65 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+
+{% block page_product_detail_tabs_inner %}
+    <div class="detail-accordion" id="accordion">
+        {% block page_product_detail_accordion_description %}
+            <div class="card card-accordion card-accordion-description">
+                {% block page_product_detail_accordion_description_header %}
+                    <div class="card-header card-accordion-header" id="headingDescription">
+                        <button class="btn btn-link card-accordion-btn"
+                                data-toggle="collapse"
+                                data-target="#collapseDescription"
+                                aria-expanded="true"
+                                aria-controls="collapseDescription">
+                            {% sw_icon 'plus-circle' %}
+                            {% sw_icon 'minus-circle' %}
+                            <span class="card-accordion-btn-text">{{ "detail.tabsDescription"|trans|sw_sanitize }}</span>
+                        </button>
+                    </div>
+                {% endblock %}
+
+                <div id="collapseDescription"
+                     class="collapse show"
+                     aria-labelledby="headingDescription"
+                     data-parent="#accordion">
+                    {% block page_product_detail_accordion_description_body %}
+                        <div class="card-body card-accordion-body">
+                            {% sw_include '@Storefront/storefront/page/product-detail/description.html.twig' %}
+                        </div>
+                    {% endblock %}
+                </div>
+            </div>
+        {% endblock %}
+
+        {% block page_product_detail_accordion_reviews %}
+            {% if shopware.config.core.listing.showReview %}
+                <div class="card card-accordion card-accordion-reviews">
+                    {% block page_product_detail_accordion_reviews_header %}
+                        <div class="card-header card-accordion-header" id="headingReviews">
+                            <button class="btn btn-link card-accordion-btn collapsed"
+                                    data-toggle="collapse"
+                                    data-target="#collapseReviews"
+                                    aria-expanded="true"
+                                    aria-controls="collapseReviews">
+                                {% sw_icon 'plus-circle' %}
+                                {% sw_icon 'minus-circle' %}
+                                <span class="card-accordion-btn-text">{{ "detail.tabsReview"|trans|sw_sanitize }}</span>
+                            </button>
+                        </div>
+                    {% endblock %}
+
+                    <div id="collapseReviews"
+                         class="collapse"
+                         aria-labelledby="headingReviews"
+                         data-parent="#accordion">
+                        {% block page_product_detail_accordion_reviews_body %}
+                            <div class="card-body card-accordion-body">
+                                {% sw_include '@Storefront/storefront/page/product-detail/review/review.html.twig' with {'reviews': page.reviews} %}
+                            </div>
+                        {% endblock %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
+
+{% block component_product_box_action_form %}
+    {% block component_product_box_action_buy_redirect_input %}
+        {{parent()}}
+    {% endblock %}
+
+    {% block page_product_detail_buy_product_buy_info %}
+        {{parent()}}
+    {% endblock %}
+
+    {% block page_product_detail_product_buy_meta %}
+        {{parent()}}
+    {% endblock %}
+
+    <button class="btn btn-block btn-buy" title="{{ "listing.boxAddProduct"|trans|striptags }}">
+		<span class="mr-1">
+			{% sw_icon 'shopping-bag' style { 'color': 'bag', 'size': size, 'pack': 'default' } %}
+		</span>
+        {{ "listing.boxAddProduct"|trans|sw_sanitize }}
+    </button>
+{% endblock %}

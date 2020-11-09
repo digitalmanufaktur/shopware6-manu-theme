@@ -1,0 +1,46 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Sidebar category navigation
+==============================================
+Styling for category navigation component.
+
+*/
+
+.category-navigation {
+    &.level-0 > {
+        .category-navigation-entry {
+            border-bottom: none;
+        }
+    }
+
+    .category-navigation-link {
+        font-size: $font-size-base;
+        padding-right: 0;
+        padding-left: 0;
+
+        &:hover {
+            text-decoration: underline;
+            color: unset;
+        }
+    }
+
+    &.level-1 {
+        .category-navigation-link {
+            color: $sw-text-color;
+        }
+    }
+
+    &.level-2 {
+        .category-navigation-link {
+            color: $sw-text-color;
+        }
+    }
+}

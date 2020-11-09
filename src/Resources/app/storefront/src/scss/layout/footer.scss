@@ -1,0 +1,112 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Footer
+==============================================
+Contains custom styles for the footer at the end of the page.
+
+*/
+
+.footer-main {
+    border-top: rem($dmf-footer-border-enable) solid $dmf-footer-border-color;
+    background: $dmf-footer-background-color;
+    color: $dmf-footer-text-color;
+    padding-top: 0;
+
+    a, a:hover {
+        color: $dmf-footer-text-color;
+    }
+}
+
+.footer-columns {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.footer-column {
+    border-bottom-color: rgba($dmf-footer-text-color, .1);
+}
+
+.footer-column-content-inner {
+    .list-unstyled {
+        margin-bottom: 0;
+    }
+}
+
+.footer-column-headline {
+    color: $dmf-footer-text-color;
+    font-weight: $font-weight-normal;
+}
+
+.footer-link {
+    &, &:hover {
+        color: $dmf-footer-text-color;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer-social-item {
+    &, &:hover {
+        color: $dmf-footer-text-color;
+        text-decoration: none;
+    }
+
+    .icon {
+        margin-right: $spacer-sm;
+    }
+}
+
+.footer-bottom {
+    color: $dmf-footer-text-color;
+
+    a {
+        color: $dmf-footer-text-color;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .footer-social-column {
+        padding-top: $spacer-sm;
+        padding-bottom: $spacer-sm;
+
+        .footer-column-headline {
+            padding-top: $spacer;
+            padding-bottom: $spacer;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .footer-main {
+        padding-top: $spacer-lg * 2;
+    }
+
+    .footer-column-headline {
+        padding: $spacer 0;
+    }
+
+    .footer-social-item {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: $spacer;
+
+        .icon > svg {
+            top: 0;
+        }
+    }
+}

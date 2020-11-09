@@ -1,0 +1,43 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Tabs
+==============================================
+Contains custom styles for the tabs.
+
+*/
+
+.product-detail-tabs {
+    margin-bottom: 0;
+}
+
+.product-detail-tab-navigation-list {
+    .product-detail-tab-navigation-link {
+        &, &.active, &:hover {
+            background: transparent;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .product-detail-tab-navigation-list {
+        .nav-item {
+            margin-right: $spacer-lg;
+        }
+
+        .product-detail-tab-navigation-link {
+            font-size: $h3-font-size;
+
+            &, &.active, &:hover {
+                background: transparent;
+            }
+        }
+    }
+}

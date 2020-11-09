@@ -1,0 +1,22 @@
+{% sw_extends '@Storefront/storefront/component/account/login.html.twig' %}
+
+{% block component_account_login_form_description %}
+{% endblock %}
+
+{% block component_account_login_form_password_input %}
+    {{ parent() }}
+
+    {% if shopware.theme['dmf-account-showpassword-enable'] %}
+        {% if shopware.theme['dmf-account-showpassword-variant'] == "icon" %}
+            <span class="toggle-password" data-toggle-password="loginPassword">
+                <span class="eye-open">{% sw_icon 'eye-open' %}</span>
+                <span class="eye-close">{% sw_icon 'eye-crossed' %}</span>
+            </span>
+        {% else %}
+            <span class="toggle-password" data-toggle-password="loginPassword">
+                <span class="eye-open textlink">{{ "account.showpasswordText"|trans|striptags }}</span>
+                <span class="eye-close textlink">{{ "account.showpasswordTextHide"|trans|striptags }}</span>
+            </span>
+        {% endif %}
+    {% endif %}
+{% endblock %}

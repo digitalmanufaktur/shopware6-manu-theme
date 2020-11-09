@@ -1,0 +1,118 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Newsletter
+==============================================
+Contains custom styles for the newsletter section above footer.
+
+*/
+
+$dmf-newsletter-input-height: 44px;
+
+.main-newsletter {
+    background: $dmf-newsletter-background-color;
+    color: $dmf-newsletter-text-color;
+
+    h2, p {
+        color: $dmf-newsletter-text-color;
+    }
+
+    .form-label {
+        display: none;
+    }
+}
+
+.footer-newsletter-col {
+    padding-top: $spacer-lg;
+    padding-bottom: $spacer-lg;
+
+    .form-control {
+        border-radius: $btn-border-radius;
+        height: $dmf-newsletter-input-height;
+    }
+}
+
+.footer-newsletter-heading {
+    text-align: center;
+    margin: 0 auto $spacer;
+}
+
+.newsletter-privacy {
+    color: $dmf-newsletter-text-color;
+
+    a {
+        color: $dmf-newsletter-text-color;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .custom-control-title {
+        display: none;
+    }
+
+    &:not(.show) {
+        display: none;
+    }
+
+    &.has-additional-fields {
+        margin-bottom: $spacer;
+    }
+
+    &:not(.has-additional-fields) {
+        + .btn {
+            position: absolute;
+            right: 18px;
+            height: $dmf-newsletter-input-height;
+            top: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+}
+
+.footer-newsletter-above {
+    text-align: center;
+
+    .btn {
+        &.float-right {
+            float: none !important;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .footer-newsletter-col {
+        padding-top: $spacer-xl + $spacer;
+        padding-bottom: $spacer-xl + $spacer;
+    }
+
+    .footer-newsletter-heading {
+        text-align: center;
+        max-width: 480px;
+        margin: 0 auto $spacer-xl;
+    }
+
+    .footer-newsletter-col {
+        &:not(.footer-newsletter-above) {
+            .footer-newsletter-heading {
+                margin: 0;
+                text-align: left;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

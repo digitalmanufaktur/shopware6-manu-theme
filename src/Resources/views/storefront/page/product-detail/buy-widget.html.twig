@@ -1,0 +1,36 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/buy-widget.html.twig' %}
+
+{% block page_product_detail_buy_inner %}
+    <div class="product-detail-buy">
+        {% block page_product_detail_rich_snippets %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block page_product_detail_not_available %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block page_product_detail_buy_container %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block page_product_detail_ordernumber_container %}
+            {% if column == 2 %}
+                {{ parent() }}
+            {% endif %}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+
+{% block page_product_detail_reviews %}
+    {% if column == 2 and shopware.theme['dmf-detail-buybox-reviews'] == 'true' %}
+        {% sw_include '@Storefront/storefront/page/product-detail/reviews.html.twig' %}
+    {% endif %}
+{% endblock %}
+
+{% block page_product_detail_delivery_informations %}
+    {% if column == 2 %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,91 @@
+{% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
+
+{% block page_checkout_container_checkout_btn %}
+    {% if shopware.theme['dmf-cart-checkoutbtn-layout'] == "topbottom" or shopware.theme['dmf-cart-checkoutbtn-layout'] == "top" %}
+        <div class="col-12 checkout-aside-action d-lg-none mb-3">
+            <a href="{{ path('frontend.checkout.confirm.page') }}"
+               class="btn btn-primary btn-block btn-lg begin-checkout-btn"
+               title="{{ "checkout.proceedLink"|trans|striptags }}">
+                {{ "checkout.proceedLink"|trans|sw_sanitize }}
+            </a>
+        </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block page_checkout_cart_add_product %}
+    {% if shopware.theme['dmf-cart-addproductcontainer-enable'] %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block page_checkout_cart_shipping_costs %}
+    {% if shopware.theme['dmf-cart-shippingcostcontainer-enable'] %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block page_checkout_cart_add_promotion %}
+    <p class="promotion-text">{{ "checkout.promotionText"|trans|sw_sanitize }}</p>
+
+    {{ parent() }}
+{% endblock %}
+
+{% block page_checkout_cart_action_proceed %}
+{% endblock %}
+
+{% block page_checkout_cart_add_promotion_submit %}
+    <div class="input-group-append">
+        <button class="btn btn-primary"
+                type="submit"
+                id="addPromotion">
+            {% sw_icon 'checkmark' %}
+        </button>
+    </div>
+{% endblock %}
+
+{% block page_checkout_cart_add_product_submit %}
+    <div class="input-group-append">
+        <button class="btn btn-primary-alt"
+                type="submit"
+                id="addProductButton">
+            {% sw_icon 'checkmark' %}
+        </button>
+    </div>
+{% endblock %}
+
+{% block page_checkout_aside_checkout_btn %}
+    {% if shopware.theme['dmf-cart-checkoutbtn-layout'] == "topbottom" or shopware.theme['dmf-cart-checkoutbtn-layout'] == "top" %}
+        <div class="checkout-aside-action d-none d-lg-block mb-5">
+            <a href="{{ path('frontend.checkout.confirm.page') }}"
+               class="btn btn-primary btn-block btn-lg ml-auto begin-checkout-btn"
+               title="{{ "checkout.proceedLink"|trans|striptags }}">
+                {{ "checkout.proceedLink"|trans|sw_sanitize }}
+            </a>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block page_checkout_bottom_actions %}
+    <div class="col-12 mt-3 mt-md-5">
+        <div class="row bottom-actions">
+            <div class="col-md-6 continue-shopping">
+                <a href="{{ path('frontend.home.page') }}"
+                   class="btn btn-secondary btn-block btn-lg mr-auto continue-shopping-btn"
+                   title="{{ "checkout.continueShoppingLabel"|trans|sw_sanitize }}">
+                    {{ "checkout.continueShoppingLabel"|trans|sw_sanitize }}
+                </a>
+            </div>
+
+            <div class="col-md-6 mt-3 mt-md-0 checkout-button-container">
+                {% if shopware.theme['dmf-cart-checkoutbtn-layout'] == "topbottom" or shopware.theme['dmf-cart-checkoutbtn-layout'] == "bottom" %}
+                    <a href="{{ path('frontend.checkout.confirm.page') }}"
+                       class="btn btn-primary btn-block btn-lg ml-auto begin-checkout-btn"
+                       title="{{ "checkout.proceedLink"|trans|striptags }}">
+                        {{ "checkout.proceedLink"|trans|sw_sanitize }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

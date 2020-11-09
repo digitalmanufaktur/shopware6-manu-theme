@@ -1,0 +1,51 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Navigation offcanvas
+==============================================
+Custom skin styling for navigation offcanvas which replaces main navigation on smaller screens.
+Based on custom offcanvas component.
+
+*/
+
+.navigation-offcanvas-headline {
+    font-weight: $font-weight-bold;
+    color: $sw-text-color;
+}
+
+.navigation-offcanvas-list-item {
+    border-top: 1px solid $sw-border-color;
+
+    &:last-child {
+        border-bottom: 1px solid $sw-border-color;
+    }
+}
+
+.navigation-offcanvas-link {
+    color: $sw-text-color;
+
+    &.is-home-link {
+        &,
+        .icon {
+            color: $sw-text-color;
+        }
+    }
+
+    &.is-back-link {
+        border-top: 1px solid $sw-border-color;
+        font-weight: $font-weight-bold;
+        color: $sw-text-color;
+    }
+
+    &.is-current-category {
+        color: $sw-text-color;
+        font-weight: $font-weight-bold;
+    }
+}

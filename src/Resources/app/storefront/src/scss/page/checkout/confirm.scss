@@ -1,0 +1,35 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Confirm
+==============================================
+Contains custom styles for the confirm page.
+
+*/
+
+.is-act-confirmpage,
+.is-ctl-accountorder {
+    .checkout {
+        padding-top: $spacer;
+    }
+}
+
+.is-act-confirmpage {
+    .checkout-aside-container  {
+        .checkout-aside-summary {
+            order: 0;
+        }
+        .checkout-aside-action {
+            order: 1;
+            margin-top: $spacer;
+        }
+    }
+}
+

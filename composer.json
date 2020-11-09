@@ -1,0 +1,44 @@
+{
+    "name": "dmf/sw6-manu-theme",
+    "description": "Manu Theme",
+    "version": "1.0.1",
+    "type": "shopware-platform-plugin",
+    "authors": [
+        {
+            "name": "digital.manufaktur GmbH",
+            "email": "hallo@digitalmanufaktur.com",
+            "homepage": "https://www.digitalmanufaktur.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/storefront": "*"
+    },
+    "minimum-stability": "RC",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Dmf\\ManuTheme\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "Dmf\\ManuTheme\\DmfManuTheme",
+        "label": {
+            "de-DE": "dmf Manu-Theme",
+            "en-GB": "dmf Manu Theme"
+        },
+        "description": {
+            "de-DE": "Manu ist ein flexibles und performantes Shopware 6 Theme, welches interdisziplinär entstanden ist und durch zertifizierte Shopware 6 Developer entwickelt wurde.",
+            "en-GB": "Manu is a flexible and performant Shopware 6 theme, developed interdisciplinary by certified Shopware developers with a straight focus on a better conversion rate."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.digitalmanufaktur.com",
+            "en-GB": "https://www.digitalmanufaktur.com"
+        },
+        "supportLink": {
+            "de-DE": "https://www.digitalmanufaktur.com/shopware-6-theme-manu",
+            "en-GB": "https://www.digitalmanufaktur.com/shopware-6-theme-manu"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Footer minimal
+==================================================
+Contains custom styles for the minimal footer which is used on checkout pages.
+
+*/
+
+.footer-minimal {
+    background: $dmf-footer-background-color;
+    color: $dmf-footer-text-color;
+
+    a {
+        color: $dmf-footer-text-color;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

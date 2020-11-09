@@ -1,0 +1,52 @@
+{
+    "footer": {
+        "shippingHeadline": "Versand",
+        "paymentHeadline": "Bezahlmethoden",
+        "socialMediaHeadline": "Folge uns",
+        "socialMediaFacebook": "https://facebook.com/",
+        "socialMediaTwitter": "https://twitter.com/",
+        "socialMediaPinterest": "https://pinterest.com/",
+        "socialMediaInstagram": "https://instagram.com/",
+        "socialMediaYoutube": "https://youtube.com/",
+        "socialMediaFacebookLabel": "Facebook",
+        "socialMediaTwitterLabel": "Twitter",
+        "socialMediaPinterestLabel": "Pinterest",
+        "socialMediaInstagramLabel": "Instagram",
+        "socialMediaYoutubeLabel": "Youtube",
+        "copyrightInfoDmf": "Realisiert mit Shopware von <a href=\"https://dmf.digital/\">digital.manufaktur GmbH</a>"
+    },
+    "listing": {
+        "boxLabelSale": "Reduziert",
+        "deliveryTime": "Lieferzeit",
+        "productNumber": "Art.-Nr."
+    },
+    "newsletter": {
+        "footerHeadline": "Jetzt für unseren Newsletter anmelden",
+        "footerText": "Melden Sie sich für unseren Newsletter an und verpassen Sie keine Neuigkeiten oder Angebote mehr."
+    },
+    "account": {
+        "asideTitle": "Ihr Konto",
+        "asideOrderSubtitle": "Ihre Bestellungen und Retouren verwalten",
+        "asideProfileSubtitle": "Änderen Sie Ihren Namen, E-Mail Adresse oder Passwort.",
+        "asideAddressSubtitle": "Rechnungsadresse und Lieferadressen anpassen",
+        "asidePaymentSubtitle": "Wähle Sie Ihre bevorzugte Bezahlweise aus.",
+        "profileTitle": "Persönliche Daten ändern",
+        "registerText": "Noch kein Account?",
+        "registerExpand": "Registrieren",
+        "backLink": "Zurück",
+        "homeSubtitle": "Dies ist Ihre Konto Übersicht, hier haben Sie die Möglichkeit, Ihre Kontoaktivitäten einzusehen und Ihre Daten anzupassen.",
+        "asideHomeSubtitle": "Alle Bereiche im Überblick",
+        "showpasswordText": "Anzeigen",
+        "showpasswordTextHide": "Ausblenden"
+    },
+    "checkout": {
+        "deleteLabel": "Löschen",
+        "promotionText": "Haben Sie einen Gutschein? Dann können Sie diesen hier eintragen.",
+        "removeLabel": "Entfernen",
+        "continueShoppingLabel": "Weiter Einkaufen"
+    },
+    "header": {
+        "searchHelpText": "Nicht gefunden was Sie suchen?",
+        "searchHelpTextUrl": "/kontakt"
+    }
+}

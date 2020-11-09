@@ -1,0 +1,154 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Order Detail
+==============================================
+Contains custom styles for the user order detail area.
+
+*/
+
+.order-table-header-order-number {
+    margin-bottom: $spacer-sm;
+}
+
+.order-hide-btn {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &, &:focus {
+        background: $dmf-account-order-btn-color;
+    }
+}
+
+.order-table-header-order-number,
+.order-table-header-order-status {
+    font-size: $dmf-font-size-h5;
+    opacity: .5;
+    padding-left: 0 !important;
+    margin-top: 0;
+    font-weight: initial;
+}
+
+.order-table-header-heading {
+    color: $sw-text-color;
+}
+
+.order-table-header-order-table-header {
+    margin-top: $spacer-sm;
+}
+
+.order-table-header-order-table-header,
+.order-table-header-order-table-body {
+    .order-table-label {
+        width: 100%;
+        display: block;
+    }
+}
+
+.order-table-header-context-menu {
+    border: none;
+}
+
+.order-detail-content-header {
+    color: $sw-text-color;
+    opacity: .5;
+    border-bottom: 1px solid $gray-100;
+    font-weight: $font-weight-normal;
+    padding-right: $spacer;
+    margin-bottom: $spacer;
+    padding-bottom: $spacer;
+}
+
+.order-item-detail-summary {
+    text-align: right;
+    font-weight: bold;
+}
+
+.order-item-product-name {
+    color: $sw-text-color;
+}
+
+.order-detail-item-product {
+    margin-bottom: $spacer;
+}
+
+.order-detail-content-row {
+    border-bottom: none;
+    background-color: $gray-100;
+    padding-right: $spacer;
+    align-items: center;
+
+    .order-item-total-value {
+        font-weight: $font-weight-normal;
+    }
+
+}
+
+.order-item-detail-footer {
+    background-color: $gray-100;
+    padding: $spacer-lg;
+}
+@include media-breakpoint-up(sm) {
+    .order-hide-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        width: auto;
+    }
+}
+@include media-breakpoint-down(md) {
+    .order-detail-content-body {
+        margin-top: $spacer;
+    }
+
+    .order-table-header-label {
+        width: 100%;
+    }
+
+    .order-table-header-order-table-header,
+    .order-table-header-order-table-body {
+        margin-left: $spacer;
+        margin-right: $spacer;
+
+        .order-table-label {
+            width: auto;
+            display: initial;
+        }
+    }
+
+    .order-detail-content-row {
+        padding: $spacer;
+    }
+
+    .order-item-label {
+        width: auto;
+        margin-right: $spacer-sm;
+    }
+
+    .order-item-detail-footer {
+        padding-bottom: $spacer-xl;
+    }
+
+    .order-item-detail-summary {
+        margin-top: $spacer-sm;
+    }
+
+    .order-item-detail-labels,
+    .order-item-detail-summary {
+        text-align: left !important;
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+
+}

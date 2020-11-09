@@ -1,0 +1,175 @@
+{% sw_extends '@Storefront/storefront/component/address/address-personal.html.twig' %}
+
+{% block component_address_personal_fields %}
+	{% block component_address_personal_account_type %}
+		{% if shopware.config.core.loginRegistration.showAccountTypeSelection and not hideCustomerTypeSelect %}
+			<div class="form-row">
+				<div class="form-group col-md-12 contact-type">
+					{% block component_address_personal_account_type_label %}
+						{{ parent() }}
+					{% endblock %}
+
+					{% block component_address_personal_account_type_select %}
+						{{ parent() }}
+					{% endblock %}
+
+					{% block component_address_personal_account_type_error %}
+						{{ parent() }}
+					{% endblock %}
+				</div>
+			</div>
+		{% else %}
+			<input type="hidden" name="accountType">
+		{% endif %}
+	{% endblock %}
+
+	{% block component_address_personal_fields_salutation_title %}{% endblock %}
+
+	{% block component_address_personal_fields_salutation_and_name %}
+		<div class="form-row">
+			{% block component_address_personal_fields_salutation %}
+				<div class="form-group col-md-4">
+					{% block component_address_personal_fields_salutation_label %}
+						{{ parent() }}
+					{% endblock %}
+
+					{% block component_address_form_salutation_select %}
+						{{ parent() }}
+					{% endblock %}
+
+					{% block component_address_form_salutation_select_error %}
+						{{ parent() }}
+					{% endblock %}
+				</div>
+			{% endblock %}
+
+			{% block component_address_personal_fields_title %}
+				{% if shopware.config.core.loginRegistration.showTitleField %}
+					<div class="form-group col-md-4">
+						{% block component_address_personal_fields_title_label %}
+							{{ parent() }}
+						{% endblock %}
+
+						{% block component_address_personal_fields_title_input %}
+							{{ parent() }}
+						{% endblock %}
+					</div>
+				{% endif %}
+			{% endblock %}
+
+			{% block component_address_personal_fields_first_name %}
+				<div class="form-group col-md-4">
+					{% block component_address_personal_fields_first_name_label %}
+						{{ parent() }}
+					{% endblock %}
+
+					{% block component_address_personal_fields_first_name_input %}
+						{{ parent() }}
+					{% endblock %}
+
+					{% block component_address_personal_fields_first_name_input_error %}
+						{{ parent() }}
+					{% endblock %}
+				</div>
+			{% endblock %}
+
+			{% block component_address_personal_fields_last_name %}
+				<div class="form-group col-md-4">
+					{% block component_address_personal_fields_last_name_label %}
+						{{ parent() }}
+					{% endblock %}
+
+					{% block component_address_personal_fields_last_name_input %}
+						{{ parent() }}
+					{% endblock %}
+
+					{% block component_address_personal_fields_last_name_input_error %}
+						{{ parent() }}
+					{% endblock %}
+				</div>
+			{% endblock %}
+		</div>
+	{% endblock %}
+
+	{% block component_address_personal_fields_name %}{% endblock %}
+
+	{% block component_address_personal_fields_birthday %}
+		{% if showBirthdayField %}
+			{% block component_address_personal_fields_birthday_label %}
+				<label for="{{ prefix }}personalBirthday">
+					{{ "account.personalBirthdayLabel"|trans|sw_sanitize }}{{ shopware.config.core.loginRegistration.birthdayFieldRequired ? "general.required"|trans|sw_sanitize }}
+				</label>
+			{% endblock %}
+
+			{% block component_address_personal_fields_birthday_selects %}
+				<div class="form-row">
+					{% block component_address_personal_fields_birthday_select_day %}
+						<div class="form-group col-md-4">
+							<select id="{{ prefix }}personalBirthday" name="{% if prefix %}{{ prefix }}[birthdayDay]{% else %}birthdayDay{% endif %}" class="custom-select{% if formViolations.getViolations('/birthdayDay') is not empty %} is-invalid{% endif %}" {{ shopware.config.core.loginRegistration.birthdayFieldRequired ? 'required="required"' }}>
+								{% if not data.get('birthdayDay') %}
+									<option selected="selected" value="">
+										{{ "account.personalBirthdaySelectDay"|trans|sw_sanitize }}
+									</option>
+								{% endif %}
+								{% for day in range(1, 31) %}
+									<option value="{{ day }}" {% if day == data.get('birthdayDay') %} selected="selected" {% endif %}>
+										{{ day }}
+									</option>
+								{% endfor %}
+							</select>
+
+							{% block component_address_personal_fields_birthday_select_day_error %}
+								{{ parent() }}
+							{% endblock %}
+						</div>
+					{% endblock %}
+
+					{% block component_address_personal_fields_birthday_select_month %}
+						<div class="form-group col-md-4">
+							<select name="{% if prefix %}{{ prefix }}[birthdayMonth]{% else %}birthdayMonth{% endif %}" class="custom-select{% if formViolations.getViolations('/birthdayMonth') is not empty %} is-invalid{% endif %}" {{ shopware.config.core.loginRegistration.birthdayFieldRequired ? 'required="required"' }}>
+								{% if not data.get('birthdayMonth') %}
+									<option selected="selected" value="">
+										{{ "account.personalBirthdaySelectMonth"|trans|sw_sanitize }}
+									</option>
+								{% endif %}
+								{% for month in range(1, 12) %}
+									<option value="{{ month }}" {% if month == data.get('birthdayMonth') %} selected="selected" {% endif %}>
+										{{ month }}
+									</option>
+								{% endfor %}
+							</select>
+
+							{% block component_address_personal_fields_birthday_select_month_error %}
+								{{ parent() }}
+							{% endblock %}
+						</div>
+					{% endblock %}
+
+					{% block component_address_personal_fields_birthday_select_year %}
+						<div class="form-group col-md-4">
+							{% set currentYear = "now"|date('Y') %}
+							{% set startYear = currentYear - 120 %}
+
+							<select name="{% if prefix %}{{ prefix }}[birthdayYear]{% else %}birthdayYear{% endif %}" class="custom-select{% if formViolations.getViolations('/birthdayYear') is not empty %} is-invalid{% endif %}" {{ shopware.config.core.loginRegistration.birthdayFieldRequired ? 'required="required"' }}>
+								{% if not data.get('birthdayYear') %}
+									<option selected="selected" value="">
+										{{ "account.personalBirthdaySelectYear"|trans|sw_sanitize }}
+									</option>
+								{% endif %}
+								{% for year in range(currentYear, startYear) %}
+									<option value="{{ year }}" {% if year == data.get('birthdayYear') %} selected="selected" {% endif %}>
+										{{ year }}
+									</option>
+								{% endfor %}
+							</select>
+
+							{% block component_address_personal_fields_birthday_select_year_error %}
+								{{ parent() }}
+							{% endblock %}
+						</div>
+					{% endblock %}
+				</div>
+			{% endblock %}
+		{% endif %}
+	{% endblock %}
+{% endblock %}

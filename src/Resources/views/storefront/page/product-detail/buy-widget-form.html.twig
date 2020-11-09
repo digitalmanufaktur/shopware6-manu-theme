@@ -1,0 +1,43 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/buy-widget-form.html.twig' %}
+
+{% block page_product_detail_buy_quantity_container %}
+    <div class="col-12 col-sm-3 mb-2 mb-sm-0 buy-widget-quantity">
+        {% block page_product_detail_buy_quantity %}
+            {% if shopware.theme['dmf-detail-buybox-quantity'] == 2 %}
+                {% if product.calculatedMaxPurchase > 1 %}
+                    <div class="custom-quantity-input-field">
+                        <input name="lineItems[{{ product.id }}][quantity]"
+                               class="custom-quantity product-detail-quantity-select"
+                               type="number"
+                               data-input-spinner="true"
+                               onKeyDown="return false"
+                               value="{{ product.minPurchase }}"
+                               min="{{ product.minPurchase }}"
+                               max="{{ product.calculatedMaxPurchase }}"
+                               step="{{ product.purchaseSteps }}"/>
+                    </div>
+                {% else %}
+                    <input name="lineItems[{{ product.id }}][quantity]"
+                           class="custom-quantity product-detail-quantity-select"
+                           type="hidden"
+                           value="{{ product.minPurchase }}"/>
+                {% endif %}
+            {% else %}
+                {{ parent() }}
+            {% endif %}
+        {% endblock %}
+    </div>
+{% endblock %}
+
+{% block page_product_detail_buy_button_container %}
+    <div class="col-12 col-sm-9 buy-widget-buy-button">
+        {% block page_product_detail_buy_button %}
+            <button class="btn btn-primary btn-block btn-buy"
+                    title="{{ "detail.addProduct"|trans|striptags }}"
+                    aria-label="{{ "detail.addProduct"|trans|striptags }}">
+                {% sw_icon 'bag' style {'size': 'sm'} %}
+                {{ "detail.addProduct"|trans|sw_sanitize }}
+            </button>
+        {% endblock %}
+    </div>
+{% endblock %}

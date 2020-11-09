@@ -1,0 +1,20 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Strip Units
+==============================================
+Converts px to rem
+
+*/
+
+@function rem($size) {
+    $value: strip-unit($size) / 16 * 1rem;
+    @return $value;
+}

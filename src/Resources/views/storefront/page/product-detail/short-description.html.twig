@@ -1,0 +1,9 @@
+{% block page_product_detail_short_description_container %}
+    {% if shortDescription %}
+        <div class="product-detail-short-description d-none d-md-block">
+            <div class="product-detail-short-description-text">
+                <p class="m-0">{{ shortDescription|striptags|raw }}</p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

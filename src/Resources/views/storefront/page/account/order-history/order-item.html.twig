@@ -1,0 +1,53 @@
+{% sw_extends '@Storefront/storefront/page/account/order-history/order-item.html.twig' %}
+
+{% block page_account_order_item_heading %}
+    <h3 class="col-12 order-table-header-heading">{{ "account.orderHeadline"|trans|sw_sanitize }} {{ order.orderDateTime|format_date('short', locale=app.request.locale) }}</h3>
+{% endblock %}
+
+{% block page_account_order_item_status_col %}
+{% endblock %}
+
+{% block page_account_order_item_order_number %}
+    <span class="order-table-header-label">{{ "account.orderNumber"|trans|sw_sanitize }}</span>
+    <span class="order-table-body-value">{{ order.orderNumber|sw_sanitize }}</span>
+{% endblock %}
+
+
+{% block page_account_order_item_order_number_col %}
+    {{ parent() }}
+
+    <div class="col-12 order-table-header-order-status">
+        <h5>
+            {{ "account.orderStatus"|trans|sw_sanitize }}
+            {% if order.transactions.last.stateMachineState.technicalName == 'failed' or order.transactions.last.stateMachineState.technicalName == 'reminded' %}
+                {{ "account.orderStatusActionRequired"|trans|sw_sanitize }}
+            {% else %}
+                {{ order.stateMachineState.translated.name }}
+            {% endif %}
+        </h5>
+    </div>
+{% endblock %}
+
+{% block page_account_order_item_order_table_header %}
+{% endblock %}
+
+{% block page_account_order_item_order_table_body %}
+    <div class="row">
+        {% block page_account_order_item_order_table_body_cell_toggle_order_details_button %}
+            <div class="col p-0 text-right">
+                <button class="btn btn-light btn-sm order-hide-btn collapsed"
+                        type="submit"
+                        data-toggle="collapse"
+                        data-target="#order{{ order.orderNumber }}"
+                        aria-expanded="false"
+                        aria-controls="collapseExample">
+
+                    {% block page_account_order_item_order_table_body_cell_toggle_order_details_button_text %}
+                        <span class="order-hide-btn-text">{{ "account.orderActionHide"|trans|sw_sanitize }}</span>
+                        <span class="order-view-btn-text">{{ "account.orderActionView"|trans|sw_sanitize }}</span>
+                    {% endblock %}
+                </button>
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

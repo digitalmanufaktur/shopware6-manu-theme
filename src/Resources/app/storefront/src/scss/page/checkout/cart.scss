@@ -1,0 +1,66 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Cart
+==============================================
+Contains custom styles for the cart page.
+
+*/
+
+.cart-main-header {
+    font-size: $dmf-font-size-h1;
+    color: $sw-headline-color;
+}
+
+.cart-add-product-container {
+    @extend .col-12;
+    @extend .col-md-8;
+    @extend .col-lg-6;
+
+    .btn {
+        width: 93px;
+    }
+}
+
+.cart-shipping-costs-container {
+    @extend .col-12;
+    @extend .col-md-4;
+    @extend .col-lg-6;
+}
+
+.cart-add-product {
+    max-width: 100%;
+}
+
+.cart-add-promotion {
+    margin-bottom: $spacer-lg;
+
+    .btn {
+        width: 93px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .checkout-product-table {
+        margin-bottom: $spacer-xl;
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .checkout {
+        padding-top: 0;
+    }
+
+    .add-product-outer-container {
+        margin-bottom: 0;
+        margin-top: $spacer;
+    }
+}

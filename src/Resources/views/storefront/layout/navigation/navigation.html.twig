@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
+
+{% block layout_main_navigation_menu_home %}
+{% endblock %}
+
+{% block layout_main_navigation_menu_flyout_wrapper %}
+    {% if shopware.theme['dmf-header-layout'] == 1 %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

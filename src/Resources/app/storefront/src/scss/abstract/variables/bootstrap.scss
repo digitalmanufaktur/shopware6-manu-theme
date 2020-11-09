@@ -1,0 +1,160 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Bootstrap Variables
+==============================================
+
+*/
+
+// Color system
+
+$gray-100: $sw-base-gray !default;
+$gray-200: darken($sw-base-gray, 10%) !default;
+$gray-300: darken($sw-base-gray, 30%) !default;
+$gray-400: darken($sw-base-gray, 40%) !default;
+$gray-600: darken($sw-base-gray, 60%) !default;
+$gray-700: darken($sw-base-gray, 70%) !default;
+$gray-800: darken($sw-base-gray, 80%) !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+        (
+            "primary": $sw-color-brand-primary,
+            "primary-alt": $sw-color-brand-primary-alt,
+            "secondary": $sw-color-brand-secondary,
+            "success": $sw-color-success,
+            "info": $sw-color-info,
+            "warning": $sw-color-warning,
+            "danger": $sw-color-danger,
+            "light": $gray-100,
+            "dark": $gray-800
+        ),
+        $theme-colors
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $sw-background-color !default;
+$body-color: $sw-text-color !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret: true !default;
+$enable-rounded: bool($dmf-border-radius-enable) !default;
+$enable-shadows: bool($dmf-shadows-enable) !default;
+$enable-gradients: false !default;
+$enable-transitions: bool($dmf-transitions-enable) !default;
+$enable-prefers-reduced-motion-media-query: true !default;
+$enable-grid-classes: true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+$enable-print-styles: true !default;
+$enable-responsive-font-sizes: true !default;
+$enable-validation-icons: true !default;
+$enable-deprecation-messages: true !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: rem($dmf-spacer) !default;
+$spacer-xs: ( $spacer * 0.25 ) !default;
+$spacer-sm: ( $spacer * 0.5 ) !default;
+$spacer-md: $spacer !default;
+$spacer-lg: ( $spacer * 1.5 ) !default;
+$spacer-xl: ( $spacer * 3 ) !default;
+
+// Grid
+$grid-gutter-width: rem(40) !default;
+
+$order-grid-gutter-width: ( $grid-gutter-width * 0.5 ) !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius: strip-unit($dmf-border-radius) + px !default;
+$border-radius-lg: strip-unit($dmf-border-radius) * 2 + px !default;
+$border-radius-sm: strip-unit($dmf-border-radius) * 0.5 + px !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-size-base: rem($dmf-font-size-base) !default;
+$font-size-lg: $font-size-base * 1.14285714286 !default;
+$font-size-sm: $font-size-base * 0.85714285714 !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 600 !default;
+
+$line-height-base: $dmf-line-height-base !default;
+
+$h1-font-size: $dmf-font-size-h1 !default;
+$h2-font-size: $dmf-font-size-h2 !default;
+$h3-font-size: $dmf-font-size-h3 !default;
+$h4-font-size: $dmf-font-size-h4 !default;
+$h5-font-size: $dmf-font-size-h5 !default;
+$h6-font-size: $dmf-font-size-h6 !default;
+
+$headings-font-weight: $dmf-headline-font-weight !default;
+
+// Buttons + Forms
+$input-btn-padding-y: rem(10) !default;
+$input-btn-padding-x: rem(20) !default;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y: rem(2) !default;
+$btn-padding-x: rem(12) !default;
+$btn-line-height: rem(34) !default;
+
+$btn-padding-y-sm: rem(2) !default;
+$btn-padding-x-sm: rem(12) !default;
+$btn-font-size-sm: $font-size-base !default;
+$btn-line-height-sm: rem(30) !default;
+
+$btn-padding-y-lg: rem(2) !default;
+$btn-padding-x-lg: rem(12) !default;
+$btn-font-size-lg: $font-size-lg !default;
+$btn-line-height-lg: rem(38) !default;
+
+$btn-border-width: $dmf-btn-border-width !default;
+
+$btn-border-radius: strip-unit($dmf-btn-border-radius) + px !default;;
+$btn-border-radius-lg: $btn-border-radius !default;
+$btn-border-radius-sm: $btn-border-radius !default;
+$btn-font-family: $dmf-btn-font-family !default;
+$btn-font-weight: $dmf-btn-font-weight !default;
+$btn-text-transform: $dmf-btn-text-transform !default;
+
+// Forms
+
+$input-bg: $dmf-input-bg !default;
+$input-color: $dmf-input-color !default;
+$input-border-color: $dmf-input-border-color !default;
+$input-focus-bg: $dmf-input-focus-bg !default;
+$input-focus-border-color: $dmf-input-focus-border-color !default;
+$input-focus-color: $dmf-input-focus-color !default;
+$input-placeholder-color: $dmf-input-placeholder-color !default;
+$input-plaintext-color: $dmf-input-plaintext-color !default;
+
+// Modals
+$modal-header-padding-y: rem(10) !default;
+$modal-header-padding-x: rem(10) !default;

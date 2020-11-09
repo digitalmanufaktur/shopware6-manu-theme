@@ -1,0 +1,7 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-image-gallery.html.twig' %}
+
+{% block element_image_gallery_inner_thumbnails_col %}
+    {% if thumbnails %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

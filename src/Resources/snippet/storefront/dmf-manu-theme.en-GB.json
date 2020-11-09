@@ -1,0 +1,52 @@
+{
+    "footer": {
+        "shippingHeadline": "Shipping",
+        "paymentHeadline": "Payment",
+        "socialMediaHeadline": "Follow us",
+        "socialMediaFacebook": "https://facebook.com/",
+        "socialMediaTwitter": "https://twitter.com/",
+        "socialMediaPinterest": "https://pinterest.com/",
+        "socialMediaInstagram": "https://instagram.com/",
+        "socialMediaYoutube": "https://youtube.com/",
+        "socialMediaFacebookLabel": "Facebook",
+        "socialMediaTwitterLabel": "Twitter",
+        "socialMediaPinterestLabel": "Pinterest",
+        "socialMediaInstagramLabel": "Instagram",
+        "socialMediaYoutubeLabel": "Youtube",
+        "copyrightInfoDmf": "Realised with Shopware by <a href=\"https://dmf.digital/\">digital.manufaktur GmbH</a>"
+    },
+    "listing": {
+        "boxLabelSale": "Sale",
+        "deliveryTime": "Delivery time",
+        "productNumber": "Product number"
+    },
+    "newsletter": {
+        "footerHeadline": "Sign up for our newsletter",
+        "footerText": "Sign up for our newsletter and never miss any news or offers.\n"
+    },
+    "account": {
+        "asideTitle": "My account",
+        "asideOrderSubtitle": "Manage your orders and returns",
+        "asideProfileSubtitle": "Change your name, email address or password",
+        "asideAddressSubtitle": "Adjust billing address and delivery addresses",
+        "asidePaymentSubtitle": "Choose your preferred payment method",
+        "profileTitle": "Change personal data",
+        "registerText": "No account yet?",
+        "registerExpand": "Register",
+        "backLink": "Back",
+        "homeSubtitle": "This is your account overview, here you have the opportunity to view your account activities and adjust your data.",
+        "asideHomeSubtitle": "Overview over all areas",
+        "showpasswordText": "Show",
+        "showpasswordTextHide": "Hide"
+    },
+    "checkout": {
+        "deleteLabel": "Delete",
+        "promotionText": "Do you have a coupon? Then you can enter it here.",
+        "removeLabel": "Remove",
+        "continueShoppingLabel": "Continue shopping"
+    },
+    "header": {
+        "searchHelpText": "Didn't find what you're looking for?",
+        "searchHelpTextUrl": "/contact"
+    }
+}

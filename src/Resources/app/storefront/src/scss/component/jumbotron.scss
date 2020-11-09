@@ -1,0 +1,28 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Jumbotron
+==============================================
+Styling for jumbotron component.
+
+*/
+
+.jumbotron {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+}
+
+@include media-breakpoint-up(sm) {
+    .jumbotron {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

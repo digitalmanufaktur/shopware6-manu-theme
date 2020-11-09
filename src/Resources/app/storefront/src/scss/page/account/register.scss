@@ -1,0 +1,115 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Register
+==============================================
+Contains custom styles for the register area.
+
+*/
+
+#registerContent {
+    transition: height .3s linear;
+
+    .register-card {
+        margin-top: $spacer-xl;
+    }
+}
+
+.account-register {
+    scroll-behavior: smooth;
+
+    .login-advantages {
+        margin-top: 52px;
+    }
+
+    .card-title {
+        border: 0;
+        font-size: $dmf-font-size-h1;
+        font-weight: $headings-font-weight;
+        color: $sw-headline-color;
+        font-family: $sw-font-family-headline;
+    }
+
+    .no-account-text,
+    .login-password-recover {
+        text-align: center;
+
+        a {
+            color: $sw-link-color;
+        }
+    }
+
+    .no-account-text {
+        margin-top: $spacer-xl;
+        color: $sw-link-color;
+    }
+
+    .login-submit,
+    .register-submit {
+        .btn {
+            @extend .btn-block;
+        }
+    }
+
+    .js-validation-message {
+        font-size: $font-size-base;
+        opacity: .5;
+    }
+}
+
+.register-expand-button-container {
+    .hidden {
+        height: 0!important;
+        overflow: hidden;
+    }
+
+    .register-personal {
+        .form-group {
+            @extend .col-sm-12;
+            @extend .col-md-12;
+            @extend .col-12;
+            padding-right: $form-grid-gutter-width / 2;
+            padding-left: $form-grid-gutter-width / 2;
+        }
+
+        .form-row:nth-child(3) {
+            .form-group {
+                @extend .col-sm-6;
+                padding-right: $form-grid-gutter-width / 2;
+                padding-left: $form-grid-gutter-width / 2;
+            }
+        }
+    }
+    .register-address {
+        .form-row {
+            &:nth-child(2) {
+                .col-md-6 {
+                    @extend .col-12;
+                    @extend .col-md-7;
+                    padding-right: $form-grid-gutter-width / 2;
+                    padding-left: $form-grid-gutter-width / 2;
+                }
+                .col-4 {
+                    @extend .col-12;
+                    @extend .col-md-5;
+                    padding-right: $form-grid-gutter-width / 2;
+                    padding-left: $form-grid-gutter-width / 2;
+                }
+                .col-8 {
+                    @extend .col-12;
+                    @extend .col-md-12;
+                    padding-right: $form-grid-gutter-width / 2;
+                    padding-left: $form-grid-gutter-width / 2;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,47 @@
+{% sw_extends '@Storefront/storefront/component/listing/breadcrumb.html.twig' %}
+
+{% block component_listing_breadcrumb %}
+    {% set breadcrumb = category.buildSeoBreadcrumb(context.salesChannel.navigationCategoryId) %}
+    {% set penultimateItem = breadcrumb|length - 1 %}
+
+    {% if shopware.theme['dmf-breadcrumb-home'] == 1 and shopware.theme['dmf-breadcrumb-size'] == false %}
+        <a class="breadcrumb-home" href="{{ path('frontend.home.page') }}" title="{{ "header.logoLink"|trans|striptags }}">
+            {% if shopware.theme['dmf-breadcrumb-home-icon-label'] == "icon" %}
+                {% sw_icon 'shop' style { 'size': '1rem', 'pack': 'default'} %}
+            {% else %}
+                {{ shopware.config.core.basicInformation.shopName }}
+            {% endif %}
+        </a>
+        <div class="breadcrumb-placeholder">
+            {% sw_icon 'arrow-medium-right' style { 'size': 'fluid', 'pack': 'solid'} %}
+        </div>
+    {% endif %}
+
+    {% for key, item in breadcrumb %}
+        <div class="breadcrumb-container {% if loop.index != penultimateItem and breadcrumb|length > 1 and shopware.theme['dmf-breadcrumb-size'] == true %}penultimate{% endif %}">
+            {% if shopware.theme['dmf-breadcrumb-size'] == true %}
+                {% block component_listing_breadcrumb_placeholder_simple %}
+                    <div class="breadcrumb-placeholder-simple">
+                        {% sw_icon 'arrow-medium-left' style { 'size': 'fluid', 'pack': 'solid'} %}
+                    </div>
+                {% endblock %}
+            {% endif %}
+            {% block component_listing_breadcrumb_category %}
+                <a class="{% if key is same as(category.id) %} is-active{% endif %}"
+                   href="{{ seoUrl('frontend.navigation.page', { navigationId: key }) }}">
+                    {% block component_listing_breadcrumb_link_name %}
+                        {{ item }}
+                    {% endblock %}
+                </a>
+            {% endblock %}
+            {% block component_listing_breadcrumb_placeholder %}
+                {% if item != breadcrumb|last %}
+                    <div class="breadcrumb-placeholder {% if shopware.theme['dmf-breadcrumb-size'] == true %}penultimate{% endif %}">
+                        {% sw_icon 'arrow-medium-right' style { 'size': 'fluid', 'pack': 'solid'} %}
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </div>
+    {% endfor %}
+{% endblock %}
+

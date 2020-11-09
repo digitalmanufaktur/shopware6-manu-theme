@@ -1,0 +1,55 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Navigation flyout
+==============================================
+Custom skin styling for navigation flyout which opens on hover over the main navigation.
+
+*/
+
+.navigation-flyout {
+    background: $dmf-header-megamenu-background-color;
+    box-shadow: 0 100vh 0 100vh rgba(0, 0, 0, .5);
+}
+
+.navigation-flyout-content {
+    padding-bottom: $spacer-lg;
+    padding-top: $spacer-lg;
+}
+
+.navigation-flyout-categories {
+    &:not(.is-level-0) {
+        margin-left: 0;
+    }
+
+    &.is-level-0 {
+        > .navigation-flyout-col {
+            margin-bottom: $spacer;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.navigation-flyout-link {
+    font-size: $font-size-base;
+    color: $dmf-header-megamenu-color;
+    margin: 0;
+    text-transform: $dmf-header-megamenu-text-transform;
+
+    &:hover {
+        padding-left: 0;
+        color: $dmf-header-megamenu-color-hover;
+        text-decoration: underline;
+    }
+
+}
