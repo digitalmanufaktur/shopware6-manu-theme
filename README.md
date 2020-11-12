@@ -95,7 +95,7 @@ Die Brotkrümelnavigation wurde im Theme umfassend erweitert, neben den klassisc
 ### Kategorie
 Ein besonderes Augenmerk liegt hier auf den Produktboxen. Es können separate Farben für dieses sehr wichtige Element vergeben werden, sodass der individuelle Marken-Charakter sichtbar wird. Dazu können unterschiedliche Informationen wie die Lieferzeit oder Bewertungen ein- oder ausgeblendet werden.
 
-![Produktboxen](img/productbox.jpg)
+![Produktboxen](assets/productbox.jpg)
 
 ### Produkt-Seite
 Die für Conversion wichtige Buybox auf der rechten Seite kann dem Marken-Charakter durch Farben und Informationen angepasst werden. Thumbnails können z. B. unter oder neben dem Hauptbild angezeigt werden.
