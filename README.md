@@ -9,22 +9,22 @@
 * Shopware 6.*
 
 ## Inhaltsverzeichnis
-**[Installtion von Manu](#installtion-von-manu)**
-[Manu Theme einem Verkaufskanal zuweisen](#manu-theme-einem-verkaufskanal-zuweisen)
+**[Installtion von Manu](#installtion-von-manu)**  
+[Manu Theme einem Verkaufskanal zuweisen](#manu-theme-einem-verkaufskanal-zuweisen)  
 
-**[Theme Einstellungen](#theme-einstellungen)**
-[Header und Navigation](#header-und-navigation)
-[Footer und Social Media](#footer-und-social-media)
-[Social Media anlegen](#social-media-anlegen)
-[Anlegen eines Footers im Theme](#anlegen-eines-footers-im-theme)
-[Breadcrumb](#breadcrumb)
-[Newsletter](#newsletter)
-[Kategorie](#kategorie)
-[Produkt-Seite](#produkt-seite)
-[Checkout](#checkout)
-[Account](#account)
-[Buttons und Formulare](#buttons-und-formulare)
-[Textbausteine](#textbausteine)
+**[Theme Einstellungen](#theme-einstellungen)**  
+[Header und Navigation](#header-und-navigation)  
+[Footer und Social Media](#footer-und-social-media)  
+[Social Media anlegen](#social-media-anlegen)  
+[Anlegen eines Footers im Theme](#anlegen-eines-footers-im-theme)  
+[Breadcrumb](#breadcrumb)  
+[Newsletter](#newsletter)  
+[Kategorie](#kategorie)  
+[Produkt-Seite](#produkt-seite)  
+[Checkout](#checkout)  
+[Account](#account)  
+[Buttons und Formulare](#buttons-und-formulare)  
+[Textbausteine](#textbausteine)  
 
 ## Installation von Manu
 1. Die aktuell Version von Manu herunterladen
