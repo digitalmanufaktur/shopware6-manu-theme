@@ -63,14 +63,14 @@
                         <div class="product-info col-12 col-md-8 d-flex flex-column justify-content-center">
                             {% block component_product_box_rating %}
                                 {% if shopware.config.core.listing.showReview %}
-                                    <div class="product-rating">
-                                        {% if product.ratingAverage %}
+                                    {% if product.ratingAverage %}
+                                        <div class="product-rating">
                                             {% sw_include '@Storefront/storefront/component/review/rating.html.twig' with {
                                                 points: product.ratingAverage,
                                                 style: 'text-primary'
                                             } %}
-                                        {% endif %}
-                                    </div>
+                                        </div>
+                                    {% endif %}
                                 {% endif %}
                             {% endblock %}
 
@@ -103,13 +103,13 @@
                                 <div class="row">
                                     <div class="product-details col-12 col-md-6 col-lg-8 col-xl-8">
                                         <div class="mt-4">
-                                            {% if product.deliveryTime %}
+                                            {% if product.deliveryTime and shopware.theme["dmf-listing-product-box-disable-deliverytime"] %}
                                                 <p class="mb-1 manu-product-deliverytime">
                                                     {{ "listing.deliveryTime"|trans|sw_sanitize }}
                                                     {{ product.deliveryTime.name }}
                                                 </p>
                                             {% endif %}
-                                            {% if product.productNumber %}
+                                            {% if product.productNumber and shopware.theme["dmf-listing-product-box-disable-productnumber"] %}
                                                 <p class="mb-0 manu-product-number">
                                                     {{ "listing.productNumber"|trans|sw_sanitize }}
                                                     {{product.productNumber}}

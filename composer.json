@@ -1,7 +1,7 @@
 {
     "name": "dmf/sw6-manu-theme",
     "description": "Manu Theme",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "shopware-platform-plugin",
     "authors": [
         {

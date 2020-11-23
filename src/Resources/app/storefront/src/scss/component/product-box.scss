@@ -19,14 +19,12 @@ Custom styling for product box component.
     border-color: $dmf-product-box-border-color;
 
     .product-info {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
         @if bool($dmf-product-box-center-text) == true {
             text-align: center;
-        }
-    }
-
-    .product-description {
-        @if bool($dmf-product-box-description-enable) == false {
-            display: none;
         }
     }
 
@@ -36,6 +34,8 @@ Custom styling for product box component.
 
     .card-body {
         padding-top: 0;
+        display: flex;
+        flex-direction: column;
 
         @if bool($dmf-listing-product-box-disable-sidepadding) == true {
             padding-left: 0;
@@ -43,19 +43,9 @@ Custom styling for product box component.
         }
     }
 
-    .manu-product-deliverytime {
-        @if bool($dmf-listing-product-box-disable-deliverytime) == true {
-            display: none;
-        }
+    .product-price-info {
+        margin-top: auto;
     }
-
-    .manu-product-number {
-        @if bool($dmf-listing-product-box-disable-productnumber) == true {
-            display: none;
-        }
-    }
-
-
 }
 
 .product-name {
@@ -66,14 +56,34 @@ Custom styling for product box component.
     font-size: $font-size-lg;
 }
 
+.price-unit-reference,
+.product-price-unit,
 .product-description {
-    color: $gray-400;
+    color: $sw-text-color;
+    opacity: .5;
+}
 
+.product-description {
+    margin-bottom: 10px;
+}
+
+.product-price-unit {
+    height: auto;
+    margin-bottom: $spacer-sm;
 }
 
 .product-price {
     font-size: $font-size-base;
     overflow: visible;
+
+    @if $dmf-listing-product-box-simple-reference-price == simple {
+        display: inline-block;
+    }
+}
+
+.price-unit-reference {
+    display: inline-block;
+    margin-left: $spacer;
 }
 
 .product-price {

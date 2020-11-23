@@ -1,26 +1,14 @@
 {% sw_extends '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
 
 {% block component_product_box_price_unit %}
-    {% if purchaseUnit and purchaseUnit != 0 %}
-        <p class="product-price-unit">
-            {# Price is based on the purchase unit #}
-            {% block component_product_box_price_purchase_unit %}
-                {% if purchaseUnit and purchaseUnit != 0 %}
-                    <span class="product-unit-label">
-						{{ "listing.boxUnitLabel"|trans|sw_sanitize }}
-					</span>
-                    <span class="price-unit-content">
-						{{ purchaseUnit }}
-                        {{ product.unit.translation('name') }}
-					</span>
-                {% endif %}
-            {% endblock %}
+    {% if purchaseUnit and purchaseUnit != 0 or referncePrice is not null  %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
 
-            {# Unit price is based on a reference unit #}
-            {% block component_product_box_price_reference_unit %}
-                {{ parent() }}
-            {% endblock %}
-        </p>
+{% block component_product_box_price_reference_unit %}
+    {% if shopware.theme["dmf-listing-product-box-simple-reference-price"] == "standard" %}
+        {{ parent() }}
     {% endif %}
 {% endblock %}
 
@@ -43,4 +31,14 @@
             {{ product.calculatedPrice.unitPrice|currency }}{{ "general.star"|trans|sw_sanitize }}
         {% endif %}
     </p>
+
+    {% if referncePrice is not null and shopware.theme["dmf-listing-product-box-simple-reference-price"] == "simple" %}
+        <span class="price-unit-reference is-{{ shopware.theme["dmf-listing-product-box-simple-reference-price"] }}">
+            {% if (product.priceRange and product.isGrouped) or product.calculatedPrices.count > 1 %}
+                {{ "listing.listingTextFrom"|trans|sw_sanitize }} {{ fromPrice.referencePrice.price|currency }}{{ "general.star"|trans|sw_sanitize }} / {{ fromPrice.referencePrice.referenceUnit }}&nbsp;{{ fromPrice.referencePrice.unitName }}
+            {% else %}
+                {{ referncePrice.price|currency }}{{ "general.star"|trans|sw_sanitize }} / {{ referncePrice.referenceUnit }} {{ referncePrice.unitName }}
+            {% endif %}
+        </span>
+    {% endif %}
 {% endblock %}

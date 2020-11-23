@@ -1,5 +1,11 @@
 {% sw_extends '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
 
+{% block component_product_box_rating %}
+    {% if product.ratingAverage %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
 {% block component_product_box_variant_characteristics %}
     {% if not product.isGrouped and product.variation %}
         <div class="product-variant-characteristics">
@@ -15,6 +21,14 @@
                     {% endif %}
                 {% endfor %}
             </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block component_product_box_description %}
+    {% if shopware.theme["dmf-product-box-description-enable"] %}
+        <div class="product-description">
+            {{ product.translated.description|striptags|raw }}
         </div>
     {% endif %}
 {% endblock %}

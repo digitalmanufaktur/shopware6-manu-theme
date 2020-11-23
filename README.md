@@ -9,7 +9,7 @@
 * Shopware 6.*
 
 ## Inhaltsverzeichnis
-**[Installtion von Manu](#installtion-von-manu)**  
+**[Installation von Manu](#installtion-von-manu)**  
 [Manu Theme einem Verkaufskanal zuweisen](#manu-theme-einem-verkaufskanal-zuweisen)  
 
 **[Theme Einstellungen](#theme-einstellungen)**  

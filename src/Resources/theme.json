@@ -2530,7 +2530,7 @@
                 "editable": true,
                 "tab": "listing",
                 "block": "themeLayout",
-                "order": 100,
+                "order": 200,
                 "section": "productBox"
             },
             "dmf-product-box-border-enable": {
@@ -2543,7 +2543,7 @@
                 "editable": true,
                 "tab": "listing",
                 "block": "themeLayout",
-                "order": 100,
+                "order": 300,
                 "section": "productBox"
             },
             "dmf-product-box-background-color": {
@@ -2580,7 +2580,7 @@
                 "editable": true,
                 "tab": "listing",
                 "block": "themeLayout",
-                "order": 100,
+                "order": 400,
                 "section": "productBox"
             },
             "dmf-listing-product-box-disable-sidepadding": {
@@ -2593,7 +2593,7 @@
                 "editable": true,
                 "tab": "listing",
                 "block": "themeLayout",
-                "order": 100,
+                "order": 500,
                 "section": "productBox"
             },
             "dmf-listing-product-box-disable-deliverytime": {
@@ -2606,7 +2606,7 @@
                 "editable": true,
                 "tab": "listing",
                 "block": "themeLayout",
-                "order": 100,
+                "order": 600,
                 "section": "productBox"
             },
             "dmf-listing-product-box-disable-productnumber": {
@@ -2619,7 +2619,39 @@
                 "editable": true,
                 "tab": "listing",
                 "block": "themeLayout",
-                "order": 100,
+                "order": 700,
+                "section": "productBox"
+            },
+            "dmf-listing-product-box-simple-reference-price": {
+                "label": {
+                    "en-GB": "Display refernce price",
+                    "de-DE": "Darstellung Grundpreis"
+                },
+                "type": "text",
+                "value": "standard",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "standard",
+                            "label": {
+                                "en-GB": "Standard",
+                                "de-DE": "Normal"
+                            }
+                        },
+                        {
+                            "value": "simple",
+                            "label": {
+                                "en-GB": "Simple",
+                                "de-DE": "Einfach"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "listing",
+                "block": "themeLayout",
+                "order": 800,
                 "section": "productBox"
             }
         }
