@@ -22,7 +22,8 @@
     },
     "newsletter": {
         "footerHeadline": "Sign up for our newsletter",
-        "footerText": "Sign up for our newsletter and never miss any news or offers.\n"
+        "footerText": "Sign up for our newsletter and never miss any news or offers.",
+        "formSubmitSignIn": "Sign in"
     },
     "account": {
         "asideTitle": "My account",

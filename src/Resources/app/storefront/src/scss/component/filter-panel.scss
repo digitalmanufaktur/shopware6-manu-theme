@@ -14,28 +14,13 @@ Custom styling for filter panel.
 
 */
 
-.filter-panel-items-container {
-    .filter-overlay {
-        display: none;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background-color: $gray-800;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        z-index: 200;
-    }
-}
-
-
 .filter-panel-item {
-    z-index: 201;
-
     .filter-panel-item-toggle {
         background-color: $sw-color-brand-secondary;
         color: unset;
         border-color: $sw-color-brand-secondary;
+        z-index: 201;
+        position: relative;
 
         &[aria-expanded="true"] {
             color: unset;
@@ -54,6 +39,7 @@ Custom styling for filter panel.
     }
 }
 
+
 .filter-panel-item-dropdown {
     background-color: $sw-color-brand-secondary;
     color: unset;
@@ -64,6 +50,22 @@ Custom styling for filter panel.
     .filter-panel-item-toggle {
         &[aria-expanded='true'] {
             border-color: $sw-color-brand-primary;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .filter-panel-items-container {
+        .filter-overlay {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: $gray-800;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            z-index: 200;
         }
     }
 }

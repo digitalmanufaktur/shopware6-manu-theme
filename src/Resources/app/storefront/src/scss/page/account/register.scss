@@ -24,6 +24,8 @@ Contains custom styles for the register area.
 
 .account-register {
     scroll-behavior: smooth;
+    margin-top: $spacer;
+    margin-bottom: $spacer;
 
     .login-advantages {
         margin-top: 52px;
@@ -112,4 +114,11 @@ Contains custom styles for the register area.
         }
     }
 
+}
+
+@include media-breakpoint-up(md) {
+    .account-register {
+        margin-top: $spacer-lg;
+        margin-bottom: $spacer-lg;
+    }
 }

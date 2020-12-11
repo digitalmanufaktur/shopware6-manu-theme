@@ -22,15 +22,11 @@
                 </div>
             </div>
 
-            <div class="col-lg-1"></div>
-
-            <div class="col-lg-4">
+            <div class="col-lg-7 ml-auto">
                 {% sw_include '@Storefront/storefront/component/account/register.html.twig' with {
                     'cardTitle': "account.registerPersonalHeader"|trans|sw_sanitize
                 } %}
             </div>
-
-            <div class="col-lg-3"></div>
         {% else %}
             <div class="col-lg-4 m-auto account-register-col">
                 {% sw_include '@Storefront/storefront/component/account/login.html.twig' with {

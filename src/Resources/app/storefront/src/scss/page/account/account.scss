@@ -79,6 +79,10 @@ Contains custom styles for the user account area.
     }
 }
 
+.account-profile {
+    margin-bottom: $spacer-lg;
+}
+
 @media screen and (max-width: 1450px) {
     .account-menu-dropdown {
         left: 38px !important;

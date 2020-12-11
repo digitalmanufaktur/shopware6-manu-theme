@@ -22,7 +22,8 @@
     },
     "newsletter": {
         "footerHeadline": "Jetzt für unseren Newsletter anmelden",
-        "footerText": "Melden Sie sich für unseren Newsletter an und verpassen Sie keine Neuigkeiten oder Angebote mehr."
+        "footerText": "Melden Sie sich für unseren Newsletter an und verpassen Sie keine Neuigkeiten oder Angebote mehr.",
+        "formSubmitSignIn": "Anmelden"
     },
     "account": {
         "asideTitle": "Ihr Konto",

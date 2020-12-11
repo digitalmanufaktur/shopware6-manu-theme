@@ -45,6 +45,14 @@ Contains custom styles for the footer at the end of the page.
     font-weight: $font-weight-normal;
 }
 
+.footer-shipping-column,
+.footer-payment-column {
+    .footer-column-content-inner {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 .footer-link {
     &, &:hover {
         color: $dmf-footer-text-color;

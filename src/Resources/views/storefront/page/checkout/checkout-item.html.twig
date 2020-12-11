@@ -28,9 +28,11 @@
                                             {% endblock %}
 
                                             {% block page_checkout_item_info_features %}
-                                                <div class="cart-item-info-features">
-                                                    {{ parent() }}
-                                                </div>
+                                                {% if lineItem.type == 'product' and lineItem.payload.features is not null %}
+                                                    <div class="cart-item-info-features">
+                                                        {{ parent() }}
+                                                    </div>
+                                                {% endif %}
                                             {% endblock %}
 
                                             {# @deprecated tag:v6.4.0.0 #}

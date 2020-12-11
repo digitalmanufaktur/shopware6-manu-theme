@@ -23,3 +23,13 @@ Custom skin styling for bootstrap forms.
         border-radius: $btn-border-radius;
     }
 }
+
+@if bool($dmf-account-showpassword-enable) == true {
+    .form-control[type="password"] {
+        &:valid, &.is-valid,
+        &:invalid, &.is-invalid {
+            background-image: none;
+            background: transparent;
+        }
+    }
+}

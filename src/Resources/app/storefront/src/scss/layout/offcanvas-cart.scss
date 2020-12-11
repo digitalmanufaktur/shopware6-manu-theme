@@ -22,7 +22,6 @@ Styling for offcanvas cart component.
         padding-left: 0px;
     }
 
-
     .offcanvas-content-container {
         width: 100%;
         padding: $spacer;
@@ -39,7 +38,7 @@ Styling for offcanvas cart component.
     }
 
     .offcanvas-cart-items {
-        margin-bottom: $spacer-xl;
+        margin-bottom: $spacer;
     }
 
     .cart-item-img-link {
@@ -58,6 +57,10 @@ Styling for offcanvas cart component.
 
     .cart-item-product {
         border-bottom: 1px solid $sw-border-color;
+
+        &:last-child {
+            border-bottom: 0;
+        }
     }
 
     .cart-item-details-container {
@@ -76,6 +79,9 @@ Styling for offcanvas cart component.
         .cart-item-label {
             font-size: $dmf-font-size-h5;
             font-weight: $font-weight-normal;
+            margin-bottom: $spacer-sm;
+            display: block;
+            line-height: 1.2;
         }
 
         .cart-item-price {
@@ -157,6 +163,7 @@ Styling for offcanvas cart component.
         display: block;
     }
 }
+
 @include media-breakpoint-up(sm) {
     .offcanvas-cart {
         .cart-quantity-price {

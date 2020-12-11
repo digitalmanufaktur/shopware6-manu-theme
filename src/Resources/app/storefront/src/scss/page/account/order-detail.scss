@@ -23,8 +23,10 @@ Contains custom styles for the user order detail area.
     display: block;
     width: 100%;
 
-    &, &:focus {
-        background: $dmf-account-order-btn-color;
+    &, &:focus, &:hover {
+        color: $dmf-account-order-btn-color;
+        background: $dmf-account-order-btn-background-color;
+        border-color: $dmf-account-order-btn-background-color;
     }
 }
 

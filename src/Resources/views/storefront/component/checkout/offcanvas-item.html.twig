@@ -50,3 +50,15 @@
 
 {% block component_offcanvas_product_remove %}
 {% endblock %}
+
+{% block cart_item_variant_characteristics %}
+    {% if lineItem.payload.options %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block component_offcanvas_product_details_features %}
+    {% if lineItem.payload.features %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

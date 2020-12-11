@@ -36,7 +36,11 @@ Contains custom styles for the product detail page.
 .product-detail-buy-inner {
     border: 1px solid $dmf-detail-buybox-border;
     background: $dmf-detail-buybox-background;
-    padding: $spacer;
+    @if $dmf-detail-buybox-background == transparent {
+        padding: 0;
+    } @else {
+        padding: $spacer;
+    }
 
     .product-detail-name-container {
         padding: 0;
@@ -113,6 +117,9 @@ Contains custom styles for the product detail page.
 
     .gallery-slider-row {
         margin: 0;
+        &.is-loading {
+            height: auto;
+        }
     }
 
     .gallery-slider-col {
@@ -162,17 +169,27 @@ Contains custom styles for the product detail page.
     color: $sw-link-color;
 }
 
-
-
 .product-detail-properties-table {
     th, td {
         padding: $spacer-sm 0;
     }
 }
 
+.product-detail-list-price-wrapper {
+    color: $sw-text-color;
+    font-size: $font-size-lg;
+    margin-left: $spacer-lg;
+    margin-bottom: 3px;
+    opacity: .5;
+}
+
 @include media-breakpoint-up(md) {
     .product-detail-buy-inner {
-        padding: $spacer-lg;
+        @if $dmf-detail-buybox-background == transparent {
+            padding: 0;
+        } @else {
+            padding: $spacer-lg;
+        }
     }
     .product-detail-mid-inner {
         padding: $spacer-lg;

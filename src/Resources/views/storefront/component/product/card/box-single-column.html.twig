@@ -7,7 +7,7 @@
 
         <div class="card product-box box-single-column">
             {% block component_product_box_content %}
-                <div class="card-body row pb-0">
+                <div class="card-body pb-0">
                     {% block component_product_box_badges %}
                         {% sw_include '@Storefront/storefront/component/product/card/badges.html.twig' %}
                     {% endblock %}
@@ -15,120 +15,132 @@
                     {% block component_product_box_rich_snippets %}
                         {% sw_include '@Storefront/storefront/component/product/card/meta.html.twig' %}
                     {% endblock %}
+                    <div class="row">
+                        {% block component_product_box_image %}
+                            <div class="col-12 col-md-4">
+                                {# fallback if display mode is not set #}
+                                {% set displayMode = displayMode ?: 'standard' %}
 
-                    {% block component_product_box_image %}
-                        <div class="col-12 col-md-4">
-                            {# fallback if display mode is not set #}
-                            {% set displayMode = displayMode ?: 'standard' %}
-
-                            {# set display mode 'cover' for box-image with standard display mode #}
-                            {% if layout == 'image' and displayMode == 'standard' %}
-                                {% set displayMode = 'cover' %}
-                            {% endif %}
-
-                            <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}" title="{{ name }}" class="product-image-link is-{{ displayMode }}">
-                                {% if cover.url %}
-                                    {% set attributes = {
-                                        'class': 'product-image is-'~displayMode,
-                                        'alt': (cover.translated.alt ?: name),
-                                        'title': (cover.translated.title ?: name)
-                                    } %}
-
-                                    {% if displayMode == 'cover' or displayMode == 'contain' %}
-                                        {% set attributes = attributes|merge({ 'data-object-fit': displayMode }) %}
-                                    {% endif %}
-
-                                    {% sw_thumbnails 'product-image-thumbnails' with {
-                                        media: cover,
-                                        sizes: {
-                                            'xs': '501px',
-                                            'sm': '315px',
-                                            'md': '427px',
-                                            'lg': '333px',
-                                            'xl': '284px'
-                                        }
-                                    } %}
-                                {% else %}
-                                    <div class="product-image-placeholder">
-                                        {% sw_icon 'placeholder' style {
-                                            'size': 'fluid'
-                                        } %}
-                                    </div>
+                                {# set display mode 'cover' for box-image with standard display mode #}
+                                {% if layout == 'image' and displayMode == 'standard' %}
+                                    {% set displayMode = 'cover' %}
                                 {% endif %}
-                            </a>
-                        </div>
-                    {% endblock %}
 
-                    {% block component_product_box_info %}
-                        <div class="product-info col-12 col-md-8 d-flex flex-column justify-content-center">
-                            {% block component_product_box_rating %}
-                                {% if shopware.config.core.listing.showReview %}
-                                    {% if product.ratingAverage %}
-                                        <div class="product-rating">
-                                            {% sw_include '@Storefront/storefront/component/review/rating.html.twig' with {
-                                                points: product.ratingAverage,
-                                                style: 'text-primary'
+                                <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}" title="{{ name }}" class="product-image-link is-{{ displayMode }}">
+                                    {% if cover.url %}
+                                        {% set attributes = {
+                                            'class': 'product-image is-'~displayMode,
+                                            'alt': (cover.translated.alt ?: name),
+                                            'title': (cover.translated.title ?: name)
+                                        } %}
+
+                                        {% if displayMode == 'cover' or displayMode == 'contain' %}
+                                            {% set attributes = attributes|merge({ 'data-object-fit': displayMode }) %}
+                                        {% endif %}
+
+                                        {% sw_thumbnails 'product-image-thumbnails' with {
+                                            media: cover,
+                                            sizes: {
+                                                'xs': '501px',
+                                                'sm': '315px',
+                                                'md': '427px',
+                                                'lg': '333px',
+                                                'xl': '284px'
+                                            }
+                                        } %}
+                                    {% else %}
+                                        <div class="product-image-placeholder">
+                                            {% sw_icon 'placeholder' style {
+                                                'size': 'fluid'
                                             } %}
                                         </div>
                                     {% endif %}
-                                {% endif %}
-                            {% endblock %}
-
-                            {% block component_product_box_name %}
-                                <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}" class="product-name" title="{{ name }}">
-                                    <h2>{{ name }}</h2>
                                 </a>
-                            {% endblock %}
+                            </div>
+                        {% endblock %}
 
-                            {% block component_product_box_variant_characteristics %}
-                                {% if not product.isGrouped and product.variation %}
-                                    <div class="product-variant-characteristics">
-                                        <div class="product-variant-characteristics-text">
-                                            {% for variation in product.variation %}
-                                                {{ variation.group }}:
-                                                <span class="product-variant-characteristics-option">
+                        {% block component_product_box_info %}
+                            <div class="col-12 col-md-8 justify-content-center product-info">
+                                {% block component_product_box_rating %}
+                                    {% if shopware.config.core.listing.showReview %}
+                                        {% if product.ratingAverage %}
+                                            <div class="product-rating">
+                                                {% sw_include '@Storefront/storefront/component/review/rating.html.twig' with {
+                                                    points: product.ratingAverage,
+                                                    style: 'text-primary'
+                                                } %}
+                                            </div>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endblock %}
+
+                                {% block component_product_box_name %}
+                                    <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}" class="product-name" title="{{ name }}">
+                                        <h2>{{ name }}</h2>
+                                    </a>
+                                {% endblock %}
+
+                                {% block component_product_box_description %}
+                                    {% if shopware.theme["dmf-product-box-description-enable"] %}
+                                        <div class="product-description">
+                                            {{ product.translated.description|striptags|raw }}
+                                        </div>
+                                    {% endif %}
+                                {% endblock %}
+
+                                {% block component_product_box_variant_characteristics %}
+                                    {% if not product.isGrouped and product.variation %}
+                                        <div class="product-variant-characteristics">
+                                            <div class="product-variant-characteristics-text">
+                                                {% for variation in product.variation %}
+                                                    {{ variation.group }}:
+                                                    <span class="product-variant-characteristics-option">
 													{{ variation.option }}
 												</span>
 
-                                                {% if product.variation|last != variation %}
-                                                    {{ " | " }}
+                                                    {% if product.variation|last != variation %}
+                                                        {{ " | " }}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endblock %}
+
+                                {% block component_product_box_details %}
+                                    <div class="row">
+                                        {% set deliveryTime = product.deliveryTime and shopware.theme["dmf-listing-product-box-disable-deliverytime"] %}
+                                        {% set productNumber = product.productNumber and shopware.theme["dmf-listing-product-box-disable-productnumber"] %}
+
+                                        {% if deliveryTime or productNumber %}
+                                            <div class="product-details col-12 col-md-6 col-lg-8 col-xl-8">
+                                                {% if product.deliveryTime and shopware.theme["dmf-listing-product-box-disable-deliverytime"] %}
+                                                    <p class="mb-1 manu-product-deliverytime">
+                                                        {{ "listing.deliveryTime"|trans|sw_sanitize }}
+                                                        {{ product.deliveryTime.name }}
+                                                    </p>
                                                 {% endif %}
-                                            {% endfor %}
+                                                {% if product.productNumber and shopware.theme["dmf-listing-product-box-disable-productnumber"] %}
+                                                    <p class="mb-0 manu-product-number">
+                                                        {{ "listing.productNumber"|trans|sw_sanitize }}
+                                                        {{product.productNumber}}
+                                                    </p>
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+
+                                        <div class="manu-product-price-info col-12 col-md-6 col-lg-4 col-xl-4 d-flex flex-column align-items-end justify-content-end">
+                                            {% block component_product_box_price %}
+                                                {% sw_include '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
+                                            {% endblock %}
+
+                                            {% sw_include '@Storefront/storefront/component/product/card/action.html.twig' %}
                                         </div>
                                     </div>
-                                {% endif %}
-                            {% endblock %}
-
-                            {% block component_product_box_details %}
-                                <div class="row">
-                                    <div class="product-details col-12 col-md-6 col-lg-8 col-xl-8">
-                                        <div class="mt-4">
-                                            {% if product.deliveryTime and shopware.theme["dmf-listing-product-box-disable-deliverytime"] %}
-                                                <p class="mb-1 manu-product-deliverytime">
-                                                    {{ "listing.deliveryTime"|trans|sw_sanitize }}
-                                                    {{ product.deliveryTime.name }}
-                                                </p>
-                                            {% endif %}
-                                            {% if product.productNumber and shopware.theme["dmf-listing-product-box-disable-productnumber"] %}
-                                                <p class="mb-0 manu-product-number">
-                                                    {{ "listing.productNumber"|trans|sw_sanitize }}
-                                                    {{product.productNumber}}
-                                                </p>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-
-                                    <div class="manu-product-price-info col-12 col-md-6 col-lg-4 col-xl-4 d-flex flex-column align-items-end justify-content-end">
-                                        {% block component_product_box_price %}
-                                            {% sw_include '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
-                                        {% endblock %}
-
-                                        {% sw_include '@Storefront/storefront/component/product/card/action.html.twig' %}
-                                    </div>
-                                </div>
-                            {% endblock %}
-                        </div>
-                    {% endblock %}
+                                {% endblock %}
+                            </div>
+                        {% endblock %}
+                    </div>
                 </div>
             {% endblock %}
         </div>

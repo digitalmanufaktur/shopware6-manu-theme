@@ -21,7 +21,6 @@ Custom styling for product box component.
     .product-info {
         display: flex;
         flex-direction: column;
-        height: 100%;
 
         @if bool($dmf-product-box-center-text) == true {
             text-align: center;
@@ -37,14 +36,22 @@ Custom styling for product box component.
         display: flex;
         flex-direction: column;
 
-        @if bool($dmf-listing-product-box-disable-sidepadding) == true {
+        @if bool($dmf-listing-product-box-disable-sidepadding) == false {
             padding-left: 0;
             padding-right: 0;
         }
     }
 
-    .product-price-info {
-        margin-top: auto;
+    .manu-product-deliverytime {
+        @if bool($dmf-listing-product-box-disable-deliverytime) == false {
+            display: none;
+        }
+    }
+
+    .manu-product-number {
+        @if bool($dmf-listing-product-box-disable-productnumber) == false {
+            display: none;
+        }
     }
 }
 
@@ -88,24 +95,25 @@ Custom styling for product box component.
 
 .product-price {
     .list-price {
-        color: $gray-700;
+        opacity: .5;
     }
 }
 
-.product-name {
-}
-
 .product-badges {
-    top: 1.5rem;
-    left: .5rem;
+    top: $spacer-sm;
+    left: $spacer-sm;
 
     .badge {
-        padding: 0 0.3rem;
+        padding: 2px $spacer-sm;
         height: auto;
+        margin-bottom: $spacer-sm;
+        margin-left: 0;
+        margin-right: 0;
         line-height: rem(16px);
         font-size: $font-size-sm;
         border: 1px solid;
         border-radius: 0;
+        display: block;
     }
 
     .badge-discount {
@@ -128,8 +136,12 @@ Custom styling for product box component.
     }
 }
 
-
 .box-single-column {
+    .product-info {
+        text-align: left;
+        padding-top: $spacer;
+    }
+
     .product-image-link {
         img {
             max-height: unset;
