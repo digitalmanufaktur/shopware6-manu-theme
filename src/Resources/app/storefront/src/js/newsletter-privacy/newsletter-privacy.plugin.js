@@ -8,12 +8,16 @@ export default class NewsletterPrivacy extends Plugin {
 
     init() {
         this.newsletterPrivacy = DomAccess.querySelector(document, this.options.newsletterPrivacySelector, false);
-
         if (!this.newsletterPrivacy) {
             return;
         }
 
-        this.el.addEventListener('focus', this.showPrivacy.bind(this));
+        const newsletterField = DomAccess.querySelector(this.el, 'input', false);
+        if (!newsletterField) {
+            return;
+        }
+
+        newsletterField.addEventListener('focus', this.showPrivacy.bind(this));
     }
 
     showPrivacy() {

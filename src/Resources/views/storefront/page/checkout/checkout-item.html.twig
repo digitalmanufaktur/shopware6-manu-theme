@@ -24,11 +24,13 @@
                                             {% endblock %}
 
                                             {% block page_checkout_item_info_variant_characteristics %}
-                                                {{ parent() }}
+                                                {% if lineItem.payload.options %}
+                                                    {{ parent() }}
+                                                {% endif %}
                                             {% endblock %}
 
                                             {% block page_checkout_item_info_features %}
-                                                {% if lineItem.type == 'product' and lineItem.payload.features is not null %}
+                                                {% if lineItem.type == 'product' and lineItem.payload.features %}
                                                     <div class="cart-item-info-features">
                                                         {{ parent() }}
                                                     </div>
@@ -67,7 +69,39 @@
 
                                                             {% block page_checkout_item_quantity_select %}
                                                                 {% block page_checkout_item_quantity_form %}
-                                                                    {{ parent() }}
+                                                                    {% if lineItem.quantityInformation and lineItem.stackable %}
+                                                                        <form action="{{ path('frontend.checkout.line-item.change-quantity', {'id': lineItem.id}) }}"
+                                                                              class="cart-item-quantity-container"
+                                                                              method="post"
+                                                                              data-form-auto-submit="true">
+
+                                                                            {% block page_checkout_item_quantity_form_csrf %}
+                                                                                {{ parent() }}
+                                                                            {% endblock %}
+
+                                                                            {% block page_checkout_item_quantity_redirect %}
+                                                                                {{ parent() }}
+                                                                            {% endblock %}
+
+                                                                            {# @var quantityInformation \Shopware\Core\Checkout\Cart\LineItem\QuantityInformation #}
+                                                                            {% set quantityInformation = lineItem.quantityInformation %}
+                                                                            {% if quantityInformation.maxPurchase %}
+                                                                                {% set maxQuantity = quantityInformation.maxPurchase %}
+                                                                            {% else %}
+                                                                                {% set maxQuantity = shopware.config.core.cart.maxQuantity %}
+                                                                            {% endif %}
+
+                                                                            {% block page_product_detail_buy_quantity %}
+                                                                                {{ parent() }}
+                                                                            {% endblock %}
+                                                                        </form>
+                                                                    {% else %}
+                                                                        {% block page_checkout_item_quantity_number %}
+                                                                            <div class="d-flex justify-content-end cart-item-quantity">
+                                                                                {{ lineItem.quantity }} <span class="cart-item-quantity-x">x</span>
+                                                                            </div>
+                                                                        {% endblock %}
+                                                                    {% endif %}
                                                                 {% endblock %}
                                                             {% endblock %}
                                                         </div>

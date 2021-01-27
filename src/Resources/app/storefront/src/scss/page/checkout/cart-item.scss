@@ -50,6 +50,11 @@ Contains custom styles for the cart item component.
     }
 }
 
+.cart-item-quantity-x {
+    opacity: .5;
+    margin: 0 $spacer-sm;
+}
+
 .cart-item-quantity-container {
     width: auto;
     margin-left: 0;
@@ -84,6 +89,7 @@ Contains custom styles for the cart item component.
 
 .cart-item-quantity {
     order: 0;
+    margin-bottom: 0;
 }
 
 .cart-item-remove {
@@ -100,7 +106,6 @@ Contains custom styles for the cart item component.
 .cart-item-total-price {
     order: 3;
     font-weight: $font-weight-normal;
-    margin-left: auto;
 }
 
 .cart-item-quantity-row {
@@ -110,7 +115,7 @@ Contains custom styles for the cart item component.
 .cart-item-info-features,
 .cart-item-property {
     opacity: .5;
-    font-size: $font-size-sm;
+    //font-size: $font-size-sm;
 }
 
 .checkout {
@@ -127,6 +132,10 @@ Contains custom styles for the cart item component.
             padding-top: 0;
             padding-bottom: $spacer-sm;
             border-bottom: 1px solid $sw-border-color;
+
+            &:last-child {
+                border-bottom: 0;
+            }
         }
 
         .cart-item-details-container {
@@ -135,12 +144,13 @@ Contains custom styles for the cart item component.
             height: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
 
             .cart-item-price {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                margin-top: auto;
+                margin-top: $spacer;
                 width: 100%;
             }
 
@@ -157,7 +167,7 @@ Contains custom styles for the cart item component.
             .cart-item-ordernumber {
                 color: $sw-text-color;
                 opacity: .5;
-                margin-bottom: $spacer;
+                margin-bottom: 0;
             }
 
             .cart-item-unit-price {
@@ -237,11 +247,5 @@ Contains custom styles for the cart item component.
                 }
             }
         }
-    }
-}
-
-@include media-breakpoint-up(md) {
-    .cart-item-total-price {
-        margin-left: 0;
     }
 }

@@ -4,15 +4,15 @@
         {% set newsletterVariant = shopware.theme['dmf-newsletter-columns'] %}
 
         <div class="col-12 {% if newsletterVariant == 1 %}col-md-7 footer-newsletter-above {% endif %}footer-newsletter-col">
-            <div class="row">
-                <div class="col-{% if newsletterVariant == 1 %}12{% else %}md-6 align-self-center{% endif %}">
+            <div class="row cms-block">
+                <div class="col-{% if newsletterVariant == 1 %}12{% else %}md-6 align-self-center{% endif %} order-2">
                     <div class="footer-newsletter-heading">
                         <h2>{{ "newsletter.footerHeadline"|trans|striptags }}</h2>
                         <p>{{ "newsletter.footerText"|trans|striptags }}</p>
                     </div>
                 </div>
 
-                <div class="col-{% if newsletterVariant == 1 %}12{% else %}md-6 align-self-center{% endif %}">
+                <div class="col-{% if newsletterVariant == 1 %}12{% else %}md-6 align-self-center{% endif %} cms-element-form order-2">
                     {% sw_include '@Storefront/storefront/layout/newsletter/newsletter-widget.html.twig'
                         with {
                             action: 'frontend.form.newsletter.register.handle',

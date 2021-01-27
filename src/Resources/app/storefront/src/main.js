@@ -5,7 +5,7 @@ import RegisterExpand from './js/register-expand/register-expand.plugin';
 
 const PluginManager = window.PluginManager;
 
-PluginManager.register('NewsletterPrivacy', NewsletterPrivacy, '[name="email-footer"]');
+PluginManager.register('NewsletterPrivacy', NewsletterPrivacy, '.footer-newsletter-email');
 PluginManager.register('InputSpinner', InputSpinner, '[data-input-spinner]');
 PluginManager.register('TogglePassword', TogglePassword, '[data-toggle-password]');
 PluginManager.register('RegisterExpand', RegisterExpand, '[data-register-expand]');

@@ -17,3 +17,14 @@ Custom styling for sidebar component.
 .cms-section-sidebar-sidebar-content {
     padding-left: 0;
 }
+
+@include media-breakpoint-down(md) {
+    .cms-section-sidebar-sidebar-content {
+        padding-right: 0;
+    }
+
+    .cms-section-sidebar-main-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

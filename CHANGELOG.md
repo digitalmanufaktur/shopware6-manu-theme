@@ -1,3 +1,11 @@
+# 1.0.4
+- Cross Selling Slider optimized
+- Newsletter fix
+- Styling fixes
+- Checkout optimized
+- Account page optimized
+- Mobile Styling fixes
+
 # 1.0.3
 - Theme.json optimized order
 - Styling fixes

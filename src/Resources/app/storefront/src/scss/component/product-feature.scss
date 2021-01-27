@@ -1,0 +1,28 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Product Box
+==============================================
+Custom styling for product box component.
+
+*/
+
+.product-feature {
+    &-list {
+        &-list {
+            color: $sw-text-color;
+            opacity: .5;
+        }
+    }
+
+    &-value {
+        font-weight: $font-weight-normal;
+    }
+}

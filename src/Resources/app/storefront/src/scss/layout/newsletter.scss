@@ -19,8 +19,11 @@ $dmf-newsletter-input-height: 44px;
 .main-newsletter {
     background: $dmf-newsletter-background-color;
     color: $dmf-newsletter-text-color;
+    padding-top: $spacer-lg;
+    padding-bottom: $spacer-lg;
 
-    h2, p {
+    h2,
+    p {
         color: $dmf-newsletter-text-color;
     }
 
@@ -31,15 +34,36 @@ $dmf-newsletter-input-height: 44px;
     .form-group {
         margin-bottom: 10px;
     }
+
+    .confirm-alert {
+        @extend .col-12;
+        @extend .col-md-7;
+        padding-bottom: $spacer-lg;
+        order: 1;
+
+        .alert {
+            margin-bottom: 0;
+        }
+    }
+
+    .confirm-message {
+        @extend .col-12;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-weight: $font-weight-normal;
+        font-size: $font-size-base;
+    }
 }
 
 .footer-newsletter-col {
-    padding-top: $spacer-lg;
-    padding-bottom: $spacer-lg;
+    //padding-top: $spacer-lg;
+    //padding-bottom: $spacer-lg;
+    order: 2;
 
     .form-control {
         border-radius: $btn-border-radius;
         height: $dmf-newsletter-input-height;
+        font-size: 1rem;
     }
 }
 
@@ -82,7 +106,6 @@ $dmf-newsletter-input-height: 44px;
             border-bottom-left-radius: 0;
         }
     }
-
 }
 
 .footer-newsletter-above {
@@ -96,9 +119,14 @@ $dmf-newsletter-input-height: 44px;
 }
 
 @include media-breakpoint-up(md) {
-    .footer-newsletter-col {
+    .main-newsletter {
         padding-top: $spacer-xl + $spacer;
         padding-bottom: $spacer-xl + $spacer;
+    }
+
+    .footer-newsletter-col {
+        //padding-top: $spacer-xl + $spacer;
+        //padding-bottom: $spacer-xl + $spacer;
     }
 
     .footer-newsletter-heading {

@@ -31,5 +31,9 @@ Contains custom styles for the confirm page.
             margin-top: $spacer;
         }
     }
+
+    .cart-item-price, .cart-item-total-price {
+        margin-left: auto;
+    }
 }
 

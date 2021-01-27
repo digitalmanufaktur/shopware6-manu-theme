@@ -124,4 +124,8 @@ Contains custom styles for the user account area.
             z-index: 99;
         }
     }
+
+    .account-content {
+        padding-top: $spacer;
+    }
 }

@@ -58,7 +58,7 @@
 {% endblock %}
 
 {% block component_offcanvas_product_details_features %}
-    {% if lineItem.payload.features %}
+    {% if lineItem.type == 'product' and lineItem.payload.features %}
         {{ parent() }}
     {% endif %}
 {% endblock %}
