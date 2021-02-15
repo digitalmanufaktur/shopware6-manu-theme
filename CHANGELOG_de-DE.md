@@ -1,3 +1,8 @@
+# 1.0.5
+- Fix Fonteinbindung der Inter-Font
+- Kompatibilität-Fix für Shopware 6.3.5.
+- Styling Anpassungen für 'header' und 'product-detail page'
+
 # 1.0.4
 - Cross Selling Slider optimiert
 - Newsletter fix

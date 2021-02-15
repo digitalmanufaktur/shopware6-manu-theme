@@ -1,17 +1,17 @@
 {% sw_extends '@Storefront/storefront/base.html.twig' %}
 
 {% block base_header %}
-    <header class="header-main{% if shopware.theme['dmf-header-layout'] == 2 %} header-main-advanced{% endif %}{% if shopware.theme['dmf-header-fullwidth'] %} is-fullwidth{% endif %}"{% if shopware.theme['dmf-header-layout'] == 2 %} data-flyout-menu="true"{% endif %}>
+    <header class="header-main{% if shopware.theme['dmf-header-layout'] == 2 %} header-main-advanced{% endif %}{% if shopware.theme['dmf-header-fullwidth'] %} is-fullwidth{% endif %}"{% if shopware.theme['dmf-header-layout'] == 2 or shopware.theme['dmf-header-layout'] == 3 %} data-flyout-menu="true"{% endif %}>
         {% block base_header_inner %}
             {{ parent() }}
 
-            {% if shopware.theme['dmf-header-layout'] == 2 %}
+            {% if shopware.theme['dmf-header-layout'] == 2 or shopware.theme['dmf-header-layout'] == 3 %}
                 {% sw_include '@Storefront/storefront/layout/header/search.html.twig' %}
             {% endif %}
         {% endblock %}
 
         {% block base_header_flyout %}
-            {% if shopware.theme['dmf-header-layout'] == 2 %}
+            {% if shopware.theme['dmf-header-layout'] == 2 or shopware.theme['dmf-header-layout'] == 3 %}
                 {% set navigationChildrenCount = 0 %}
                 {% for treeItem in page.header.navigation.tree %}
                     {% if treeItem.category.childCount > 0 %}

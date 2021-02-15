@@ -84,7 +84,7 @@
                                 {% if column == 3 %}
                                     {% set minHeightConfig = '420px' %}
                                 {% else %}
-                                    {% set minHeightConfig = '640px' %}
+                                    {% set minHeightConfig = '500px' %}
                                 {% endif %}
 
                                 {% sw_include '@Storefront/storefront/element/cms-element-image-gallery.html.twig' with {
@@ -106,6 +106,8 @@
                             {% endif %}
                         </div>
                     {% endblock %}
+
+
 
                     {% block page_product_detail_buy %}
                         {% if column == 3 %}

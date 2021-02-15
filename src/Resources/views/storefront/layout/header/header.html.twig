@@ -38,7 +38,7 @@
     <div class="col-12 order-2 col-sm order-sm-1 header-search-col">
         <div class="row">
             <div class="col">
-                {% if shopware.theme['dmf-header-layout'] == 2 %}
+                {% if shopware.theme['dmf-header-layout'] == 2 or shopware.theme['dmf-header-layout'] == 3 %}
                     {% sw_include '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
                 {% else %}
                     {% sw_include '@Storefront/storefront/layout/header/search.html.twig' %}

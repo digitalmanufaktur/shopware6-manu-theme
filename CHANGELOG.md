@@ -1,3 +1,8 @@
+# 1.0.5
+- fix font integration
+- fix compatibility issue with shopware 6.3.5.
+- Styling fixes for header and product-detail page
+
 # 1.0.4
 - Cross Selling Slider optimized
 - Newsletter fix

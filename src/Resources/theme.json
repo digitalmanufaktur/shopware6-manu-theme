@@ -469,7 +469,7 @@
                     "de-DE": "Schriftart Text"
                 },
                 "type": "fontFamily",
-                "value": "'SF Pro', Inter, sans-serif",
+                "value": "Inter, sans-serif",
                 "editable": true,
                 "tab": "colorsTypo",
                 "block": "typography",
@@ -915,6 +915,13 @@
                             "label": {
                                 "en-GB": "Search as icon / Navigation centered",
                                 "de-DE": "Suche als Icon / Navigation Mittig"
+                            }
+                        },
+                        {
+                            "value": "3",
+                            "label": {
+                                "en-GB": "Search as icon / Navigation bottom",
+                                "de-DE": "Suche als Icon / Navigation Unterhalb"
                             }
                         }
                     ]
@@ -1805,7 +1812,7 @@
                     "de-DE": "Schriftart Text"
                 },
                 "type": "fontFamily",
-                "value": "'SF Pro', Inter, sans-serif",
+                "value": "Inter, sans-serif",
                 "editable": true,
                 "tab": "buttons",
                 "block": "button",

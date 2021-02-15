@@ -36,6 +36,7 @@ $header-padding-bottom: rem($dmf-header-padding-bottom);
 
 .header-logo-main {
     max-width: $dmf-header-logo-max-width-mobile;
+    width: 100%;
 }
 
 .header-logo-main-img {
@@ -111,7 +112,7 @@ $header-padding-bottom: rem($dmf-header-padding-bottom);
     }
 }
 
-.header-search-advanced {
+.header-search-advanced, .header-search-bottom {
     padding: 0 $spacer $spacer-sm;
 }
 

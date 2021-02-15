@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/layout/header/search.html.twig' %}
 
 {% block layout_header_search %}
-    <div class="collapse{% if shopware.theme['dmf-header-layout'] == 2 %} header-search-advanced{% endif %}"
+    <div class="collapse{% if shopware.theme['dmf-header-layout'] == 2 %} header-search-advanced{% endif %}{% if shopware.theme['dmf-header-layout'] == 3 %} header-search-bottom{% endif %}  "
          id="searchCollapse">
         <div class="header-search">
             <form action="{{ path('frontend.search.page') }}"
