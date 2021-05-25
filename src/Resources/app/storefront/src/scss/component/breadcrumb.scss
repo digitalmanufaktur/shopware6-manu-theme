@@ -92,6 +92,7 @@ Advanced styling for breadcrumb component
 @include media-breakpoint-up(sm) {
     .breadcrumb {
         padding: $spacer $order-grid-gutter-width;
+        padding-left: 0px;
 
         .breadcrumb-container {
             &.penultimate {

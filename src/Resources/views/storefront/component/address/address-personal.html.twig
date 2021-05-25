@@ -2,7 +2,7 @@
 
 {% block component_address_personal_fields %}
 	{% block component_address_personal_account_type %}
-		{% if shopware.config.core.loginRegistration.showAccountTypeSelection and not hideCustomerTypeSelect %}
+		{% if onlyCompanyRegistration or (config('core.loginRegistration.showAccountTypeSelection') and not hideCustomerTypeSelect) %}
 			<div class="form-row">
 				<div class="form-group col-md-12 contact-type">
 					{% block component_address_personal_account_type_label %}

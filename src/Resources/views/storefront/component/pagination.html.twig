@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/component/pagination.html.twig' %}
 
 {% block component_pagination_first %}
-    {% if shopware.theme["dmf-listing-pagination-last-first-enable"] %}
+    {% if theme_config('dmf-listing-pagination-last-first-enable') %}
         <li class="page-item page-first{% if currentPage == 1 %} disabled{% endif %}">
             {% block component_pagination_first_input %}
                 <input type="radio" {% if currentPage == 1 %} disabled="disabled" {% endif %} name="p" id="p-first" value="1" class="d-none" title="pagination">
@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block component_pagination_last %}
-    {% if shopware.theme["dmf-listing-pagination-last-first-enable"] %}
+    {% if theme_config('dmf-listing-pagination-last-first-enable') %}
         <li class="page-item page-last{% if currentPage == totalPages %} disabled{% endif %}">
             {% block component_pagination_last_input %}
                 <input type="radio" {% if currentPage == totalPages %} disabled="disabled" {% endif %} name="p" id="p-last" value="{{ totalPages }}" class="d-none" title="pagination">

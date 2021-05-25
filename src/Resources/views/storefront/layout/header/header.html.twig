@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block layout_header_logo %}
-    {% if shopware.theme['dmf-nav-mobile'] == 'left' %}
+    {% if theme_config('dmf-nav-mobile') == 'left' %}
         <div class="col-auto d-lg-none pr-0">
             <div class="menu-button">
                 {% block layout_header_navigation_toggle_button_left %}
@@ -38,12 +38,11 @@
     <div class="col-12 order-2 col-sm order-sm-1 header-search-col">
         <div class="row">
             <div class="col">
-                {% if shopware.theme['dmf-header-layout'] == 2 or shopware.theme['dmf-header-layout'] == 3 %}
+                {% if theme_config('dmf-header-layout') == 2 %}
                     {% sw_include '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
                 {% else %}
                     {% sw_include '@Storefront/storefront/layout/header/search.html.twig' %}
                 {% endif %}
-
             </div>
         </div>
     </div>
@@ -53,7 +52,7 @@
     <div class="col-auto order-1 order-sm-2 header-actions-col">
         <div class="row no-gutters">
             {% block layout_header_search_toggle %}
-                <div class="col-auto{% if shopware.theme['dmf-header-layout'] == 1 %} d-sm-none{% endif %}">
+                <div class="col-auto{% if theme_config('dmf-header-layout') == 1 %} d-sm-none{% endif %}">
                     <div class="search-toggle">
                         <button class="btn header-actions-btn search-toggle-btn js-search-toggle-btn collapsed"
                                 type="button"
@@ -68,6 +67,21 @@
                     </div>
                 </div>
             {% endblock %}
+
+            {% if config('core.cart.wishlistEnabled') %}
+                {% block layout_header_actions_wishlist %}
+                    <div class="col-auto">
+                        <div class="header-wishlist">
+                            <a class="btn header-wishlist-btn header-actions-btn"
+                               href="{{ path('frontend.wishlist.page') }}"
+                               title="{{ 'header.wishlist'|trans|striptags }}"
+                               aria-label="{{ 'header.wishlist'|trans|striptags }}">
+                                {% sw_include '@Storefront/storefront/layout/header/actions/wishlist-widget.html.twig' %}
+                            </a>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endif %}
 
             {% block layout_header_actions_account %}
                 <div class="col-auto">
@@ -93,7 +107,7 @@
             {% endblock %}
 
             {% block layout_header_navigation_toggle %}
-                {% if shopware.theme['dmf-nav-mobile'] == 'right' %}
+                {% if theme_config('dmf-nav-mobile') == 'right' %}
                     <div class="col-auto d-lg-none">
                         <div class="menu-button">
                             {% block layout_header_navigation_toggle_button %}

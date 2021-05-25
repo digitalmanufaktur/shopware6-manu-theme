@@ -1091,6 +1091,42 @@
                 "section": "headerCart",
                 "order": 100
             },
+            "dmf-header-wishlist-quantity": {
+                "label": {
+                    "en-GB": "Wishlist product quantity",
+                    "de-DE": "Merkzettel Artikelanzahl"
+                },
+                "helpText": {
+                    "en-GB": "If Badge is selected, a small badge appears instead of the number",
+                    "de-DE": "Wird Badge ausgewählt, erscheint ein kleines Badge anstelle der Anzahl"
+                },
+                "type": "text",
+                "value": "badge",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "badge",
+                            "label": {
+                                "en-GB": "Badge",
+                                "de-DE": "Badge"
+                            }
+                        },
+                        {
+                            "value": "number",
+                            "label": {
+                                "en-GB": "Number",
+                                "de-DE": "Nummer"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "header",
+                "block": "header",
+                "section": "headerCart",
+                "order": 100
+            },
             "dmf-header-cart-quantity-background": {
                 "label": {
                     "en-GB": "Cart badge color",
@@ -1588,6 +1624,19 @@
                 "editable": true,
                 "tab": "footer",
                 "block": "socialMedia",
+                "section": "generalSettings",
+                "order": 100
+            },
+            "dmf-footer-service-enable": {
+                "label": {
+                    "en-GB": "Show Service block in Footer",
+                    "de-DE": "Service Block im Footer anzeigen"
+                },
+                "type": "switch",
+                "value": true,
+                "editable": true,
+                "tab": "footer",
+                "block": "themeLayout",
                 "section": "generalSettings",
                 "order": 100
             },
@@ -2213,6 +2262,62 @@
                 "section": "color",
                 "order": 300
             },
+            "dmf-wishlist-fill-color": {
+                "label": {
+                    "en-GB": "Wishlist Heart Fill Color",
+                    "de-DE": "Merkzettel Herz Farbe"
+                },
+                "type": "color",
+                "value": "#FF0000",
+                "editable": true,
+                "tab": "listing",
+                "block": "productBox",
+                "section": "color",
+                "order": 100
+            },
+            "dmf-product-box-show-variants": {
+                "label": {
+                    "en-GB": "Show Product variant information",
+                    "de-DE": "Produktvarianten Informationen anzeigen"
+                },
+                "type": "switch",
+                "value": false,
+                "editable": true,
+                "tab": "listing",
+                "block": "productBox",
+                "order": 100
+            },
+            "dmf-product-box-wishlist-position": {
+                "label": {
+                    "en-GB": "Headline position",
+                    "de-DE": "Position der Überschrift"
+                },
+                "type": "text",
+                "value": "image",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "image",
+                            "label": {
+                                "en-GB": "Image Bottom Right",
+                                "de-DE": "Bild unten Rechts"
+                            }
+                        },
+                        {
+                            "value": "button",
+                            "label": {
+                                "en-GB": "Next to Buy Button",
+                                "de-DE": "Neben dem Warenkorb Button"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "listing",
+                "block": "productBox",
+                "order": 100
+            },
             "dmf-detail-headline-position": {
                 "label": {
                     "en-GB": "Headline position",
@@ -2344,6 +2449,44 @@
                             "label": {
                                 "en-GB": "Plus & minus (+ | -)",
                                 "de-DE": "Plus & Minus (+ | -)"
+                            }
+                        }
+                    ]
+                },
+                "editable": true,
+                "tab": "productDetail",
+                "block": "buybox",
+                "order": 100
+            },
+            "dmf-detail-wishlist-position": {
+                "label": {
+                    "en-GB": "Product Detail Page Wishlist Position",
+                    "de-DE": "Produktdetailseite Merkzettel Position"
+                },
+                "type": "text",
+                "value": "buy-button",
+                "custom": {
+                    "componentName": "sw-single-select",
+                    "options": [
+                        {
+                            "value": "buy-button",
+                            "label": {
+                                "en-GB": "Right to buy button",
+                                "de-DE": "Rechts neben Warenkorb Button"
+                            }
+                        },
+                        {
+                            "value": "button",
+                            "label": {
+                                "en-GB": "Button under buy button",
+                                "de-DE": "Als Button unter Warenkorb Button"
+                            }
+                        },
+                        {
+                            "value": "link",
+                            "label": {
+                                "en-GB": "Link under buy button",
+                                "de-DE": "Als Link unter Warenkorb Button"
                             }
                         }
                     ]

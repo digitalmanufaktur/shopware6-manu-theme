@@ -2,7 +2,7 @@
 
 {% block page_account_register_inner %}
     <div class="row">
-        {% if shopware.theme['dmf-account-variant'] == "default" %}
+        {% if theme_config('dmf-account-variant') == "default" %}
             <div class="col-lg-4">
                 {% sw_include '@Storefront/storefront/component/account/login.html.twig' with {
                     'cardTitle': "account.loginHeader"|trans|sw_sanitize

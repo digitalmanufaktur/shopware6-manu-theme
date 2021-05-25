@@ -3,8 +3,8 @@
 {% block component_account_register_personal_password_input %}
     {{ parent() }}
 
-    {% if shopware.theme['dmf-account-showpassword-enable'] %}
-        {% if shopware.theme['dmf-account-showpassword-variant'] == "icon" %}
+    {% if theme_config('dmf-account-showpassword-enable') %}
+        {% if theme_config('dmf-account-showpassword-variant') == "icon" %}
             <span class="toggle-password" data-toggle-password="personalPassword">
                 <span class="eye-open">{% sw_icon 'eye-open' %}</span>
                 <span class="eye-close">{% sw_icon 'eye-crossed' %}</span>
@@ -21,8 +21,8 @@
 {% block component_account_register_personal_password_confirmation_input %}
     {{ parent() }}
 
-    {% if shopware.theme['dmf-account-showpassword-enable'] %}
-        {% if shopware.theme['dmf-account-showpassword-variant'] == "icon" %}
+    {% if theme_config('dmf-account-showpassword-enable') %}
+        {% if theme_config('dmf-account-showpassword-variant') == "icon" %}
             <span class="toggle-password" data-toggle-password="personalPasswordConfirmation">
                 <span class="eye-open">{% sw_icon 'eye-open' %}</span>
                 <span class="eye-close">{% sw_icon 'eye-crossed' %}</span>

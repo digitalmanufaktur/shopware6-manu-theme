@@ -5,12 +5,12 @@
         {% if searchResult.total > 0 %}
             {% block element_product_listing_pagination_nav_actions %}
                 {% set justify = "between" %}
-                {% if shopware.theme["dmf-listing-show-sorting"] == false %}
+                {% if theme_config('dmf-listing-show-sorting') == false %}
                     {% set justify = "center" %}
                 {% endif %}
                 <div class="cms-element-product-listing-actions row justify-content-{{justify}}">
                     <div class="col-md-auto">
-                        {% if shopware.theme["dmf-listing-pagination-position"] == "top" or shopware.theme["dmf-listing-pagination-position"] == "both" %}
+                        {% if theme_config('dmf-listing-pagination-position') == "top" or theme_config('dmf-listing-pagination-position') == "both" %}
                             {% block element_product_listing_pagination_nav_top %}
                                 {% sw_include '@Storefront/storefront/component/pagination.html.twig' with {
                                     entities: searchResult,
@@ -67,7 +67,7 @@
             </div>
         {% endblock %}
 
-        {% if shopware.theme["dmf-listing-pagination-position"] == "bottom" or shopware.theme["dmf-listing-pagination-position"] == "both" %}
+        {% if theme_config('dmf-listing-pagination-position') == "bottom" or theme_config('dmf-listing-pagination-position') == "both" %}
             {% block element_product_listing_pagination_nav_bottom %}
                 <div class="d-flex justify-content-center">
                     {% sw_include '@Storefront/storefront/component/pagination.html.twig' with {

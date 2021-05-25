@@ -8,27 +8,39 @@
 
 {% block component_product_box_variant_characteristics %}
     {% if not product.isGrouped and product.variation %}
-        <div class="product-variant-characteristics">
-            <div class="product-variant-characteristics-text">
-                {% for variation in product.variation %}
-                    {{ variation.group }}:
-                    <span class="product-variant-characteristics-option">
-						{{ variation.option }}
-					</span>
+        {% if theme_config('dmf-product-box-show-variants') %}
+            <div class="product-variant-characteristics">
+                <div class="product-variant-characteristics-text">
+                    {% for variation in product.variation %}
+                        {{ variation.group }}:
+                        <span class="product-variant-characteristics-option">
+                            {{ variation.option }}
+                        </span>
 
-                    {% if product.variation|last != variation %}
-                        {{ " | " }}
-                    {% endif %}
-                {% endfor %}
+                        {% if product.variation|last != variation %}
+                            {{ " | " }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
-        </div>
+        {% endif %}
     {% endif %}
 {% endblock %}
 
 {% block component_product_box_description %}
-    {% if shopware.theme["dmf-product-box-description-enable"] %}
+    {% if theme_config('dmf-product-box-description-enable') %}
         <div class="product-description">
             {{ product.translated.description|striptags|raw }}
         </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block component_product_box_wishlist_action %}
+    {% if theme_config('dmf-product-box-wishlist-position') == 'image' %}
+        {% sw_include '@Storefront/storefront/component/product/card/wishlist.html.twig' with {
+            appearance: 'circle',
+            productId: id
+        } %}
     {% endif %}
 {% endblock %}

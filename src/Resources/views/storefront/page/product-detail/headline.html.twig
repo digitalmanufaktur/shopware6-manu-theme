@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/page/product-detail/headline.html.twig' %}
 
 {% block page_product_detail_manufacturer %}
-    {% if page.product.manufacturer and shopware.theme['dmf-detail-show-manufacturer'] == 'true' %}
+    {% if page.product.manufacturer and theme_config('dmf-detail-show-manufacturer') == 'true' %}
         <div class="col-md-auto product-detail-manufacturer">
             {% block page_product_detail_manufacturer_inner %}
                 {{ parent() }}

@@ -1,22 +1,61 @@
 {% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
 
-{% block component_product_box_action_form %}
-    {% block component_product_box_action_buy_redirect_input %}
+
+{% block component_product_box_action_inner %}
+    {% set id = product.id %}
+
+    {% if config('core.listing.allowBuyInListing') %}
+        <div class="product-action {% if theme_config('dmf-product-box-wishlist-position') == 'button' %}wishlist-button{% endif %}">
+            {% set isAvailable = not product.isCloseout or (product.availableStock >= product.minPurchase) %}
+            {% set displayFrom = product.calculatedPrices.count > 1 %}
+            {% set displayBuyButton = isAvailable and not displayFrom and product.childCount <= 0 %}
+
+            {% if displayBuyButton %}
+                {% block component_product_box_action_buy %}
+                    {# @var product \Shopware\Core\Content\Product\SalesChannel\SalesChannelProductEntity #}
+                    <form action="{{ path('frontend.checkout.line-item.add') }}" method="post" class="buy-widget" data-add-to-cart="true">
+
+                        {% block component_product_box_action_buy_csrf %}
+                            {{ sw_csrf('frontend.checkout.line-item.add') }}
+                        {% endblock %}
+
+                        {% block component_product_box_action_form %}
+                            {% block component_product_box_action_buy_redirect_input %}
+                                {{parent()}}
+                            {% endblock %}
+
+                            {% block page_product_detail_buy_product_buy_info %}
+                                {{parent()}}
+                            {% endblock %}
+
+                            {% block page_product_detail_product_buy_meta %}
+                                {{parent()}}
+                            {% endblock %}
+
+                            <button class="btn btn-block btn-buy" title="{{ "listing.boxAddProduct"|trans|striptags }}">
+                                <span class="mr-1">
+                                    {% sw_icon 'shopping-bag' style { 'color': 'bag', 'size': size, 'pack': 'default' } %}
+                                </span>
+                                {{ "listing.boxAddProduct"|trans|sw_sanitize }}
+                            </button>
+                        {% endblock %}
+                    </form>
+                {% endblock %}
+            {% else %}
+                {% block component_product_box_action_detail %}
+                    {{parent()}}
+                {% endblock %}
+            {% endif %}
+            {% if theme_config('dmf-product-box-wishlist-position') == 'button' %}
+                {% sw_include '@Storefront/storefront/component/product/card/wishlist.html.twig' with {
+                    appearance: 'circle',
+                    productId: id
+                } %}
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% block component_product_box_action_meta %}
         {{parent()}}
     {% endblock %}
-
-    {% block page_product_detail_buy_product_buy_info %}
-        {{parent()}}
-    {% endblock %}
-
-    {% block page_product_detail_product_buy_meta %}
-        {{parent()}}
-    {% endblock %}
-
-    <button class="btn btn-block btn-buy" title="{{ "listing.boxAddProduct"|trans|striptags }}">
-		<span class="mr-1">
-			{% sw_icon 'shopping-bag' style { 'color': 'bag', 'size': size, 'pack': 'default' } %}
-		</span>
-        {{ "listing.boxAddProduct"|trans|sw_sanitize }}
-    </button>
 {% endblock %}

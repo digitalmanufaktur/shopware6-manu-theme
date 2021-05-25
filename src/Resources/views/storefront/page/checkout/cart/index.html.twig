@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
 
 {% block page_checkout_container_checkout_btn %}
-    {% if shopware.theme['dmf-cart-checkoutbtn-layout'] == "topbottom" or shopware.theme['dmf-cart-checkoutbtn-layout'] == "top" %}
+    {% if theme_config('dmf-cart-checkoutbtn-layout') == "topbottom" or theme_config('dmf-cart-checkoutbtn-layout') == "top" %}
         <div class="col-12 checkout-aside-action d-lg-none mb-3">
             <a href="{{ path('frontend.checkout.confirm.page') }}"
                class="btn btn-primary btn-block btn-lg begin-checkout-btn"
@@ -14,13 +14,13 @@
 
 
 {% block page_checkout_cart_add_product %}
-    {% if shopware.theme['dmf-cart-addproductcontainer-enable'] %}
+    {% if theme_config('dmf-cart-addproductcontainer-enable') %}
         {{ parent() }}
     {% endif %}
 {% endblock %}
 
 {% block page_checkout_cart_shipping_costs %}
-    {% if shopware.theme['dmf-cart-shippingcostcontainer-enable'] %}
+    {% if theme_config('dmf-cart-shippingcostcontainer-enable') %}
         {{ parent() }}
     {% endif %}
 {% endblock %}
@@ -55,7 +55,7 @@
 {% endblock %}
 
 {% block page_checkout_aside_checkout_btn %}
-    {% if shopware.theme['dmf-cart-checkoutbtn-layout'] == "topbottom" or shopware.theme['dmf-cart-checkoutbtn-layout'] == "top" %}
+    {% if theme_config('dmf-cart-checkoutbtn-layout') == "topbottom" or theme_config('dmf-cart-checkoutbtn-layout') == "top" %}
         <div class="checkout-aside-action d-none d-lg-block mb-5">
             <a href="{{ path('frontend.checkout.confirm.page') }}"
                class="btn btn-primary btn-block btn-lg ml-auto begin-checkout-btn"
@@ -78,7 +78,7 @@
             </div>
 
             <div class="col-md-6 mt-3 mt-md-0 checkout-button-container">
-                {% if shopware.theme['dmf-cart-checkoutbtn-layout'] == "topbottom" or shopware.theme['dmf-cart-checkoutbtn-layout'] == "bottom" %}
+                {% if theme_config('dmf-cart-checkoutbtn-layout') == "topbottom" or theme_config('dmf-cart-checkoutbtn-layout') == "bottom" %}
                     <a href="{{ path('frontend.checkout.confirm.page') }}"
                        class="btn btn-primary btn-block btn-lg ml-auto begin-checkout-btn"
                        title="{{ "checkout.proceedLink"|trans|striptags }}">
