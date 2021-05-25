@@ -37,19 +37,14 @@
                                                 {% endif %}
                                             {% endblock %}
 
-                                            {# @deprecated tag:v6.4.0.0 #}
-                                            {% block page_checkout_item_info_variants %}
-                                                {{ parent() }}
-                                            {% endblock %}
-
                                             {% block page_checkout_item_info_ordernumber %}
-                                                {% if shopware.theme['dmf-cart-showproductnumber-enable'] %}
+                                                {% if theme_config('dmf-cart-showproductnumber-enable') %}
                                                     {{ parent() }}
                                                 {% endif %}
                                             {% endblock %}
 
                                             {% block page_checkout_item_info_properties_theme %}
-                                                {% if shopware.theme['dmf-cart-showproperties-enable'] and lineItem.payload.properties %}
+                                                {% if theme_config('dmf-cart-showproperties-enable') and lineItem.payload.properties %}
                                                     {% sw_include '@Storefront/storefront/component/dmfmanu-attributes/properties.html.twig' ignore missing with {
                                                         properties: lineItem.payload.properties
                                                     }  %}

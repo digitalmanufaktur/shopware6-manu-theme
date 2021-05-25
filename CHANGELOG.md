@@ -1,3 +1,14 @@
+# 2.0.0
+- Corrected layout 'Search as icon / Navigation bottom'
+- Corrected text align in search field suggestions
+- Added option to display variant information
+- Added configuration options for wishlist:
+    - Color of the wishlist icon
+    - Position of the wishlist button in the product listing
+    - Type of wishlist display in the header
+- Shopware 6.4 compatibility
+
+
 # 1.0.5
 - fix font integration
 - fix compatibility issue with shopware 6.3.5.

@@ -1,3 +1,13 @@
+# 2.0.0
+- Die Variante 'Suche als Icon / Navigation Unterhalb' wurde korrigiert
+- Textausrichtung bei Vorschlägen im Suchfeld korrigiert
+- Option für die Anzeige von Varianteninformationen eingefügt
+- Konfigurationsmöglichkeiten für Merkzettel hinzugefügt:
+    - Farbe des Merkzettel Symbols
+    - Position des Merkzettel Buttons im Produktlisting
+    - Art der Merkzettelanzeige im Header
+- Shopware 6.4 Kompatibilität
+
 # 1.0.5
 - Fix Fonteinbindung der Inter-Font
 - Kompatibilität-Fix für Shopware 6.3.5.

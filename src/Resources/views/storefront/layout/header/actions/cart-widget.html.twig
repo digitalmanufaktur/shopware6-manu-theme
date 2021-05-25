@@ -6,7 +6,7 @@
     </span>
 
     {% if page.cart.lineItems|length > 0 %}
-        {% if shopware.theme['dmf-header-cart-quantity'] == 2 %}
+        {% if theme_config('dmf-header-cart-quantity') == 2 %}
             <span class="badge badge-primary header-cart-badge"></span>
         {% else %}
             <span class="header-cart-total">

@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block layout_main_navigation_menu_flyout_wrapper %}
-    {% if shopware.theme['dmf-header-layout'] == 1 %}
+    {% if theme_config('dmf-header-layout') == 1 %}
         {{ parent() }}
     {% endif %}
 {% endblock %}

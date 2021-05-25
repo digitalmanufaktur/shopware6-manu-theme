@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block component_product_box_price_reference_unit %}
-    {% if shopware.theme["dmf-listing-product-box-simple-reference-price"] == "standard" %}
+    {% if theme_config('dmf-listing-product-box-simple-reference-price') == "standard" %}
         {{ parent() }}
     {% endif %}
 {% endblock %}
@@ -32,8 +32,8 @@
         {% endif %}
     </p>
 
-    {% if referncePrice is not null and shopware.theme["dmf-listing-product-box-simple-reference-price"] == "simple" %}
-        <span class="price-unit-reference is-{{ shopware.theme["dmf-listing-product-box-simple-reference-price"] }}">
+    {% if referncePrice is not null and theme_config('dmf-listing-product-box-simple-reference-price') == "simple" %}
+        <span class="price-unit-reference is-{{ theme_config('dmf-listing-product-box-simple-reference-price') }}">
             {% if (product.priceRange and product.isGrouped) or product.calculatedPrices.count > 1 %}
                 {{ "listing.listingTextFrom"|trans|sw_sanitize }} {{ fromPrice.referencePrice.price|currency }}{{ "general.star"|trans|sw_sanitize }} / {{ fromPrice.referencePrice.referenceUnit }}&nbsp;{{ fromPrice.referencePrice.unitName }}
             {% else %}

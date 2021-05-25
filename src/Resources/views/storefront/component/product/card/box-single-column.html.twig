@@ -17,7 +17,8 @@
                     {% endblock %}
                     <div class="row">
                         {% block component_product_box_image %}
-                            <div class="col-12 col-md-4">
+                            <div
+                                class="col-12 col-md-4">
                                 {# fallback if display mode is not set #}
                                 {% set displayMode = displayMode ?: 'standard' %}
 
@@ -81,7 +82,7 @@
                                 {% endblock %}
 
                                 {% block component_product_box_description %}
-                                    {% if shopware.theme["dmf-product-box-description-enable"] %}
+                                    {% if theme_config('dmf-product-box-description-enable') %}
                                         <div class="product-description">
                                             {{ product.translated.description|striptags|raw }}
                                         </div>
@@ -90,37 +91,39 @@
 
                                 {% block component_product_box_variant_characteristics %}
                                     {% if not product.isGrouped and product.variation %}
-                                        <div class="product-variant-characteristics">
-                                            <div class="product-variant-characteristics-text">
-                                                {% for variation in product.variation %}
-                                                    {{ variation.group }}:
-                                                    <span class="product-variant-characteristics-option">
-													{{ variation.option }}
-												</span>
+                                        {% if theme_config('dmf-product-box-show-variants') %}
+                                            <div class="product-variant-characteristics">
+                                                <div class="product-variant-characteristics-text">
+                                                    {% for variation in product.variation %}
+                                                        {{ variation.group }}:
+                                                        <span class="product-variant-characteristics-option">
+                                                            {{ variation.option }}
+                                                        </span>
 
-                                                    {% if product.variation|last != variation %}
-                                                        {{ " | " }}
-                                                    {% endif %}
-                                                {% endfor %}
+                                                        {% if product.variation|last != variation %}
+                                                            {{ " | " }}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
                                             </div>
-                                        </div>
+                                        {% endif %}
                                     {% endif %}
                                 {% endblock %}
 
                                 {% block component_product_box_details %}
                                     <div class="row">
-                                        {% set deliveryTime = product.deliveryTime and shopware.theme["dmf-listing-product-box-disable-deliverytime"] %}
-                                        {% set productNumber = product.productNumber and shopware.theme["dmf-listing-product-box-disable-productnumber"] %}
+                                        {% set deliveryTime = product.deliveryTime and theme_config('dmf-listing-product-box-disable-deliverytime') %}
+                                        {% set productNumber = product.productNumber and theme_config('dmf-listing-product-box-disable-productnumber') %}
 
                                         {% if deliveryTime or productNumber %}
                                             <div class="product-details col-12 col-md-6 col-lg-8 col-xl-8">
-                                                {% if product.deliveryTime and shopware.theme["dmf-listing-product-box-disable-deliverytime"] %}
+                                                {% if product.deliveryTime and theme_config('dmf-listing-product-box-disable-deliverytime') %}
                                                     <p class="mb-1 manu-product-deliverytime">
                                                         {{ "listing.deliveryTime"|trans|sw_sanitize }}
                                                         {{ product.deliveryTime.name }}
                                                     </p>
                                                 {% endif %}
-                                                {% if product.productNumber and shopware.theme["dmf-listing-product-box-disable-productnumber"] %}
+                                                {% if product.productNumber and theme_config('dmf-listing-product-box-disable-productnumber') %}
                                                     <p class="mb-0 manu-product-number">
                                                         {{ "listing.productNumber"|trans|sw_sanitize }}
                                                         {{product.productNumber}}

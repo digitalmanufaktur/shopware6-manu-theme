@@ -50,6 +50,7 @@ Contains styles for the search suggest popover in the shop header.
 .search-suggest-total-count,
 .search-suggest-product-price {
     color: $gray-300;
+    text-align: right;
 }
 
 .search-suggest-not-found {

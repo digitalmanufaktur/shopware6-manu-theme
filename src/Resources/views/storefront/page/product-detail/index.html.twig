@@ -1,18 +1,6 @@
 {% sw_extends '@Storefront/storefront/page/product-detail/index.html.twig' %}
 
 {% block base_flashbags %}
-    {% block dmf_page_product_detail_breadcrumb %}
-        <div class="breadcrumb-wrapper">
-            <div class="breadcrumb product-breadcrumb container">
-                {% sw_include '@Storefront/storefront/component/product/breadcrumb.html.twig' with {
-                    navigationTree: page.header.navigation.tree,
-                    categoryTree: page.product.categoryTree|last,
-                    product: page.product
-                } only %}
-            </div>
-        </div>
-    {% endblock %}
-
     {{ parent() }}
 {% endblock %}
 
@@ -36,7 +24,7 @@
             {% endblock %}
 
             {% block page_product_detail_headline %}
-                {% if shopware.theme['dmf-detail-headline-position'] == 'top' %}
+                {% if theme_config('dmf-detail-headline-position') == 'top' %}
                     <div class="row align-items-center product-detail-headline">
                         {% sw_include '@Storefront/storefront/page/product-detail/headline.html.twig' %}
                     </div>
@@ -57,25 +45,25 @@
                                     {% set zoomConfig = false %}
                                 {% endif %}
 
-                                {% if shopware.theme['dmf-detail-media-thumbnails-position'] == 'bottom' %}
+                                {% if theme_config('dmf-detail-media-thumbnails-position') == 'bottom' %}
                                     {% set galleryPositionConfig = 'underneath' %}
                                 {% else %}
                                     {% set galleryPositionConfig = 'left' %}
                                 {% endif %}
 
-                                {% if shopware.theme['dmf-detail-media-thumbnails-enable'] == 0 %}
+                                {% if theme_config('dmf-detail-media-thumbnails-enable') == 0 %}
                                     {% set thumbnailsConfig = false %}
                                 {% else %}
                                     {% set thumbnailsConfig = true %}
                                 {% endif %}
 
-                                {% if shopware.theme['dmf-detail-media-navigation-enable'] == 0 %}
+                                {% if theme_config('dmf-detail-media-navigation-enable') == 0 %}
                                     {% set navigationArrowsConfig = false %}
                                 {% else %}
                                     {% set navigationArrowsConfig = 'inside' %}
                                 {% endif %}
 
-                                {% if shopware.theme['dmf-detail-media-paging-enable'] == 0 %}
+                                {% if theme_config('dmf-detail-media-paging-enable') == 0 %}
                                     {% set navigationDotsConfig = false %}
                                 {% else %}
                                     {% set navigationDotsConfig = 'inside' %}
@@ -113,17 +101,17 @@
                         {% if column == 3 %}
                             <div class="col-lg-4 js-magnifier-zoom-image-container product-detail-mid">
                                 <div class="product-detail-mid-inner">
-                                    {% if shopware.theme['dmf-detail-headline-position'] == 'buybox' %}
+                                    {% if theme_config('dmf-detail-headline-position') == 'buybox' %}
                                         {% sw_include '@Storefront/storefront/page/product-detail/headline.html.twig' %}
                                     {% endif %}
 
-                                    {% if shortDescription and shopware.theme['dmf-detail-show-short-description'] == 'true' %}
+                                    {% if shortDescription and theme_config('dmf-detail-show-short-description') == 'true' %}
                                         {% sw_include '@Storefront/storefront/page/product-detail/short-description.html.twig' with {
                                             shortDescription: page.product.translated.customFields.product_short_description
                                         } only %}
                                     {% endif %}
 
-                                    {% if shopware.theme['dmf-detail-buybox-reviews'] == 'true' %}
+                                    {% if theme_config('dmf-detail-buybox-reviews') == 'true' %}
                                         {% sw_include '@Storefront/storefront/page/product-detail/reviews.html.twig' %}
                                     {% endif %}
 
@@ -157,13 +145,13 @@
                             <div class="product-detail-buy-inner">
                                 {% if column == 2 %}
                                     {% block page_product_detail_buy_headline %}
-                                        {% if shopware.theme['dmf-detail-headline-position'] == 'buybox' %}
+                                        {% if theme_config('dmf-detail-headline-position') == 'buybox' %}
                                             {% sw_include '@Storefront/storefront/page/product-detail/headline.html.twig' %}
                                         {% endif %}
                                     {% endblock %}
 
                                     {% block page_product_detail_buy_short_description %}
-                                        {% if shortDescription and shopware.theme['dmf-detail-show-short-description'] == 'true' %}
+                                        {% if shortDescription and theme_config('dmf-detail-show-short-description') == 'true' %}
                                             {% sw_include '@Storefront/storefront/page/product-detail/short-description.html.twig' with {
                                                 shortDescription: page.product.translated.customFields.product_short_description
                                             } only %}
@@ -187,9 +175,9 @@
 {% block page_product_detail_tabs %}
     <div class="product-detail-tabs jumbotron bg-light">
         <div class="container">
-            {% if shopware.theme['dmf-detail-tabs'] == 'accordion' %}
+            {% if theme_config('dmf-detail-tabs') == 'accordion' %}
                 {% sw_include '@Storefront/storefront/page/product-detail/accordion.html.twig' %}
-            {% elseif shopware.theme['dmf-detail-tabs'] == 'anchor' %}
+            {% elseif theme_config('dmf-detail-tabs') == 'anchor' %}
                 {% sw_include '@Storefront/storefront/page/product-detail/anchor.html.twig' %}
             {% else %}
                 {% sw_include '@Storefront/storefront/page/product-detail/tabs.html.twig' %}

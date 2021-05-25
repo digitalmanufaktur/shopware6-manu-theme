@@ -80,22 +80,25 @@ $header-padding-bottom: rem($dmf-header-padding-bottom);
     padding-left: $spacer-sm;
     padding-right: $spacer-sm;
 
-    &, .icon {
+    &,
+    .icon {
         color: $dmf-header-text-color;
     }
 
     &:hover {
-        &, .icon {
+        &,
+        .icon {
             color: $dmf-header-text-color;
         }
     }
 }
 
 .header-search-btn {
-     &, .icon {
-         color: $sw-text-color;
-     }
- }
+    &,
+    .icon {
+        color: $sw-text-color;
+    }
+}
 
 .search-toggle-btn {
     .icon-search {
@@ -112,7 +115,8 @@ $header-padding-bottom: rem($dmf-header-padding-bottom);
     }
 }
 
-.header-search-advanced, .header-search-bottom {
+.header-search-advanced,
+.header-search-bottom {
     padding: 0 $spacer $spacer-sm;
 }
 
@@ -185,17 +189,9 @@ $header-padding-bottom: rem($dmf-header-padding-bottom);
 }
 
 @include media-breakpoint-up(lg) {
-    .header-search-advanced {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-        background: $white;
-        height: 100%;
+    .header-search-advanced,
+    .header-search-bottom {
         opacity: 0;
-        display: flex;
-        padding: 0;
 
         &.collapsing {
             transition: none;
@@ -251,10 +247,35 @@ $header-padding-bottom: rem($dmf-header-padding-bottom);
                 }
             }
         }
+    }
 
+    .header-search-advanced {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background: $white;
+        height: 100%;
+        display: flex;
+        padding: 0;
     }
 
     .header-logo-main {
         max-width: $dmf-header-logo-max-width-desktop;
     }
+}
+
+.wishlist-badge {
+    background: $sw-color-brand-primary;
+    display: block;
+    min-width: 6px;
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    margin: 0;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    border-radius: 5px;
 }

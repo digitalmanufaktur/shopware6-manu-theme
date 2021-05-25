@@ -1,18 +1,45 @@
 {% sw_extends '@Storefront/storefront/page/product-detail/buy-widget.html.twig' %}
 
+{% block page_product_detail_reviews %}
+    {% if column == 2 and theme_config('dmf-detail-buybox-reviews') == 'true' %}
+        {% sw_include '@Storefront/storefront/page/product-detail/reviews.html.twig' %}
+    {% endif %}
+{% endblock %}
+
+{% block page_product_detail_delivery_informations %}
+    {% if column == 2 %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+
 {% block page_product_detail_buy_inner %}
-    <div class="product-detail-buy">
+    <div class="product-detail-buy js-magnifier-zoom-image-container">
         {% block page_product_detail_rich_snippets %}
             {{ parent() }}
         {% endblock %}
 
         {% block page_product_detail_not_available %}
-            {{ parent() }}
+            {#TODO: NEXT-2784 - product not available message#}
         {% endblock %}
 
         {% block page_product_detail_buy_container %}
             {{ parent() }}
         {% endblock %}
+
+        {% if config('core.cart.wishlistEnabled') %}
+            {% if theme_config('dmf-detail-wishlist-position') == 'button' or theme_config('dmf-detail-wishlist-position') == 'link'  %}
+                <div class="wishlist {% if theme_config('dmf-detail-wishlist-position') == 'button' %}wishlist-button{% endif %}">
+                    {% block page_product_detail_wishlist %}
+                        {% sw_include '@Storefront/storefront/component/product/card/wishlist.html.twig' with {
+                    showText: true,
+                    size: 'md',
+                    productId: page.product.id
+                } %}
+                    {% endblock %}
+                </div>
+            {% endif %}
+        {% endif %}
 
         {% block page_product_detail_ordernumber_container %}
             {% if column == 2 %}
@@ -23,14 +50,17 @@
 {% endblock %}
 
 
-{% block page_product_detail_reviews %}
-    {% if column == 2 and shopware.theme['dmf-detail-buybox-reviews'] == 'true' %}
-        {% sw_include '@Storefront/storefront/page/product-detail/reviews.html.twig' %}
-    {% endif %}
-{% endblock %}
+{% block page_product_detail_buy_form %}
+    {% if page.product.active %}
+        <div class="product-detail-form-container {% if theme_config('dmf-detail-wishlist-position') == 'buy-button' %}product-detail-wishlist{% endif %}">
+            {% sw_include '@Storefront/storefront/page/product-detail/buy-widget-form.html.twig' %}
 
-{% block page_product_detail_delivery_informations %}
-    {% if column == 2 %}
-        {{ parent() }}
+            {% if theme_config('dmf-detail-wishlist-position') == 'buy-button' %}
+                {% sw_include '@Storefront/storefront/component/product/card/wishlist.html.twig' with {
+                    size: 'md',
+                    productId: page.product.id
+                } %}
+            {% endif %}
+        </div>
     {% endif %}
 {% endblock %}

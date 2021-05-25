@@ -23,7 +23,7 @@
     {% block page_checkout_aside %}
         <div class="col-md-12 col-lg-4 ml-auto checkout-right{% if block('page_checkout_additional')|trim %}checkout-aside-no-offset{% endif %}">
             {% block page_checkout_aside_container %}
-                <div class="checkout-aside-container{% if shopware.theme['dmf-cart-checkout-aside-container-position'] == "sticky" %} is-sticky{% else %} h-100 d-flex flex-column justify-content-{{ shopware.theme['dmf-cart-checkout-aside-container-position'] }}{% endif %}">
+                <div class="checkout-aside-container{% if theme_config('dmf-cart-checkout-aside-container-position') == "sticky" %} is-sticky{% else %} h-100 d-flex flex-column justify-content-{{ theme_config('dmf-cart-checkout-aside-container-position') }}{% endif %}">
                     {% block page_checkout_aside_checkout_btn %}
                     {% endblock %}
 

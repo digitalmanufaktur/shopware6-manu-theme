@@ -3,7 +3,7 @@
 {% block page_product_detail_buy_quantity_container %}
     <div class="col-12 col-sm-3 mb-2 mb-sm-0 buy-widget-quantity">
         {% block page_product_detail_buy_quantity %}
-            {% if shopware.theme['dmf-detail-buybox-quantity'] == 2 %}
+            {% if theme_config('dmf-detail-buybox-quantity') == 2 %}
                 {% if product.calculatedMaxPurchase > 1 %}
                     <div class="custom-quantity-input-field">
                         <input name="lineItems[{{ product.id }}][quantity]"

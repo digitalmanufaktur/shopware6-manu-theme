@@ -4,7 +4,7 @@
     <input type="hidden" name="option" value="subscribe"/>
     <input type="submit" class="submit--hidden d-none">
 
-    {% if shopware.theme['dmf-newsletter-additional-fields'] %}
+    {% if theme_config('dmf-newsletter-additional-fields') %}
         {% block cms_form_newsletter_input_first_name %}
             {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
                 with {
@@ -47,7 +47,7 @@
 {% endblock %}
 
 {% block cms_form_newsletter_privacy %}
-    <div class="newsletter-privacy{% if shopware.theme['dmf-newsletter-additional-fields'] %} has-additional-fields{% endif %}" data-newsletter-privacy="true">
+    <div class="newsletter-privacy{% if theme_config('dmf-newsletter-additional-fields') %} has-additional-fields{% endif %}" data-newsletter-privacy="true">
         {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-privacy.html.twig' %}
     </div>
 {% endblock %}
@@ -58,7 +58,7 @@
 {% block cms_form_newsletter_submit %}
     {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-submit.html.twig'
         with {
-            btnClass: shopware.theme['dmf-newsletter-btn'] ~ ' btn-newsletter'
+            btnClass: theme_config('dmf-newsletter-btn') ~ ' btn-newsletter'
         }
     %}
 {% endblock %}

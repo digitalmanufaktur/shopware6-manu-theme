@@ -10,7 +10,7 @@
                 points: page.product.ratingAverage,
                 style: 'text-primary'
             } %}
-            {% if shopware.theme['dmf-detail-tabs'] == 'tabs' %}
+            {% if theme_config('dmf-detail-tabs') == 'tabs' %}
                 <a data-toggle="tab"
                    class="product-detail-reviews-link"
                    data-offcanvas-tabs="true"
@@ -21,7 +21,7 @@
                     {{ page.reviews.totalReviews}}
                     {{ "detail.reviewLinkText"|trans({'%count%': page.reviews.totalReviews})|sw_sanitize }}
                 </a>
-            {% elseif shopware.theme['dmf-detail-tabs'] == 'accordion' %}
+            {% elseif theme_config('dmf-detail-tabs') == 'accordion' %}
                 <span class="product-detail-reviews-link">
                     {{ page.reviews.totalReviews}}
                     {{ "detail.reviewLinkText"|trans({'%count%': page.reviews.totalReviews})|sw_sanitize }}
