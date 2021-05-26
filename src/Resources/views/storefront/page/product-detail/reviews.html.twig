@@ -4,7 +4,7 @@
         scrollToElement: true
     } %}
 
-    {% if page.product.ratingAverage > 0 and shopware.config.core.listing.showReview %}
+    {% if page.product.ratingAverage > 0 and config('core.listing.showReview')  %}
         <p class="product-detail-reviews">
             {% sw_include '@Storefront/storefront/component/review/rating.html.twig' with {
                 points: page.product.ratingAverage,

@@ -10,4 +10,7 @@ PluginManager.register('NewsletterPrivacy', NewsletterPrivacy, '.footer-newslett
 PluginManager.register('InputSpinner', InputSpinner, '[data-input-spinner]');
 PluginManager.register('TogglePassword', TogglePassword, '[data-toggle-password]');
 PluginManager.register('RegisterExpand', RegisterExpand, '[data-register-expand]');
-PluginManager.override('WishlistWidget', ExtendedWishlistWidgetPlugin, '[data-wishlist-widget]');
+
+if (window.wishlistEnabled) {
+    PluginManager.override('WishlistWidget', ExtendedWishlistWidgetPlugin, '[data-wishlist-widget]');
+}

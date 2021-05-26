@@ -32,7 +32,7 @@
         {% endblock %}
 
         {% block page_product_detail_accordion_reviews %}
-            {% if shopware.config.core.listing.showReview %}
+            {% if config('core.listing.showReview')  %}
                 <div class="card card-accordion card-accordion-reviews">
                     {% block page_product_detail_accordion_reviews_header %}
                         <div class="card-header card-accordion-header" id="headingReviews">

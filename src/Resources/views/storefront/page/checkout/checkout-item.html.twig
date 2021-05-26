@@ -83,7 +83,7 @@
                                                                             {% if quantityInformation.maxPurchase %}
                                                                                 {% set maxQuantity = quantityInformation.maxPurchase %}
                                                                             {% else %}
-                                                                                {% set maxQuantity = shopware.config.core.cart.maxQuantity %}
+                                                                                {% set maxQuantity = config('core.cart.maxQuantity')  %}
                                                                             {% endif %}
 
                                                                             {% block page_product_detail_buy_quantity %}

@@ -30,7 +30,7 @@
                     </div>
                     <div class="footer-contact-form">
                         {{ 'footer.serviceContactLink'|trans({
-                                    '%url%': path('frontend.cms.page', { id: shopware.config.core.basicInformation.contactPage })
+                                    '%url%': path('frontend.cms.page', { id: config('core.basicInformation.contactPage') })
                                 })|raw }}
                     </div>
                 </div>

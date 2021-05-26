@@ -9,7 +9,7 @@
             {% if theme_config('dmf-breadcrumb-home-icon-label') == "icon" %}
                 {% sw_icon 'shop' style { 'size': '1rem', 'pack': 'default'} %}
             {% else %}
-                {{ shopware.config.core.basicInformation.shopName }}
+                {{ config('core.basicInformation.shopName')  }}
             {% endif %}
         </a>
         <div class="breadcrumb-placeholder">

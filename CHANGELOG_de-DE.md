@@ -1,3 +1,6 @@
+# 2.0.1
+- Fix für javascript Fehler wenn Merkzettel nicht aktiviert ist
+
 # 2.0.0
 - Die Variante 'Suche als Icon / Navigation Unterhalb' wurde korrigiert
 - Textausrichtung bei Vorschlägen im Suchfeld korrigiert

@@ -1,3 +1,6 @@
+# 2.0.1
+- Fixed js error if wishlist is not enabled
+
 # 2.0.0
 - Corrected layout 'Search as icon / Navigation bottom'
 - Corrected text align in search field suggestions

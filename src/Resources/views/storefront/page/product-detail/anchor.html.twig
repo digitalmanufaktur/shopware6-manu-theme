@@ -15,7 +15,7 @@
                             </li>
                         {% endblock %}
                         {% block page_product_detail_anchors_navigation_review %}
-                            {% if shopware.config.core.listing.showReview %}
+                            {% if config('core.listing.showReview')  %}
                                 <li class="nav-item">
                                     <a class="nav-link product-detail-anchor-navigation-link"
                                        href="#review-tab-pane">
@@ -41,7 +41,7 @@
                         {% endblock %}
 
                         {% block page_product_detail_anchors_content_review %}
-                            {% if shopware.config.core.listing.showReview %}
+                            {% if config('core.listing.showReview')  %}
                                 <span class="product-detail-anchor-title"
                                       id="review-tab-pane">{{ "detail.tabsReview"|trans|sw_sanitize }}</span>
                                 <div class="anchor-pane">
