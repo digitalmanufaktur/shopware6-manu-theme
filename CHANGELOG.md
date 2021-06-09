@@ -1,3 +1,7 @@
+# 2.0.2
+- Add Wishlist button to 1-Column Layout
+- Add delivery time to standard box layout
+
 # 2.0.1
 - Fixed js error if wishlist is not enabled
 

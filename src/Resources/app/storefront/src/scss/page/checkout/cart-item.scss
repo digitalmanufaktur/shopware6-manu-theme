@@ -249,3 +249,11 @@ Contains custom styles for the cart item component.
         }
     }
 }
+
+
+.offcanvas-cart {
+    .cart-item-remove {
+        position: relative;
+        right: 0px;
+    }
+}

@@ -25,8 +25,8 @@
         {% else %}
             {% if listPrice.percentage > 0 %}
                 <span class="list-price mr-3">
-					{{ listPrice.price|currency }}{{ "general.star"|trans|sw_sanitize }}
-				</span>
+                    {{ listPrice.price|currency }}{{ "general.star"|trans|sw_sanitize }}
+                </span>
             {% endif %}
             {{ product.calculatedPrice.unitPrice|currency }}{{ "general.star"|trans|sw_sanitize }}
         {% endif %}

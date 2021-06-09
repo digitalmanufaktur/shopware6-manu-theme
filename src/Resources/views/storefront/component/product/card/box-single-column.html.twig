@@ -57,6 +57,14 @@
                                         </div>
                                     {% endif %}
                                 </a>
+                                {% block component_product_box_wishlist_action %}
+                                    {% if theme_config('dmf-product-box-wishlist-position') == 'image' %}
+                                        {% sw_include '@Storefront/storefront/component/product/card/wishlist.html.twig' with {
+                                            appearance: 'circle',
+                                            productId: id
+                                        } %}
+                                    {% endif %}
+                                {% endblock %}
                             </div>
                         {% endblock %}
 

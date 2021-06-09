@@ -173,3 +173,11 @@ Custom styling for product box component.
         }
     }
 }
+
+.box-single-column {
+    .product-wishlist {
+        .product-wishlist-action-circle {
+            right: 2rem;
+        }
+    }
+}

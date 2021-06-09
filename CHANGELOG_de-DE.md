@@ -1,3 +1,7 @@
+# 2.0.2
+- Wunschliste auch für 1-spaltiges Layout im Listing integrieren
+- Lieferzeit zur Produktkachel hinzugefügt
+
 # 2.0.1
 - Fix für javascript Fehler wenn Merkzettel nicht aktiviert ist
 

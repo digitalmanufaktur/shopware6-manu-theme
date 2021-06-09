@@ -16,7 +16,7 @@
         "@Storefront",
         "app/storefront/dist/storefront/js/dmf-manu-theme.js"
     ],
-    "asset": ["app/storefront/src/assets"],
+    "asset": ["@Storefront", "app/storefront/src/assets"],
     "config": {
         "tabs": {
             "colorsTypo": {
@@ -2882,4 +2882,3 @@
         }
     }
 }
-
