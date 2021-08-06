@@ -48,11 +48,8 @@
 {% endblock %}
 
 {% block base_breadcrumb %}
-    <div class="container">
-        {% sw_include '@Storefront/storefront/layout/breadcrumb.html.twig' with {
-            context: context,
-            category: page.product.seoCategory
-        } only %}
+    <div class="breadcrumb cms-breadcrumb container">
+        {{ parent() }}
     </div>
 {% endblock %}
 

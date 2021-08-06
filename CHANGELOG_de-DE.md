@@ -1,3 +1,9 @@
+# 2.0.3
+- Neues Auswahlfeld im Admin-Panel, um die Farbe der Bezahl-/ Versandbeschreibung abändern zu können
+- Dynamische Größenanpassung des Filter-Buttons, basierend auf der Bildschirmbreite und den anderen Objekten
+- Hinzufügen von Padding-Top auf der Produkt-Detail Seite
+- Entfernen von Padding-Bottom auf der Produkt-Detail Seite
+
 # 2.0.2
 - Wunschliste auch für 1-spaltiges Layout im Listing integrieren
 - Lieferzeit zur Produktkachel hinzugefügt

@@ -14,6 +14,15 @@ Contains custom styles for the product detail page.
 
 */
 
+/* padding for info on detail-pages */
+.product-detail {
+    padding-top: 55px;
+
+    .product-detail-cross-selling {
+        display: none;
+    }
+}
+
 .is-ctl-product {
     .container-main {
         padding-bottom: 0;

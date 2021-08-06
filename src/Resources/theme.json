@@ -212,6 +212,12 @@
                     "en-GB": "Account",
                     "de-DE": "Account"
                 }
+            },
+            "payAndShipmentMethods": {
+                "label": {
+                    "en-GB": "Pay- and Shipment Methods",
+                    "de-DE": "Bezahl- und Versandarten"
+                }
             }
         },
         "sections": {
@@ -279,6 +285,12 @@
                 "label": {
                     "en-GB": "Show Password",
                     "de-DE": "Passwort anzeigen"
+                }
+            },
+            "paymentAndShipmentMethods": {
+                "label": {
+                    "en-GB": "Payment/Shipping Description",
+                    "de-DE": "Bezahl- und Versandbeschreibung"
                 }
             }
         },
@@ -379,17 +391,18 @@
                 "block": "themeColors",
                 "order": 300
             },
-            "sw-border-color": {
+            "border-color": {
                 "label": {
-                    "en-GB": "Border color",
-                    "de-DE": "Rahmenfarbe"
+                    "en-GB": "Payment/Shipping Description-Color",
+                    "de-DE": "Bezahl- und Versandbeschreibung"
                 },
+                "editable": true,
                 "type": "color",
                 "value": "#DEE8E3",
-                "editable": true,
-                "tab": "colorsTypo",
-                "block": "themeColors",
-                "order": 400
+                "tab": "checkout",
+                "block": "payAndShipmentMethods",
+                "section": "paymentAndShipmentMethods",
+                "order": 900
             },
             "sw-background-color": {
                 "label": {
