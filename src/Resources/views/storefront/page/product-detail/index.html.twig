@@ -20,9 +20,6 @@
 
     <div class="product-detail-content">
         <div class="container">
-            {% block page_product_detail_breadcrumb %}
-            {% endblock %}
-
             {% block page_product_detail_headline %}
                 {% if theme_config('dmf-detail-headline-position') == 'top' %}
                     <div class="row align-items-center product-detail-headline">
@@ -201,3 +198,4 @@
 {% block page_product_detail_buy_inner %}
     {{ parent() }}
 {% endblock %}
+

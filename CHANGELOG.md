@@ -1,3 +1,9 @@
+# 2.0.3
+- Add new colour picker within the admin-panel for "Payment/Shipping Description"
+- Change button size dynamically based on viewport-width and surrounding elements
+- Add padding-top on product-detail page
+- Remove padding-bottom on product-detail page
+
 # 2.0.2
 - Add Wishlist button to 1-Column Layout
 - Add delivery time to standard box layout
