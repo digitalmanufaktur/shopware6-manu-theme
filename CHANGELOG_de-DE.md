@@ -1,3 +1,9 @@
+# 2.0.4
+- Fix der Thumbnail-Anzeige
+- Implementierung von halben Sternen bei Bewertungen
+- Logout Funktion im Drop Down Menü
+- Fix von Überschriften für die Merkliste
+
 # 2.0.3
 - Neues Auswahlfeld im Admin-Panel, um die Farbe der Bezahl-/ Versandbeschreibung abändern zu können
 - Dynamische Größenanpassung des Filter-Buttons, basierend auf der Bildschirmbreite und den anderen Objekten

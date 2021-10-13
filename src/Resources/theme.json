@@ -2302,8 +2302,8 @@
             },
             "dmf-product-box-wishlist-position": {
                 "label": {
-                    "en-GB": "Headline position",
-                    "de-DE": "Position der Überschrift"
+                    "en-GB": "Wishlist position",
+                    "de-DE": "Position der Wunschliste"
                 },
                 "type": "text",
                 "value": "image",

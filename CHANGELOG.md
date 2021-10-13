@@ -1,3 +1,9 @@
+# 2.0.4
+- Thumbnail fix
+- Implementation of half stars in ratings
+- Logout function in drop down menu
+- Fix headings for the wish list
+
 # 2.0.3
 - Add new colour picker within the admin-panel for "Payment/Shipping Description"
 - Change button size dynamically based on viewport-width and surrounding elements

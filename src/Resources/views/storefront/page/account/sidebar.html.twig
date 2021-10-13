@@ -77,6 +77,12 @@
                                     </div>
                             </a>
                             {% endblock %}
+                            {% block page_account_sidebar_logout %}
+                                <a href="{{ path('frontend.account.logout.page') }}"
+                                   class="list-group-item-action account-aside-item">
+                                    {{ "account.logout"|trans|sw_sanitize }}
+                                </a>
+                            {% endblock %}
                         {% endblock %}
                     </div>
                 {% endif %}
