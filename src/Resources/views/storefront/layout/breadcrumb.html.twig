@@ -1,6 +1,38 @@
 {% sw_extends '@Storefront/storefront/layout/breadcrumb.html.twig' %}
 
 {% block layout_breadcrumb_list_item %}
+    {% if loop.first %}
+        {% block layout_breadcrumb_home_item %}
+            {% if theme_config('dmf-breadcrumb-home') == 1 and (theme_config('dmf-breadcrumb-size') == false or breadcrumbCategories|length > 0) %}
+                {% set breadcrumbIndex = 1 %}
+                <li class="breadcrumb-item"
+                    itemprop="itemListElement"
+                    itemscope
+                    itemtype="https://schema.org/ListItem">
+                        <a
+                            class="breadcrumb-home"
+                            href="{{ path('frontend.home.page') }}"
+                            title="{{ "header.logoLink"|trans|striptags }}"
+                            itemprop="item">
+                            <link itemprop="url" href="{{ path('frontend.home.page') }}"/>
+                            {% if theme_config('dmf-breadcrumb-home-icon-label') == "icon" %}
+                                {% sw_icon 'shop' style { 'size': '1rem', 'pack': 'default'} %}
+                            {% else %}
+                                <span class="breadcrumb-title" itemprop="name">
+                                    {{ config('core.basicInformation.shopName')  }}
+                                </span>
+                            {% endif %}
+                        </a>
+                        <meta itemprop="position" content="{{ breadcrumbIndex }}"/>
+                </li>
+            {% endif %}
+            {% block layout_breadcrumb_home_placeholder %}
+                <div class="breadcrumb-placeholder">
+                    {% sw_icon 'arrow-medium-right' style { 'size': 'fluid', 'pack': 'solid'} %}
+                </div>
+            {% endblock %}
+        {% endblock %}
+    {% endif %}
     <li class="breadcrumb-item{% if theme_config('dmf-breadcrumb-size') == 1 and key != breadcrumbKeys|last %} d-none d-md-inline-block{% endif %}"
         {% if key is same as(categoryId) %}aria-current="page"{% endif %}
         itemprop="itemListElement"
@@ -18,7 +50,7 @@
                       href="{{ category_url(breadcrumbCategory) }}"/>
                 <span class="breadcrumb-title" itemprop="name">{{ name }}</span>
             </a>
-            <meta itemprop="position" content="{{ breadcrumbCategory.id }}"/>
+            <meta itemprop="position" content="{{ loop.index + breadcrumbIndex }}"/>
         {% endif %}
     </li>
 {% endblock %}

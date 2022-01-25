@@ -1,7 +1,6 @@
 {% sw_extends '@Storefront/storefront/base.html.twig' %}
 
 {% block base_header %}
-
     <header class="header-main{% if theme_config('dmf-header-layout') == 2 %} header-main-advanced{% endif %}{% if theme_config('dmf-header-fullwidth') %} is-fullwidth{% endif %}" {% if theme_config('dmf-header-layout') == 2 or theme_config('dmf-header-layout') == 3 %} data-flyout-menu="true" {% endif %}>
         {% block base_header_inner %}
             {{ parent() }}

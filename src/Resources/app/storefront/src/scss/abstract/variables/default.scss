@@ -1,0 +1,106 @@
+/*
+     _            __
+    | |          / _|
+  __| |_ __ ___ | |_
+ / _` | '_ ` _ \|  _|
+| (_| | | | | | | |
+ \__,_|_| |_| |_|_|
+
+Copyright (c) digital.manufaktur GmbH
+
+Default Variables
+==============================================
+
+*/
+
+// Sizes
+
+$dmf-spacer: 16px !default;
+$dmf-font-size-base: 14px !default;
+$dmf-line-height-base: 1.6 !default;
+
+// Border
+
+$dmf-border-radius: 5px !default;
+$dmf-btn-border-radius: 5px !default;
+$dmf-btn-border-width: 1px !default;
+
+// Headlines
+
+$dmf-font-size-h1: 36px !default;
+$dmf-font-size-h2: 24px !default;
+$dmf-font-size-h3: 21px !default;
+$dmf-font-size-h4: 18px !default;
+$dmf-font-size-h5: 16px !default;
+$dmf-font-size-h6: 14px !default;
+
+// Paddings
+
+$dmf-header-padding-top: 16px !default;
+$dmf-header-padding-bottom: 16px !default;
+
+// Width
+
+$dmf-header-logo-max-width-desktop: 140px !default;
+$dmf-header-logo-max-width-mobile: 90px !default;
+
+
+// Colors
+
+$sw-color-brand-primary: #0DB669 !default;
+$sw-color-brand-primary-alt: #CDDD5D !default;
+$sw-color-brand-secondary: #F0F5F3 !default;
+$border-color: #DEE8E3 !default;
+$sw-background-color: #FFFFFF !default;
+$sw-base-gray: #F5F5F5 !default;
+$sw-color-success: #3CC261 !default;
+$sw-color-info: #26A0CF !default;
+$sw-color-warning: #FFCC5D !default;
+$sw-color-danger: #D63D2C !default;
+$sw-text-color: #242424 !default;
+$sw-headline-color: #0DB669 !default;
+$sw-link-color: #808080 !default;
+$sw-color-price: #242424 !default;
+$sw-color-buy-button: #0DB669 !default;
+$sw-color-buy-button-text: #F0F5F3 !default;
+$dmf-breadcrumb-background-color: #FFFFFF !default;
+$dmf-breadcrumb-text-color: #929292 !default;
+$dmf-header-background-color: #F0F5F3 !default;
+$dmf-header-text-color: #242424 !default;
+$dmf-header-cart-quantity-background: #D63D2C !default;
+$dmf-navigation-background-color: #F0F5F3 !default;
+$dmf-navigation-text-color: #242424 !default;
+$dmf-navigation-text-color-hover: #242424 !default;
+$dmf-header-megamenu-background-color: #FFFFFF !default;
+$dmf-header-megamenu-color: #242424 !default;
+$dmf-header-megamenu-color-hover: #0DB669 !default;
+$dmf-header-search-background: #FFF !default;
+$dmf-header-search-background-focus: #FFF !default;
+$dmf-header-search-border: #DEE8E3 !default;
+$dmf-header-search-border-focus: #0DB669 !default;
+$dmf-header-search-color: #242424 !default;
+$dmf-header-search-placeholder-color: rgba(#242424, 0.5) !default;
+$dmf-customer-support-color: #808080 !default;
+$dmf-footer-background-color: #F0F5F3 !default;
+$dmf-footer-border-color: #F0F5F3 !default;
+$dmf-footer-text-color: #242424 !default;
+$dmf-newsletter-background-color: #CDDD5D !default;
+$dmf-newsletter-text-color: #242424 !default;
+$dmf-input-bg: #FFFFFF !default;
+$dmf-input-focus-bg: #FFFFFF !default;
+$dmf-input-border-color: #242424 !default;
+$dmf-input-focus-border-color: #0DB669 !default;
+$dmf-input-plaintext-color: #242424 !default;
+$dmf-input-color: #242424 !default;
+$dmf-input-focus-color: #242424 !default;
+$dmf-input-placeholder-color: #C3C3C3 !default;
+$dmf-product-box-background-color: transparent !default;
+$dmf-product-box-image-background-color: #f0f5f3 !default;
+$dmf-product-box-border-color: transparent !default;
+$dmf-wishlist-fill-color: #FF0000 !default;
+$dmf-detail-buybox-background: transparent !default;
+$dmf-detail-buybox-border: transparent !default;
+$dmf-detail-media-background: #F0F5F3 !default;
+$dmf-detail-media-border: #F0F5F3 !default;
+$dmf-account-order-btn-background-color: #FFFFFF !default;
+$dmf-account-order-btn-color: #242424 !default;
