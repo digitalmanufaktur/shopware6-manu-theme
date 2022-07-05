@@ -5,7 +5,7 @@ export default class InputSpinner extends Plugin {
     init() {
         this._filterBtn = document.querySelector('.cms-element-sidebar-filter');
         this._sortBtn = document.querySelector('.sorting')
-        if (this._sortBtn) {
+        if (!this._sortBtn) {
             return;
         }
         this._sortBtnWidthPx = this._sortBtn.offsetWidth+'px';
