@@ -1,3 +1,10 @@
+# 2.0.6
+- Fix für Social media icons ab 6.4.15.2 security update
+- Fix #14 Cannot read properties of null (reading 'offsetWidth')
+
+# 2.0.5
+- Optimierungen
+
 # 2.0.4
 - Fix der Thumbnail-Anzeige
 - Implementierung von halben Sternen bei Bewertungen

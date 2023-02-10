@@ -4,7 +4,7 @@
     {% if pack is not defined %}
         {% set pack = 'default' %}
     {% endif %}
-    {% set customIcon = source('@DmfManuTheme/../app/storefront/src/assets/icon/'~ pack ~'/'~ name ~'.svg', ignore_missing = true) %}
+    {% set customIcon = source('@DmfManuTheme/app/storefront/src/assets/icon/'~ pack ~'/'~ name ~'.svg', ignore_missing = true) %}
     {% if (customIcon) %}
         {% set styles = [ size, color, rotation, flip, class ] %}
         <span
